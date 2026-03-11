@@ -1,0 +1,1 @@
+Gemini is good at Marketing it seems, which I think is most closely related to social media. It also has good story telling and 
