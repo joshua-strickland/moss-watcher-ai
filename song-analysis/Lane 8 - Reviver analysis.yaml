@@ -9,52 +9,28 @@ track_metadata:
   genre: Melodic House
 
 arrangement:
-  - section_name: Intro 1
-    duration_bars: 8
-    chord_progression: "V chord root note"
-    elements:
-      - category: Keys - Piano
-        label: Delayed Piano
-        tonality: >
-          Delayed or time-manipulated acoustic piano character.
-        pattern: >
-          Maintains a constant root note while playing subtle top notes.
-      - category: Synth - Sustained
-        label: Warm Saw
-        tonality: >
-          Warm low-mid sawtooth synthesizer.
-        pattern: >
-          Activates intermittently, maintaining a single note.
-        automation: >
-          Low pass filter gradually opens up to higher frequencies across the 8 bars.
-      - category: Synth - Pad
-        label: Atmospheric Layer
-        tonality: >
-          Evolving background pads mixed with subtle white noise sweeps.
-        pattern: >
-          Continuous, establishing the spatial environment.
-
-  - section_name: Intro 2
-    duration_bars: 8
+  - section_name: Intro
+    duration_bars: 16
     chord_progression: "V chord root note"
     global_transitions: >
-      Bar 6, beat 4: Vocal chop triggers.
-      Bar 7: Hard cut of all instruments. Reverb tail of the vocal chop and plucky synth rings out. One more sonar two-note descending synth ping occurs during the silence.
+      Bar 15: Hard cut of all instruments. Reverb tail of the vocal chop and plucky synth rings out. One more sonar two-note descending synth ping occurs during the silence.
     elements:
       - category: Synth - Pluck
         label: Sonar Ping
         tonality: >
           Heavily filtered "sonar" style synth pings.
         pattern: >
-          Two-note descending melody, gradually becoming more prominent.
+          Occurs either on beat 1 or on beat 1 and 3
+        timing: Starts on Bar 9, then Every 1-2 bars after
       - category: Synth - Sustained
         label: Warm Saw
         tonality: >
           Warm low-mid sawtooth synthesizer.
         pattern: >
-          Activates intermittently.
+          Lasts 1 bar 3 beats.
         automation: >
           Low-pass filter gradually opens further.
+        timing: Occurs every bar from Bar 1 - Bar 14
       - category: Synth - Arp
         label: Main 16th Arp
         tonality: >
@@ -63,20 +39,14 @@ arrangement:
           16th-note arpeggiated rhythm.
         automation: >
           Low pass filter gradually opens up.
-      - category: Drums - Kick
-        label: Main Kick
-        tonality: >
-          Muffled with minimal high-end transient.
-        pattern: >
-          Standard 4/4 rhythm.
-        automation: >
-          Filter slowly opens to build low-end presence.
+        timing: Bar 9 - 16
       - category: Vocals - Chop
         label: Descending Vocal Chop
         tonality: >
           Female vocal with a lush reverb tail.
         pattern: >
           Two-note descending melody hitting once near the end of the section.
+        timing: Bar 14 beat 4
 
   - section_name: Verse A
     duration_bars: 16
