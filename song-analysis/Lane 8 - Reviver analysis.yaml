@@ -1,0 +1,305 @@
+# yaml-language-server: $schema=/song-schema.json
+
+track_metadata:
+  artist: Lane 8
+  title: Reviver
+  key_signature: D# Major
+  bpm: 123
+  time_signature: 4/4
+  genre: Melodic House
+
+arrangement:
+  - section_name: Intro 1
+    duration_bars: 8
+    chord_progression: "V chord root note"
+    elements:
+      - category: Keys - Piano
+        label: Delayed Piano
+        tonality: >
+          Delayed or time-manipulated acoustic piano character.
+        pattern: >
+          Maintains a constant root note while playing subtle top notes.
+      - category: Synth - Sustained
+        label: Warm Saw
+        tonality: >
+          Warm low-mid sawtooth synthesizer.
+        pattern: >
+          Activates intermittently, maintaining a single note.
+        automation: >
+          Low pass filter gradually opens up to higher frequencies across the 8 bars.
+      - category: Synth - Pad
+        label: Atmospheric Layer
+        tonality: >
+          Evolving background pads mixed with subtle white noise sweeps.
+        pattern: >
+          Continuous, establishing the spatial environment.
+
+  - section_name: Intro 2
+    duration_bars: 8
+    chord_progression: "V chord root note"
+    global_transitions: >
+      Bar 6, beat 4: Vocal chop triggers.
+      Bar 7: Hard cut of all instruments. Reverb tail of the vocal chop and plucky synth rings out. One more sonar two-note descending synth ping occurs during the silence.
+    elements:
+      - category: Synth - Pluck
+        label: Sonar Ping
+        tonality: >
+          Heavily filtered "sonar" style synth pings.
+        pattern: >
+          Two-note descending melody, gradually becoming more prominent.
+      - category: Synth - Sustained
+        label: Warm Saw
+        tonality: >
+          Warm low-mid sawtooth synthesizer.
+        pattern: >
+          Activates intermittently.
+        automation: >
+          Low-pass filter gradually opens further.
+      - category: Synth - Arp
+        label: Main 16th Arp
+        tonality: >
+          Plucky synthesizer sharing notes with the piano melody.
+        pattern: >
+          16th-note arpeggiated rhythm.
+        automation: >
+          Low pass filter gradually opens up.
+      - category: Drums - Kick
+        label: Main Kick
+        tonality: >
+          Muffled with minimal high-end transient.
+        pattern: >
+          Standard 4/4 rhythm.
+        automation: >
+          Filter slowly opens to build low-end presence.
+      - category: Vocals - Chop
+        label: Descending Vocal Chop
+        tonality: >
+          Female vocal with a lush reverb tail.
+        pattern: >
+          Two-note descending melody hitting once near the end of the section.
+
+  - section_name: Verse A1
+    duration_bars: 8
+    chord_progression: "IV - VI - V - II - IV"
+    elements:
+      - category: Synth - Pluck
+        label: Sonar Ping
+        tonality: >
+          Heavily filtered "sonar" style synth pings.
+        pattern: >
+          Continuing the previous rhythmic ping pattern.
+      - category: Synth - Pluck
+        label: Main Melody Saw
+        tonality: >
+          Main saw synth featuring a strong reverb tail.
+        pattern: >
+          Core melody utilizing a quick portamento (glide) between notes.
+        automation: >
+          Heavily sidechain-compressed (ducked) against the kick drum to create a "lead breath" pumping effect.
+
+  - section_name: Verse A2
+    duration_bars: 8
+    chord_progression: "IV - VI - V - II - IV"
+    global_transitions: >
+      Bar 6: Instruments partially fade out. A vocal FX triggers right as the fade occurs, acting as a transitory marker.
+    elements:
+      - category: Synth - Pluck
+        label: Sonar Ping
+        tonality: >
+          Heavily filtered "sonar" style synth pings.
+        pattern: >
+          Continuing the previous rhythmic ping pattern.
+      - category: Synth - Pluck
+        label: Main Melody Saw
+        tonality: >
+          Main saw synth featuring a strong reverb tail.
+        pattern: >
+          Core melody utilizing a quick portamento (glide) between notes.
+        automation: >
+          Heavily sidechain-compressed (ducked) against the kick drum to create a "lead breath" pumping effect.
+      - category: Bass
+        label: Sub Bass
+        tonality: >
+          Deep sub-bass designed to fill out the low frequencies.
+        pattern: >
+          Anchoring bassline following the chord progression root notes.
+
+  - section_name: Chorus A1
+    duration_bars: 8
+    chord_progression: "IV - VI - V - II - IV, IV - VI - V - II - IV - VI - I"
+    global_transitions: >
+      Bar 2, beat 3: Instruments cut out for a tom drum fill.
+      Bar 5, beat 3: Similar instrument cut-out.
+      Bar 8: Clap rhythm occurs just before Chorus A2.
+    elements:
+      - category: Synth - Pluck
+        label: Layered Main Saw
+        tonality: >
+          Main saw synth layered with an identical patch one octave higher for increased width and brightness.
+        pattern: >
+          Driving the core melody.
+      - category: Synth - Pluck
+        label: Sonar Ping
+        tonality: >
+          Sonar ping sounds with a long reverb tail (lasting 5-10s).
+        pattern: >
+          Similar pattern as verses, with one prominent lower-pitch ping around beat 2.
+      - category: Drums - Kick
+        label: Main Kick
+        tonality: >
+          Full-sounding kick with med-high treble content for punch. Fundamental around 80-110Hz. Short overall envelope.
+        pattern: >
+          Driving 4/4 rhythm.
+      - category: Drums - Snare
+        label: Main Snare
+        tonality: >
+          Punchy but smooth. Features an unzip/zip compressor effect that "swishes" the volume.
+        pattern: >
+          Sharp hits on beats 2 and 4.
+      - category: Vocals - Chop
+        label: Mid Vocal Chop
+        tonality: >
+          Mid-range audible with a fair amount of reverb; tail ends within a few seconds.
+        pattern: >
+          Occurs intermittently.
+      - category: Bass
+        label: Sub Bass
+        tonality: >
+          Sub-bass foundation.
+        pattern: >
+          Driving bassline following the progression.
+        automation: >
+          Sidechained heavily to the kick.
+
+  - section_name: Chorus A2
+    duration_bars: 8
+    chord_progression: "IV - VI - V - II - IV, IV - VI - V - II - IV - VI - I"
+    global_transitions: >
+      Bar 7 to 8: Simple white noise swell with a long reverb tail lasting approximately 4 bars.
+    elements:
+      - category: Drums - Hat Closed
+        label: Main Closed Hat
+        tonality: >
+          Standard tight closed hi-hat.
+        pattern: >
+          Driving 16th-note rhythm to establish peak groove.
+      - category: Drums - Hat Open
+        label: Main Open Hat
+        tonality: >
+          Bright open hi-hat.
+        pattern: >
+          Placed strictly on the off-beats.
+
+  - section_name: Pre-Verse 1
+    duration_bars: 8
+    chord_progression: "V chord root note"
+    global_transitions: >
+      Bar 1: Heavy 4/4 kick, sub-bass, and driving percussion are completely removed to release tension.
+    elements:
+      - category: Keys - Piano
+        label: Piano Pad Layer
+        tonality: >
+          Piano layered with lush, string-like sustained pads.
+        pattern: >
+          The piano melody from the intro returns.
+      - category: Synth - Arp
+        label: Main 16th Arp
+        tonality: >
+          The 16th-note plucky synth from the intro.
+        pattern: >
+          Emerges around bar 3.
+        automation: >
+          Crescendos toward the next section.
+
+  - section_name: Pre-Verse 2
+    duration_bars: 8
+    chord_progression: "V chord root note"
+    global_transitions: >
+      Bar 7: All instruments cut out completely except for one solitary synth line, maximizing the tension vacuum before the second verse.
+    elements:
+      - category: Synth - Sustained
+        label: Melodic Riser
+        tonality: >
+          Soft melodic synthesizer.
+        pattern: >
+          Functions as a melodic riser.
+        automation: >
+          Cutoff filter continues to open steadily.
+
+  - section_name: Verse B1
+    duration_bars: 8
+    chord_progression: "IV - VI - V - II - IV"
+    elements:
+      - category: Synth - Supersaw
+        label: Layered Main Saw
+        tonality: >
+          Features the core saw synth layered with the higher octave introduced in Chorus A to maintain elevated energy levels post-breakdown.
+        pattern: >
+          Plays the core melody from Verse A1.
+
+  - section_name: Verse B2
+    duration_bars: 8
+    chord_progression: "IV - VI - V - II - IV"
+    global_transitions: >
+      Dedicated transition segment immediately preceding the final chorus. All riser elements abruptly end just before the chorus downbeat.
+    elements:
+      - category: Synth - Riser
+        label: Synth Riser
+        tonality: >
+          Synthesized pitch riser.
+        pattern: >
+          Continuous upward momentum for 2 bars.
+      - category: FX - Sweep Up
+        label: White Noise Riser
+        tonality: >
+          White noise riser.
+        pattern: >
+          Continuous swell for 2 bars.
+
+  - section_name: Chorus B
+    duration_bars: 16
+    chord_progression: "IV - VI - V - II - IV, IV - VI - V - II - IV - VI - I"
+    global_transitions: >
+      Bar 1: Crash cymbals trigger on the downbeats to reinforce peak energy.
+    elements:
+      - category: Synth - Pluck
+        label: Augmented Sonar Ping
+        tonality: >
+          The original sonar pluck augmented and layered with a warm triangle-sounding synth.
+        pattern: >
+          Continues the rhythmic syncopated pattern.
+      - category: Synth - Supersaw
+        label: Layered Main Saw
+        tonality: >
+          Layered lead synth matching peak energy.
+        pattern: >
+          Core chorus melody.
+      - category: Bass
+        label: Sub Bass
+        tonality: >
+          Deep foundational sub-bass.
+        pattern: >
+          Driving bassline following the progression.
+
+  - section_name: Outro
+    duration_bars: 8
+    chord_progression: "V chord root note"
+    global_transitions: >
+      Bar 1: Heavy 4/4 kick, sub-bass, and claps are removed. Track strips back strictly to core intro elements.
+    elements:
+      - category: Keys - Piano
+        label: Delayed Piano
+        tonality: >
+          Delayed acoustic piano.
+        pattern: >
+          Original intro melody.
+        automation: >
+          Progressively low-pass filtered and faded out to prepare for DJ mix transition.
+      - category: Synth - Sustained
+        label: Warm Saw
+        tonality: >
+          Single-layer sawtooth synthesizer.
+        pattern: >
+          Intermittent root notes.
+        automation: >
+          Progressively low-pass filtered and faded out.

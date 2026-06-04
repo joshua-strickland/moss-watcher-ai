@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["track_metadata", "arrangement"],
+  "properties": {
+    "track_metadata": {
+      "type": "object",
+      "required": ["artist", "title", "key_signature", "bpm", "time_signature", "genre"],
+      "properties": {
+        "artist": { "type": "string" },
+        "title": { "type": "string" },
+        "key_signature": { "type": "string" },
+        "bpm": { "type": "integer" },
+        "time_signature": { "type": "string" },
+        "genre": { "type": "string" }
+      }
+    },
+    "arrangement": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["section_name", "duration_bars", "chord_progression", "elements"],
+        "properties": {
+          "section_name": { "type": "string" },
+          "duration_bars": { "type": "integer" },
+          "chord_progression": { "type": "string" },
+          "global_transitions": { "type": "string" },
+          "elements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["category", "tonality", "pattern"],
+              "properties": {
+                "category": {
+                  "type": "string",
+                  "enum": [
+                    "Bass",
+                    "Drums - Kick",
+                    "Drums - Snare",
+                    "Drums - Clap",
+                    "Drums - Hat Closed",
+                    "Drums - Hat Open",
+                    "Drums - Percussion",
+                    "Synth - Sustained",
+                    "Synth - Pluck",
+                    "Synth - Pad",
+                    "Synth - Arp",
+                    "Synth - Supersaw",
+                    "Synth - Riser",
+                    "Keys - Piano",
+                    "Vocals - Lead",
+                    "Vocals - Chop",
+                    "Vocals - Atmosphere",
+                    "FX - Sweep Up",
+                    "FX - Sweep Down",
+                    "FX - Foley",
+                    "FX - Impact"
+                  ]
+                },
+                "label": { "type": "string" },
+                "tonality": { "type": "string" },
+                "pattern": { "type": "string" },
+                "automation": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
