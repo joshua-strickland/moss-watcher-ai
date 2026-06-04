@@ -29,7 +29,7 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["category", "tonality", "pattern"],
+              "required": ["category", "tonality", "pattern", "timing"],
               "properties": {
                 "category": {
                   "type": "string",
@@ -38,29 +38,29 @@
                     "Drums - Kick",
                     "Drums - Snare",
                     "Drums - Clap",
-                    "Drums - Hat Closed",
-                    "Drums - Hat Open",
-                    "Drums - Percussion",
+                    "Drums - Shakers",
+                    "Drums - Hats",
                     "Synth - Sustained",
                     "Synth - Pluck",
                     "Synth - Pad",
                     "Synth - Arp",
                     "Synth - Supersaw",
-                    "Synth - Riser",
                     "Keys - Piano",
                     "Vocals - Lead",
                     "Vocals - Chop",
                     "Vocals - Atmosphere",
-                    "FX - Sweep Up",
-                    "FX - Sweep Down",
+                    "Transition - Sweep",
+                    "Transition - Riser",
                     "FX - Foley",
+                    "FX - Noise",
                     "FX - Impact"
                   ]
                 },
                 "label": { "type": "string" },
                 "tonality": { "type": "string" },
                 "pattern": { "type": "string" },
-                "automation": { "type": "string" }
+                "automation": { "type": "string" },
+                "timing": { "type": "string" }
               }
             }
           }

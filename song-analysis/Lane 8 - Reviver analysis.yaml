@@ -78,51 +78,41 @@ arrangement:
         pattern: >
           Two-note descending melody hitting once near the end of the section.
 
-  - section_name: Verse A1
-    duration_bars: 8
-    chord_progression: "IV - VI - V - II - IV"
-    elements:
-      - category: Synth - Pluck
-        label: Sonar Ping
-        tonality: >
-          Heavily filtered "sonar" style synth pings.
-        pattern: >
-          Continuing the previous rhythmic ping pattern.
-      - category: Synth - Pluck
-        label: Main Melody Saw
-        tonality: >
-          Main saw synth featuring a strong reverb tail.
-        pattern: >
-          Core melody utilizing a quick portamento (glide) between notes.
-        automation: >
-          Heavily sidechain-compressed (ducked) against the kick drum to create a "lead breath" pumping effect.
-
-  - section_name: Verse A2
-    duration_bars: 8
+  - section_name: Verse A
+    duration_bars: 16
     chord_progression: "IV - VI - V - II - IV"
     global_transitions: >
-      Bar 6: Instruments partially fade out. A vocal FX triggers right as the fade occurs, acting as a transitory marker.
+      Bar 14 beat 2: Main Melody Saw and Warm cutoff sustained saw stop and reverb tail
+      fades out.
     elements:
       - category: Synth - Pluck
         label: Sonar Ping
         tonality: >
           Heavily filtered "sonar" style synth pings.
         pattern: >
-          Continuing the previous rhythmic ping pattern.
+          Occurs about once every 4 bars, on beats 1 and 3
+        timing: Bar 1 - 16
       - category: Synth - Pluck
         label: Main Melody Saw
         tonality: >
           Main saw synth featuring a strong reverb tail.
         pattern: >
           Core melody utilizing a quick portamento (glide) between notes.
+        timing: >
+          Bar 1 - Bar 14 beat 2
         automation: >
           Heavily sidechain-compressed (ducked) against the kick drum to create a "lead breath" pumping effect.
-      - category: Bass
-        label: Sub Bass
-        tonality: >
-          Deep sub-bass designed to fill out the low frequencies.
-        pattern: >
-          Anchoring bassline following the chord progression root notes.
+      - category: Synth - Sustained
+        label: Warm cutoff sustained saw
+        tonality: Warm cutoff sustained saw
+        pattern: nearly 2 bar sustained notes, cutting off around bar 2 beat 3 or 4
+        timing: Bar 9 - Bar 14 beat 2
+      - category: Vocals - Chop
+        label: Ahh Ayy
+        tonality: female, breathy, Ah vowels, reverbed
+        pattern: 2 eight notes
+        timing: Bar 15
+
 
   - section_name: Chorus A1
     duration_bars: 8
