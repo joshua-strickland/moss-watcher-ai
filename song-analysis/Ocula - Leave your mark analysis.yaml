@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=/song-schema.json
+
+track_metadata:
+  artist: Ocula
+  title: Leave your mark
+  key_signature: C Major
+  bpm: 126
+  time_signature: 4/4
+  genre: Melodic House
+
+arrangement:
+  - section_name: Pre-Intro
+    duration_bars: 4
+    chord_progression: no harmonic elements
+    elements:
+      - category: FX - Foley
+        label: Foley wisp pad things
+        tonality: >
+          Soft, wispy, and ethereal sound effects.
+        pattern: >
+          Occurs throughout this minor section
+        timing: bar 1-4
+      - category: Bass
+        label: Sub Bass
+        tonality: Bass
+        pattern: swell
+        automation:
+          simple volume swell
+        timing: bar 4
+  - section_name: Verse A
+    duration_bars: 24
+    chord_progression: ""
+    global_transitions: >
+    elements:
+          - category: Synth - Pluck
+            label: Maine synth lead pluck
+            tonality: plucked saw lead
+            pattern: eigth notes
+            automation:
+              the pluck pattern uses a 16th note after the 2 A beat
+              and the 4 beat to cutoff the pluck a bit faster than
+              at other parts of the melody.
+              The cutoff gradually opens
+            timing: bar 1-24
+          - category: Vocals - Atmosphere
+            label: Oooo verbed out vocals
+            tonality: >
+              Soft, and ethereal heavily verbed vocals in the background.
+            pattern: half note / quarter note
+            timing: bar 5-8
+          - category: Drums - Kick
+            label: Kick
+            tonality: >
+              Kick drum, punchy, high transient and treble content
+            pattern: >
+              quarter notes / 4 on the floor
+            timing: bar 1-24
+          - category: Drums - Hats
+            label: Hats
+            tonality: >
+              soft open ish hat
+            pattern: >
+              quarter notes
+            timing: bar 8-24
+          - category: Drums - Snare
+            label: soft snare
+            tonality: >
+             soft ish snare
+            pattern: >
+              2nd & 4th beats
+            timing: bar 8-24
