@@ -1,0 +1,77 @@
+# yaml-language-server: $schema=/song-schema.json
+
+track_metadata:
+  artist: Ocula
+  title: Found you there
+  key_signature: C Major
+  bpm: 122
+  time_signature: 4/4
+  genre: Melodic House
+
+arrangement:
+  - section_name: Intro
+    duration_bars: 16
+    chord_progression: ""
+    global_transitions: >
+
+    elements:
+      - category: Synth - Pad
+        label: tremolo warm saw
+        tonality: >
+          Warm cut off, tremolo'd sawtooth synthesizer.
+        pattern: >
+          pad
+        timing: pad
+      - category: Synth - Pad
+        label: tremolo shimmer pad
+        tonality: >
+          High frequency content saw / similar synth gated with pseudo random rhythm. 
+          layered with tremolo warm saw
+        pattern: >
+          gated with pseudo random rhythm, otherwise constant
+        timing: pad
+      - category: Synth - Arp
+        label: Main 16th Arp
+        tonality: >
+          Plucky synthesizer sharing notes with the piano melody.
+        pattern: >
+          16th-note arpeggiated rhythm.
+        automation: >
+          Low pass filter gradually opens up.
+        timing: Bar 1 - 16
+      - category: Vocals - Atmosphere
+        label: background verbed background vocals
+        tonality: >
+          Female vocal with a lush reverb tail. heavy cutoff
+        pattern: >
+          inconsistent
+        timing: bar 1-16
+      - category: Drums - Kick
+        label: soft intro kick
+        tonality: cut off
+        pattern: 4 on the floor
+        timing: bar 5-16
+      - category: Drums - Other Percussive
+        label: gentle speaker pops
+        tonality: like a vinyl crackle or low quality speaker pops with low filter
+        pattern: seemingly random
+        timing: bar 5-16
+      - category: Bass
+        tonality: very warm gentle bass, sub and maybe mid bass
+        pattern: primarily changes every bar, but intermittently changes on quarter notes
+        timing: bar 9-16
+      - category: Transition - Riser
+        label: intro to verse riser
+        tonality: band passed pad like saw
+        pattern: note descends approx one interval once after 15th bar
+        timing: bar 15-16 or so?
+      - category: Synth - Pad
+        tonality: Sounds kinda like a trumpet
+        pattern: pad
+        timing: bar 9-16
+        automation: cutoff gradually changes
+      - category: Drums - Hats
+        tonality:
+
+
+  - section_name: Verse A
