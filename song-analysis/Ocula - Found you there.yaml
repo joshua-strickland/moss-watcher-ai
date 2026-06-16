@@ -13,7 +13,6 @@ arrangement:
     duration_bars: 16
     chord_progression: ""
     global_transitions: >
-
     elements:
       - category: Synth - Pad
         label: tremolo warm saw
@@ -71,7 +70,37 @@ arrangement:
         timing: bar 9-16
         automation: cutoff gradually changes
       - category: Drums - Hats
-        tonality:
-
+        tonality: varying velocity hi hat hits, transitory
+        pattern: 16th notes
+        timing: bar 16 beat 4
 
   - section_name: Verse A
+    duration_bars: 16
+    chord_progression: unsure
+    elements:
+      - category: Bass
+        tonality: very warm gentle bass, sub and maybe mid bass
+        pattern: primarily changes every bar, but intermittently changes on quarter notes
+        timing: constant
+      - category: Drums - Kick
+        tonality: not super punchy, not super soft, right in the middle
+        automation: cut off filter expands as soon as verse a begins allowing full frequency presence
+        pattern: 4 on the floor
+        timing: constant
+      - category: Drums - Snare
+        tonality: Slappy, "paper-y" Not a super long tail, no verb?
+        pattern: beats 2 & 4
+        timing: constant
+      - category: Synth - Pad
+        label: tremolo shimmer pad
+        tonality: >
+          High frequency content saw / similar synth gated with pseudo random rhythm. 
+          layered with tremolo warm saw
+        pattern: >
+          gated with pseudo random rhythm, otherwise constant
+        timing: pad
+      - category: Synth - Pluck
+        tonality: warm cut off saw pluck
+        pattern: alternates between quarter and eigth notes
+        timing: constant
+
