@@ -49,7 +49,9 @@ arrangement:
         label: soft intro kick
         tonality: cut off
         pattern: 4 on the floor
-        timing: bar 5-16
+        timing: >
+          bar 5-16
+          except for on bar 16, beat 4, where kick is absent as transitory pattern shift
       - category: Drums - Other Percussive
         label: gentle speaker pops
         tonality: like a vinyl crackle or low quality speaker pops with low filter
@@ -73,6 +75,10 @@ arrangement:
         tonality: varying velocity hi hat hits, transitory
         pattern: 16th notes
         timing: bar 16 beat 4
+      - category: Vocals - Lead
+        tonality: clean, unfiltered
+        pattern: transitionary timing occurring on final bar beat 3 "And"
+        timing: transitory timing occurring on final bar
 
   - section_name: Verse A
     duration_bars: 16
@@ -86,6 +92,14 @@ arrangement:
         tonality: not super punchy, not super soft, right in the middle
         automation: cut off filter expands as soon as verse a begins allowing full frequency presence
         pattern: 4 on the floor
+        timing: constant
+      - category: Drums - Hats
+        tonality: alternates in velocity, ranges from heavy to soft.
+        pattern: >
+          primarily occurs on eigth notes with 4 on the floor pattern.
+          heavier quarter note hits occur on beats 1 & 3, while beats 2 and 4 utilize softer hits
+          eighth note hits are softer
+          16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on bar 2 beat 4
         timing: constant
       - category: Drums - Snare
         tonality: Slappy, "paper-y" Not a super long tail, no verb?
@@ -101,6 +115,165 @@ arrangement:
         timing: pad
       - category: Synth - Pluck
         tonality: warm cut off saw pluck
-        pattern: alternates between quarter and eigth notes
+        pattern: >
+          alternates between quarter and eighth notes.
+          more rapid notes occur primarily during transitory rhythms leading to subsequent bars.
+          goes to 16th notes as well during some transitory rhythms
         timing: constant
+      - category: Vocals - Lead
+        tonality: clean, unfiltered
+        pattern: Plays as transitory, occurring on the "And" of beats 3 or 2
+        timing: constant
+
+  - section_name: chorus A
+    duration_bars: 16
+    chord_progression: unsure
+    elements:
+      - category: Bass
+        tonality: very warm gentle bass, sub and maybe mid bass
+        pattern: primarily changes every bar, but intermittently changes on quarter notes
+        timing: constant
+      - category: Drums - Kick
+        tonality: not super punchy, not super soft, right in the middle
+        automation: cut off filter expands as soon as verse a begins allowing full frequency presence
+        pattern: 4 on the floor
+        timing: constant
+      - category: Drums - Hats
+        tonality: alternates in velocity, ranges from heavy to soft.
+        pattern: >
+          primarily occurs on eigth notes with 4 on the floor pattern.
+          heavier quarter note hits occur on beats 1 & 3, while beats 2 and 4 utilize softer hits
+          eighth note hits are softer
+          16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on bar 2 beat 4
+        timing: constant
+      - category: Drums - Snare
+        tonality: Slappy, "paper-y" Not a super long tail, no verb?
+        pattern: beats 2 & 4
+        timing: constant
+      - category: Synth - Pad
+        label: tremolo shimmer pad
+        tonality: >
+          High frequency content saw / similar synth gated with pseudo random rhythm. 
+          layered with tremolo warm saw
+        pattern: >
+          gated with pseudo random rhythm, otherwise constant
+        timing: pad
+      - category: Synth - Pluck
+        label: Main warm saw lead pluck
+        tonality: warm cut off saw pluck
+        pattern: >
+          alternates between quarter and eighth notes.
+          more rapid notes occur primarily during transitory rhythms leading to subsequent bars.
+          goes to 16th notes as well during some transitory rhythms
+        timing: constant
+      - category: Vocals - Lead
+        tonality: clean, unfiltered
+        pattern: Plays as transitory, occurring on the "And" of beats 3 or 2
+        timing: constant
+
+  - section_name: bridge
+    duration_bars: 2
+    chord_progression: unsure
+    global_transitions: synth lead reverb trails ring out.
+    elements:
+      - category: Vocals - Lead
+        tonality: clean - unfiltered
+        pattern: eighth notes
+        timing: bar 2 beat 3 "And"
+
+  - section_name: Verse B
+    duration_bars: 16
+    chord_progression: unsure
+    elements:
+      - category: Bass
+        tonality: very warm gentle bass, sub and maybe mid bass
+        pattern: primarily changes every bar, but intermittently changes on quarter notes
+        timing: constant
+      - category: Drums - Kick
+        tonality: not super punchy, not super soft, right in the middle
+        automation: cut off filter expands as soon as verse a begins allowing full frequency presence
+        pattern: 4 on the floor
+        timing: constant
+      - category: Synth - Sustained
+        tonality: warm sonar sounding sustained background synth
+        timing: constant
+        pattern: pad
+      - category: Synth - Pluck
+        label: warm bell synth
+        tonality: bell like synth, cut off, very much in the background
+        pattern: eighth notes
+        timing: constant
+      - category: Synth - Pad
+        label: tremolo shimmer pad
+        tonality: >
+          High frequency content saw / similar synth gated with pseudo random rhythm. 
+          layered with tremolo warm saw
+        pattern: >
+          gated with pseudo random rhythm, otherwise constant
+        timing: pad
+      - category: Synth - Pluck
+        tonality: warm cut off saw pluck
+        pattern: >
+          alternates between quarter and eighth notes.
+          more rapid notes occur primarily during transitory rhythms leading to subsequent bars.
+          goes to 16th notes as well during some transitory rhythms
+        timing: constant
+      - category: Vocals - Lead
+        tonality: clean, unfiltered
+        pattern: Plays as transitory, occurring on the "And" of beats 3 or 2
+        timing: constant
+
+  - section_name: chorus B
+    duration_bars: 16
+    chord_progression: unsure
+    elements:
+      - category: Bass
+        tonality: very warm gentle bass, sub and maybe mid bass
+        pattern: primarily changes every bar, but intermittently changes on quarter notes
+        timing: constant
+      - category: Drums - Kick
+        tonality: not super punchy, not super soft, right in the middle
+        automation: cut off filter expands as soon as verse a begins allowing full frequency presence
+        pattern: 4 on the floor
+        timing: constant
+      - category: Drums - Hats
+        tonality: alternates in velocity, ranges from heavy to soft.
+        pattern: >
+          primarily occurs on eigth notes with 4 on the floor pattern.
+          heavier quarter note hits occur on beats 1 & 3, while beats 2 and 4 utilize softer hits
+          eighth note hits are softer
+          16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on bar 2 beat 4
+        timing: constant
+      - category: Drums - Snare
+        tonality: Slappy, "paper-y" Not a super long tail, no verb?
+        pattern: beats 2 & 4
+        timing: constant
+      - category: Synth - Pad
+        label: tremolo shimmer pad
+        tonality: >
+          High frequency content saw / similar synth gated with pseudo random rhythm. 
+          layered with tremolo warm saw
+        pattern: >
+          gated with pseudo random rhythm, otherwise constant
+        timing: pad
+      - category: Synth - Sustained
+        tonality: warm sonar sounding sustained background synth
+        timing: constant
+        pattern: pad
+      - category: Synth - Pluck
+        tonality: warm cut off saw pluck
+        pattern: >
+          alternates between quarter and eighth notes.
+          more rapid notes occur primarily during transitory rhythms leading to subsequent bars.
+          goes to 16th notes as well during some transitory rhythms
+        timing: constant
+      - category: Vocals - Lead
+        tonality: clean, unfiltered
+        pattern: Plays as transitory, occurring on the "And" of beats 3 or 2
+        timing: constant
+      - category: Vocals - Chop
+        tonality: muffled sounding vocal chops like in intro
+        pattern: eighth notes
+        timing: intermittent
+
 
