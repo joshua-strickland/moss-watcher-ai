@@ -62,7 +62,7 @@
                 "pattern": { "type": "string" },
                 "automation": { "type": "string" },
                 "timing": { "type": "string" },
-                "cuts": { "type": "string" }
+                "pattern_variation": { "type": "string" }
               }
             }
           }

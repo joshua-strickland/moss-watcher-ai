@@ -144,7 +144,7 @@ arrangement:
         pattern: >
           16th notes, harder hits occurring on quarter notes
         timing: bar 5-24
-        cuts: bar 8 beat 4
+        pattern_variation: cut bar 8 beat 4
 
       - category: Drums - Hats
         label: upbeat hats
@@ -174,7 +174,6 @@ arrangement:
         tonality: breathy, airy saw with a high transient
         pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
         timing: bar 1-16
-        automation:
 
       - category: Drums - Kick
         label: Kick
@@ -183,34 +182,33 @@ arrangement:
         pattern: >
           quarter notes / 4 on the floor
         timing: constant
-        cuts: >
-          bar 1 - bar 2
-          bars 13 - bar 16
+        pattern_variation: >
+          cut bar 1 - bar 2
+          cut bars 13 - bar 16
 
       - category: Drums - Hats
         label: rapid 16th note hats
         tonality: unfiltered
         pattern: >
           16th notes, harder hits occurring on quarter notes
-        timing:
-        cuts:
+        timing: constant
 
       - category: Drums - Hats
         label: upbeat hats
         tonality: harder hit than rapid 16th hats
         pattern: >
           upbeats/ "And"s
-        timing:
+        timing: bar 9-16
 
       - category: Drums - Snare
         tonality: mid
         pattern: beats 2 and 4
-        timing:
+        timing: constant
 
       - category: Bass
         tonality: mid & sub bass
         pattern: matches rapid super saw lead, but does not cut out completely on 16ths
-        timing:
+        timing: constant
 
       - category: Vocals - Lead
         label: main vocals
@@ -248,7 +246,7 @@ arrangement:
         timing: bar 1-16
         automation: >
           hi cut is lower upon section start. 
-          volume and potentially cutoff lower as well
+          volume and potentially cutoff gradually lower
           the note pattern progresses to a more static 16th note rhythm on a single note
           and the final notes ring out for a few bars into the next section
 
@@ -332,5 +330,142 @@ arrangement:
       - category: Vocals - Lead
         label: main vocals
         tonality: falsetto - very soft male voice, lush reverb that rings out
-        pattern: eihgth notes primarily, some gaps for space
+        pattern: eighth notes primarily, some gaps for space
         timing: constant
+
+  - section_name: bridge b
+    duration_bars: 16
+    elements:
+
+      - category: Synth - Supersaw
+        label: rapid super saw lead
+        tonality: breathy, airy saw with a high transient
+        pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
+        timing: constant
+        automation: starts muted and volume & hi cut rise as final bar approaches
+
+      - category: Bass
+        tonality: mid & sub, soft
+        pattern: same as rapid super saw lead
+        timing: constant
+
+      - category: Drums - Kick
+        label: Kick
+        tonality: >
+          Kick drum, punchy, high transient and treble content
+        pattern: >
+          quarter notes / 4 on the floor
+        timing: bar 3-16
+
+      - category: Drums - Snare
+        label: hard snare
+        tonality: >
+          heavy transient hard hitting snare, very pounchy
+        pattern: >
+          2nd & 4th beats
+        timing: bar 3-16
+
+      - category: Drums - Hats
+        label: rapid 16th note hats
+        tonality: unfiltered
+        pattern: >
+          16th notes, harder hits occurring on quarter notes
+        pattern_variation: cut bar 8 beat 4
+        timing: bar 3-16
+
+      - category: Drums - Hats
+        label: upbeat hats
+        tonality: harder hit than rapid 16th hats
+        pattern: >
+          upbeats/ "And"s
+        timing: bar 9-16
+
+  - section_name: verse d
+    duration_bars: 16
+    chord_progression: unknown
+
+    elements:
+      - category: Synth - Supersaw
+        label: rapid super saw lead
+        tonality: breathy, airy saw with a high transient
+        pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
+        timing: bar 1-16
+
+      - category: Drums - Kick
+        label: Kick
+        tonality: >
+          Kick drum, punchy, high transient and treble content
+        pattern: >
+          quarter notes / 4 on the floor
+        timing: constant
+        pattern_variation: >
+          cut bar 1 - bar 2
+          cut bars 13 - bar 16
+
+      - category: Drums - Hats
+        label: rapid 16th note hats
+        tonality: unfiltered
+        pattern: >
+          16th notes, harder hits occurring on quarter notes
+        timing: constant
+
+      - category: Drums - Hats
+        label: upbeat hats
+        tonality: harder hit than rapid 16th hats
+        pattern: >
+          upbeats/ "And"s
+        timing: bar 9-16
+
+      - category: Drums - Snare
+        tonality: mid
+        pattern: beats 2 and 4
+        timing: constant
+
+      - category: Bass
+        tonality: mid & sub bass
+        pattern: matches rapid super saw lead, but does not cut out completely on 16ths
+        timing: constant
+
+      - category: Vocals - Lead
+        label: main vocals
+        tonality: falsetto - very soft male voice, lush reverb that rings out
+        pattern: quarter / eighth notes primarily, some gaps for space
+        timing: constant
+
+      - category: Transition - Sweep
+        label: bass sweep
+        tonality: sortof like a reverse kick, low end heavy sweep
+        pattern: once
+        timing: final beat of section
+
+  - section_name: outro
+    duration_bars: 8
+    elements:
+      - category: Synth - Supersaw
+        label: rapid super saw lead
+        tonality: >
+          breathy, airy saw with a high transient
+          pretty cut off as outro section starts
+        pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
+        timing: bar 1-8
+        automation: hi cut gradually lowers
+
+      - category: Vocals - Atmosphere
+        label: Oooo verbed out vocals
+        tonality: >
+          Soft, and ethereal heavily verbed vocals in the background.
+        pattern: half note / quarter note
+        timing: constant
+        automation: hi cut gradually lowers
+
+      - category: Synth - Pad
+        label: ethereal glassy shimmer pad
+        tonality: >
+          a mid-high saw synth pad, band passed to occupy limited frequnecy range 
+          volume gated at a pseudo random pattern to sort of "shimmer"
+          reverbed
+        pattern: pad, oscillates between 2 notes
+        timing: constant
+        automation: volume gradually lowers
+
+

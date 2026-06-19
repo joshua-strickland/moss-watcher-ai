@@ -101,6 +101,7 @@ arrangement:
           primarily occurs on eigth notes with 4 on the floor pattern.
           heavier quarter note hits occur on beats 1 & 3, while beats 2 and 4 utilize softer hits
           eighth note hits are softer
+        pattern_variation:
           16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on bar 2 beat 4
         timing: constant
       - category: Drums - Snare
@@ -147,12 +148,14 @@ arrangement:
           primarily occurs on eigth notes with 4 on the floor pattern.
           heavier quarter note hits occur on beats 1 & 3, while beats 2 and 4 utilize softer hits
           eighth note hits are softer
+        pattern_variation:
           16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on bar 2 beat 4
         timing: constant
       - category: Drums - Snare
         tonality: Slappy, "paper-y" Not a super long tail, no verb?
         pattern: > 
           beats 2 & 4
+        pattern_variation:
           on final bar & beat, 16th note quick fill
         timing: constant
       - category: Synth - Pad
@@ -246,6 +249,7 @@ arrangement:
           primarily occurs on eigth notes with 4 on the floor pattern.
           heavier quarter note hits occur on beats 1 & 3, while beats 2 and 4 utilize softer hits
           eighth note hits are softer
+        pattern_variation:
           16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on bar 2 beat 4
         timing: constant
       - category: Drums - Snare
@@ -301,7 +305,7 @@ arrangement:
           primarily occurs on eigth notes with 4 on the floor pattern.
           heavier quarter note hits occur on beats 1 & 3, while beats 2 and 4 utilize softer hits
           eighth note hits are softer
-          16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on bar 2 beat 4
+        pattern_variation:  16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on bar 2 beat 4
         timing: constant
       - category: Drums - Snare
         tonality: Slappy, "paper-y" Not a super long tail, no verb?
