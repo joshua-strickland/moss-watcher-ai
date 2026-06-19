@@ -1,0 +1,259 @@
+# yaml-language-server: $schema=./track_schema.json
+
+track_metadata:
+  artist: Lane 8
+  title: Automatic
+  key_signature: A# Major
+  bpm: 124
+  time_signature: 4/4
+  genre: Melodic House
+
+arrangement:
+  - section_name: Intro
+    duration_bars: 16
+    chord_progression: "D#, E#, F"
+    elements:
+      - category: Synth - Pad
+        label: Vocal String Pad
+        timing: Bars 1-16
+        tonality: Vocal mixed with strings character.
+        pattern: Stays primarily on one note but goes a bit higher for a beat or so intermittently.
+      - category: Drums - Kick
+        label: Trebly Kick
+        timing: Bars 1-16
+        tonality: Treble-heavy kick drum.
+        pattern: Standard driving beat.
+      - category: Drums - Other Percussive
+        label: Tonal Tom
+        timing: Bars 1-16
+        tonality: Noisy tonal tom.
+        pattern: Replaces standard snare placement in the groove.
+      - category: Synth - Pluck
+        label: Simple Pluck
+        timing: Bars 1-16
+        tonality: Warm sine/sawtooth sound.
+        pattern: Simple melodic progression.
+        pattern_variation: Bar 8: Melody harmonizes as it leads into the second phrase.
+      - category: Bass
+        label: Main Bass
+        timing: Bars 9-16
+        tonality: Foundational bassline.
+        pattern: Enters to support the groove.
+      - category: Vocals - Atmosphere
+        label: Vocal FX
+        timing: Bars 9-16
+        tonality: Processed vocal texture.
+        pattern: Occurs throughout the second phrase.
+      - category: Synth - Supersaw
+        label: Cinematic Hypersaw
+        timing: Bars 15-16
+        tonality: Verbed, expansive cinematic saw.
+        pattern: Leads directly into the break.
+
+  - section_name: Break A
+    duration_bars: 8
+    chord_progression: "D#, E#, F"
+    elements:
+      - category: Bass
+        label: Main Bass
+        timing: Bars 1-8
+        tonality: Foundational bassline.
+        pattern: Continuous underlying rhythm.
+      - category: Synth - Pluck
+        label: Simple Pluck
+        timing: Bars 1-8
+        tonality: Warm sine/sawtooth sound.
+        pattern: Simple melodic progression.
+      - category: Synth - Pad
+        label: Transition Pad Swell
+        timing: Bars 7-8
+        tonality: Synthesizer pad.
+        pattern: Swells up and cuts out right before the verse starts.
+
+  - section_name: Verse A
+    duration_bars: 24
+    chord_progression: "D#, E#, F"
+    elements:
+      - category: Bass
+        label: Reese Bass
+        timing: Bars 1-16
+        tonality: Thick Reese-style bassline.
+        pattern: Steady fundamental support.
+        automation: Cutoff adjusts subtly over time.
+      - category: Synth - Pluck
+        label: Simple Pluck
+        timing: Bars 1-24
+        tonality: Warm melodic pluck.
+        pattern: Simple melody.
+      - category: Vocals - Lead
+        label: Main Vocals
+        timing: Bars 1-24
+        tonality: Clear vocal line.
+        pattern: Continuous lyrical phrasing.
+      - category: Vocals - Atmosphere
+        label: Falsetto FX
+        timing: Bars 9-24
+        tonality: Processed high-register falsetto.
+        pattern: Occurs in the background.
+      - category: Bass
+        label: Standard Bass
+        timing: Bars 17-24
+        tonality: Cleaner, non-Reese bass character.
+        pattern: Standard foundational support replacing the Reese bass.
+
+  - section_name: Break B
+    duration_bars: 8
+    elements:
+      - category: Bass
+        label: Reese Bass
+        timing: Bars 1-8
+        tonality: Thick Reese-style bass.
+        pattern: Driving low-end rhythm.
+      - category: Synth - Pluck
+        label: Simple Pluck
+        timing: Bars 1-8
+        tonality: Warm melodic sound.
+        pattern: Continuous simple melody.
+      - category: Drums - Other Percussive
+        label: Tommy Drum Beat
+        timing: Bars 1-8
+        tonality: Tom-heavy drum rhythm.
+        pattern: Replaces standard drum patterns.
+      - category: Synth - Pad
+        label: Transition Pad Swell
+        timing: Bars 7-8
+        tonality: Synthesizer pad.
+        pattern: Swells in and cuts out just prior to the verse.
+
+  - section_name: Verse B
+    duration_bars: 24
+    elements:
+      - category: Drums - Snare
+        label: Main Snare/Clap
+        timing: Bars 1-24
+        tonality: Layered snare and clap sound.
+        pattern: Enters strongly on beats 2 and 4.
+      - category: Vocals - Lead
+        label: Main Vocals
+        timing: Bars 1-24
+        tonality: Clear vocal delivery.
+        pattern: Sings main verse phrasing.
+      - category: Vocals - Atmosphere
+        label: Falsetto FX
+        timing: Bars 1-24
+        tonality: Processed high-register falsetto.
+        pattern: Occurs intermittently in the background.
+      - category: Synth - Pluck
+        label: Distorted Pluck
+        timing: Bars 1-24
+        tonality: Melodic pluck mixed with a secondary distorted synth layer.
+        pattern: Core melodic progression.
+        automation: Fades in and out throughout the section.
+      - category: FX - Noise
+        label: Air Hiss FX
+        timing: Bars 9-12
+        tonality: Hissing white noise.
+        pattern: Adds atmospheric texture.
+
+  - section_name: Break C
+    duration_bars: 16
+    global_transitions: >
+      Bar 15: All vocals and remaining instrumental sounds cut abruptly.
+    elements:
+      - category: Bass
+        label: Main Bass
+        timing: Bars 1-14
+        tonality: Subdued foundational bass.
+        pattern: Quieter performance.
+        automation: Cutoff and distortion adjust subtly throughout.
+      - category: Synth - Pluck
+        label: Simple Pluck
+        timing: Bars 1-14
+        tonality: Warm melodic sound.
+        pattern: Melody continues without heavy drum accompaniment.
+      - category: Vocals - Atmosphere
+        label: Falsetto FX
+        timing: Bars 1-14
+        tonality: Processed falsetto.
+        pattern: Continuous background presence.
+      - category: Vocals - Lead
+        label: Isolated Vocals
+        timing: Bars 1-15
+        tonality: Sings the word "alone".
+        pattern: Vocals isolated from major instrumentation.
+        automation: High-passed on and off heavily in bars 9 through 15.
+      - category: Synth - Pad
+        label: Saw Pad Swell
+        timing: Bars 12-15
+        tonality: Sawtooth pad texture.
+        pattern: Swells in before hard cutting.
+
+  - section_name: Finale
+    duration_bars: 16
+    global_transitions: >
+      Bar 9 to 16: Elements progressively become more subtle leading into the outro.
+    elements:
+      - category: Synth - Pad
+        label: Aggressive Saw Pad
+        timing: Bars 1-16
+        tonality: Prominent, aggressive sawtooth texture.
+        pattern: Takes center stage, playing the same melody as the pluck.
+      - category: Vocals - Atmosphere
+        label: Falsetto FX
+        timing: Bars 1-16
+        tonality: Processed high-register falsetto.
+        pattern: Occurs throughout the section.
+      - category: Drums - Kick
+        label: Main Kick
+        timing: Bars 1-16
+        tonality: Standard driving kick.
+        pattern: Four-on-the-floor rhythm.
+      - category: Drums - Snare
+        label: Main Snare
+        timing: Bars 1-16
+        tonality: Standard snare drum.
+        pattern: Backbeat on 2 and 4.
+      - category: Bass
+        label: Main Bass
+        timing: Bars 1-16
+        tonality: Foundational low-end.
+        pattern: Follows the chord progression.
+      - category: FX - Noise
+        label: Hissing Noise FX
+        timing: Bars 9-12
+        tonality: Hissing air texture.
+        pattern: Accompanies the transition to subtlety.
+
+  - section_name: Outro
+    duration_bars: 16
+    elements:
+      - category: Vocals - Atmosphere
+        label: Falsetto FX
+        timing: Bars 1-16
+        tonality: Processed high-register falsetto.
+        pattern: Continuous through the outro.
+      - category: Synth - Pluck
+        label: Simple Pluck
+        timing: Bars 1-16
+        tonality: Plucky melody sound.
+        pattern: Core melodic progression returns isolated.
+      - category: Drums - Snare
+        label: Transition Snare Fill
+        timing: Bar 8
+        tonality: Standard snare.
+        pattern: Snare fill leading into the second half of the outro.
+      - category: Drums - Kick
+        label: Main Kick
+        timing: Bars 9-16
+        tonality: Foundational kick.
+        pattern: Beat returns for the final 8 bars.
+      - category: Drums - Snare
+        label: Main Snare
+        timing: Bars 9-16
+        tonality: Standard snare.
+        pattern: Hits on beats 2 and 4.
+      - category: Bass
+        label: Siney Bass
+        timing: Bars 9-16
+        tonality: Pure sine-wave bass character.
+        pattern: Wubs in and out to close the track.

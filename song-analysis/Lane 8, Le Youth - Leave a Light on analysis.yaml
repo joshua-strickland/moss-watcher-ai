@@ -1,0 +1,175 @@
+# yaml-language-server: $schema=./track_schema.json
+
+track_metadata:
+  artist: Le Youth, Lane 8
+  title: Leave a Light on
+  key_signature: C# Major
+  bpm: 123
+  time_signature: 4/4
+  genre: Melodic House
+
+arrangement:
+  - section_name: Intro
+    duration_bars: 24
+    elements:
+      - category: Vocals - Lead
+        label: Pad Vocals
+        timing: Bars 1-24
+        tonality: Pad-like vocal texture.
+        pattern: Continuous underlying presence.
+      - category: Synth - Pad
+        label: Main Pad
+        timing: Bars 1-24
+        tonality: Smooth sustained chords.
+        automation: Cutoff frequency raises continually from bar 9 through 24.
+      - category: Synth - Sustained
+        label: Synth Lead
+        timing: Bars 9-24
+        tonality: Melodic lead synthesizer.
+        automation: Cutoff frequency raises continually alongside the pad.
+      - category: Transition - Riser
+        label: Pre-Chorus Riser
+        timing: Bars 17-24
+        tonality: Rising tension element.
+        pattern: Sweeps upward into the chorus drop.
+      - category: Vocals - Lead
+        label: Vocal Phrase
+        timing: Bar 24
+        tonality: Clear vocal delivery.
+        pattern: Sings "I will leave a light on" just before entry to chorus.
+
+  - section_name: Chorus A
+    duration_bars: 32
+    chord_progression: "IV - V - VI - V"
+    elements:
+      - category: Synth - Sustained
+        label: Synth Lead
+        timing: Bars 1-32
+        tonality: Shifted an octave up; more trebly tone.
+        pattern: Continuous melodic lead.
+        pattern_variation: Bar 25: Merges with another synth; original sound dies out and cutoff drops.
+        automation: Cutoff raises and falls slightly throughout.
+      - category: Drums - Kick
+        label: Main Kick
+        timing: Bars 1-32
+        tonality: Standard foundational kick.
+        pattern: Four-on-the-floor beat (hitting on 1, 2, 3, 4).
+        automation: Fades away around bar 29.
+      - category: Drums - Snare
+        label: Main Snare
+        timing: Bars 1-32
+        tonality: Standard snare drum.
+        pattern: Hits consistently on beats 2 and 4.
+      - category: Drums - Hats
+        label: 16th Note Hats
+        timing: Bars 1-32
+        tonality: Standard closed hi-hats.
+        pattern: Continuous 16th-note rhythm.
+        automation: The "1 e and a" notes increase in volume slightly before going into the 2nd beat with the snare.
+      - category: Bass
+        label: Reese Bass
+        timing: Bars 1-32
+        tonality: Reese-like timbre.
+        pattern: 1/4 note rhythm throughout the chorus.
+        automation: Filter is heavily LFO'd. Bass fades away around bar 29.
+      - category: Vocals - Atmosphere
+        label: Swell Vocal FX
+        timing: Bar 5
+        tonality: Processed vocal swell.
+        pattern: Swells in and dies back out.
+      - category: Drums - Hats
+        label: Off-Beat Hats
+        timing: Bars 9-32
+        tonality: Additional hi-hat layer.
+        pattern: Hits on the off-beats ("ands").
+        automation: Gets progressively louder starting around bar 17.
+
+  - section_name: Intro B
+    duration_bars: 16
+    elements:
+      - category: Vocals - Lead
+        label: Pad Vocals
+        timing: Bars 1-16
+        tonality: Similar to the first intro.
+        pattern: Continuous underlying presence with slightly different lyrics.
+      - category: Synth - Sustained
+        label: Synth Lead
+        timing: Bar 8
+        tonality: Heavily filtered.
+        pattern: Plays a very cut-off minor melody just before bar 9.
+      - category: Transition - Sweep
+        label: Noise Swell
+        timing: Bars 15-16
+        tonality: White noise.
+        pattern: Upward swell leading into the buildup.
+      - category: Vocals - Lead
+        label: Vocal Phrase
+        timing: Bar 16
+        tonality: Clear vocal delivery.
+        pattern: Sings "I will leave a light on" leading into the buildup.
+
+  - section_name: Buildup
+    duration_bars: 32
+    elements:
+      - category: Synth - Sustained
+        label: Synth Lead
+        timing: Bars 1-32
+        tonality: Melodic lead.
+        automation: Cutoff remains pretty high throughout.
+      - category: Synth - Pad
+        label: Main Pad
+        timing: Bars 1-32
+        tonality: Sustained chords.
+        automation: Cutoff frequency rises from bar 17 to 32.
+      - category: FX - Noise
+        label: High-Pitched Transition
+        timing: Bar 8
+        tonality: High-pitched sound element.
+        pattern: Leads directly into the snare buildup.
+      - category: Drums - Snare
+        label: Buildup Snare
+        timing: Bars 9-32
+        tonality: Standard snare drum.
+        pattern: Snare roll buildup lasting through the rest of the section.
+        automation: Gets louder and utilizes less cutoff from bar 25 to 32.
+      - category: Transition - Riser
+        label: Main Riser
+        timing: Bars 25-32
+        tonality: Pitch-rising tension element.
+        pattern: Continuous sweep leading into the final chorus.
+
+  - section_name: Chorus B
+    duration_bars: 16
+    elements:
+      - category: Drums - Kick
+        label: Main Kick
+        timing: Bars 1-16
+        tonality: Different sample or louder/less cutoff compared to Chorus A.
+        pattern: Four-on-the-floor beat.
+      - category: Drums - Snare
+        label: Main Snare
+        timing: Bars 1-16
+        tonality: Different sample or louder/less cutoff compared to Chorus A.
+        pattern: Hits on beats 2 and 4.
+      - category: Synth - Pad
+        label: Trebly Pad
+        timing: Bars 1-16
+        tonality: Treble-heavy pad texture.
+        pattern: Maintains chords throughout the section.
+        pattern_variation: Shifts notes slightly around bar 4.
+      - category: Bass
+        label: Main Bass
+        timing: Bars 1-16
+        tonality: Foundational low-end.
+        pattern: 1/4 note rhythm.
+        automation: Filter is heavily LFO'd.
+      - category: Synth - Sustained
+        label: Synth Leads
+        timing: Bars 1-16
+        tonality: Layered melodic leads.
+        pattern: Core melodic progression.
+      - category: Drums - Other Percussive
+        label: Odd Percussion
+        timing: Bar 2
+        tonality: Unique percussive hit.
+        pattern: Single odd percussive accent.

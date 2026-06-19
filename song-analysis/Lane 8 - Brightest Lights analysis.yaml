@@ -1,0 +1,217 @@
+# yaml-language-server: $schema=./track_schema.json
+
+track_metadata:
+  artist: Lane 8
+  title: Brightest Lights
+  key_signature: D# Major
+  bpm: 125
+  time_signature: 4/4
+  genre: Melodic House
+
+arrangement:
+  - section_name: Intro
+    duration_bars: 32
+    elements:
+      - category: Transition - Sweep
+        label: Reverse Swell
+        timing: Bar 1
+        tonality: Reverse sound.
+        pattern: Swells right away on the first beat.
+      - category: Drums - Kick
+        label: Main Kick
+        timing: Bars 1-32
+        tonality: Standard foundational kick.
+        pattern: Four-on-the-floor rhythm.
+        pattern_variation: Begins on beat 2 of Bar 1.
+      - category: Synth - Pad
+        label: LFO Pad
+        timing: Bars 1-32
+        tonality: Synthesizer pad with heavy modulation.
+        pattern: Quarter notes.
+      - category: Vocals - Atmosphere
+        label: Vocal FX
+        timing: Bars 1-32
+        tonality: Processed human voice.
+        pattern: Occurs intermittently throughout the section.
+      - category: Drums - Other Percussive
+        label: Steel Drum Melody
+        timing: Bars 1-32
+        tonality: Cutoff steel drums character.
+        pattern: Subtle percussive melody.
+      - category: Drums - Hats
+        label: Intro Hats
+        timing: Bars 9-32
+        tonality: Standard hi-hats.
+        pattern: Rhythmic hat pattern introduced.
+      - category: Drums - Other Percussive
+        label: Harmonic Percussion
+        timing: Bars 17-32
+        tonality: Percussive element containing harmonic content.
+        pattern: Interlocking rhythm.
+      - category: Drums - Hats
+        label: Secondary Hats
+        timing: Bars 25-32
+        tonality: Light open hats.
+        pattern: Additional hat rhythm that leads into the post intro.
+
+  - section_name: Post Intro
+    duration_bars: 16
+    global_transitions: >
+      Bar 1: Kick drum exits completely.
+    elements:
+      - category: Vocals - Atmosphere
+        label: Vocal FX
+        timing: Bars 1-16
+        tonality: Processed human voice.
+        pattern: Continues intermittently.
+      - category: Synth - Sustained
+        label: Warm Synth
+        timing: Bars 1-16
+        tonality: Warm synthesizer sound using distortion.
+        pattern: Comes and goes throughout the section.
+        automation: Distortion becomes more aggressive from bar 9 to 16.
+      - category: Drums - Kick
+        label: Sub Kick
+        timing: Bars 9-16
+        tonality: Real subtle, low cutoff.
+        pattern: Soft driving beat.
+      - category: Synth - Pad
+        label: Post Intro Pad
+        timing: Bars 9-16
+        tonality: Smooth sustaining pad.
+        pattern: Background texture.
+
+  - section_name: Preverse
+    duration_bars: 16
+    elements:
+      - category: Drums - Kick
+        label: Main Kick
+        timing: Bars 1-16
+        tonality: Standard kick (not cutoff).
+        pattern: Four-on-the-floor rhythm.
+        pattern_variation: Exits on bar 15.
+      - category: Synth - Pad
+        label: LFO Pad
+        timing: Bars 1-16
+        tonality: Light, heavily modulated pad.
+        pattern: Quarter notes, comes and goes.
+      - category: Synth - Pluck
+        label: Automated Pluck
+        timing: Bars 1-16
+        tonality: Light plucky synth.
+        pattern: Intermittent phrasing.
+        automation: Volume automated in and out.
+      - category: Vocals - Atmosphere
+        label: Vocal FX
+        timing: Bars 1-16
+        tonality: Subtle processed vocals.
+        pattern: Light background presence.
+      - category: Drums - Snare
+        label: Percussive Snare
+        timing: Bars 9-16
+        tonality: Percussive snare-like element.
+        pattern: Hits strictly on the 2nd beats.
+      - category: Drums - Hats
+        label: Transition Hats
+        timing: Bars 15-16
+        tonality: Open hi-hat.
+        pattern: Ascending rhythm leading into the verse.
+
+  - section_name: Verse A
+    duration_bars: 24
+    chord_progression: "VI - VII - I - III - II, VI - VII - I - III - V"
+    global_transitions: >
+      Bar 17: Kicks and plucks exit for the verse break.
+    elements:
+      - category: Vocals - Lead
+        label: Main Vocals
+        timing: Bars 1-24
+        tonality: Clear lead vocal.
+        pattern: Main melody lines enter.
+      - category: Drums - Kick
+        label: Main Kick
+        timing: Bars 1-16
+        tonality: Standard kick.
+        pattern: Four-on-the-floor rhythm.
+      - category: Drums - Hats
+        label: Main Hats
+        timing: Bars 1-16
+        tonality: Standard hi-hats.
+        pattern: Top rhythmic layer.
+      - category: Synth - Pluck
+        label: Verse Plucks
+        timing: Bars 1-16
+        tonality: Plucky melodic synth.
+        pattern: Core accompaniment.
+      - category: Synth - Pad
+        label: Ringing Pad
+        timing: Bars 1-16
+        tonality: Resonant, ringing pad character.
+        pattern: Pings specifically on beat 1 and 2a.
+      - category: Synth - Pad
+        label: Verse Break Pad
+        timing: Bars 17-24
+        tonality: Softer pad, not ringy.
+        pattern: Replaces the ringing pad for the vocal break.
+
+  - section_name: Chorus A
+    duration_bars: 24
+    elements:
+      - category: Vocals - Lead
+        label: Main Vocals
+        timing: Bars 1-24
+        tonality: Clear lead vocal ("all the brightest lights").
+        pattern: Sings main chorus phrasing.
+      - category: Vocals - Lead
+        label: Vocal Harmony
+        timing: Bars 9-16
+        tonality: Harmonized vocal layer.
+        pattern: Accompanies the main vocal melody.
+      - category: Vocals - Lead
+        label: Outro Vocals
+        timing: Bars 17-24
+        tonality: Atmospheric "whoo oo oo oo" vocal lines.
+        pattern: Ethereal phrasing.
+      - category: Synth - Pluck
+        label: Chorus Plucks
+        timing: Bars 1-16
+        tonality: Very similar to Verse A1, but a bit less cutoff.
+        pattern: Core melodic rhythm.
+        pattern_variation: Exits on bar 15.
+      - category: Drums - Kick
+        label: Main Kick
+        timing: Bars 1-16
+        tonality: Standard kick.
+        pattern: Four-on-the-floor.
+        pattern_variation: Exits on bar 15.
+      - category: Synth - Sustained
+        label: Telephone Synth
+        timing: Bars 17-24
+        tonality: Warm, cutoff telephone ring character.
+        pattern: New melodic synthesizer element.
+
+  - section_name: Verse B
+    duration_bars: 8
+    elements:
+      - category: Vocals - Lead
+        label: Main Vocals
+        timing: Bars 1-8
+        tonality: Clear lead vocal.
+        pattern: Follows Verse A structure.
+      - category: Synth - Pluck
+        label: Verse Plucks
+        timing: Bars 1-8
+        tonality: Plucky melodic synth.
+        pattern: Core accompaniment.
+      - category: Drums - Hats
+        label: Main Hats
+        timing: Bars 1-8
+        tonality: Standard hi-hats.
+        pattern: Top rhythmic layer.
+      - category: Drums - Kick
+        label: Half-Time Kick
+        timing: Bars 1-8
+        tonality: Standard kick.
+        pattern: Half-notes instead of quarter-notes.
+        pattern_variation: Does not come in until bar 2.
+
