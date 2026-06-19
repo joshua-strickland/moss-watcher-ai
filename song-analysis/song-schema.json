@@ -19,7 +19,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["section_name", "duration_bars", "chord_progression", "elements"],
+        "required": ["section_name", "duration_bars", "elements"],
         "properties": {
           "section_name": { "type": "string" },
           "duration_bars": { "type": "integer" },
@@ -29,7 +29,7 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["category", "tonality", "pattern", "timing"],
+              "required": ["category", "timing"],
               "properties": {
                 "category": {
                   "type": "string",
@@ -61,7 +61,8 @@
                 "tonality": { "type": "string" },
                 "pattern": { "type": "string" },
                 "automation": { "type": "string" },
-                "timing": { "type": "string" }
+                "timing": { "type": "string" },
+                "cuts": { "type": "string" }
               }
             }
           }

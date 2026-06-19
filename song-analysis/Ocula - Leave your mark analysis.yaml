@@ -27,45 +27,310 @@ arrangement:
         automation:
           simple volume swell
         timing: bar 4
+  - section_name: Intro
+    duration_bars: 8
+    chord_progression: unknown
+    elements:
+      - category: Drums - Kick
+        label: kick
+        tonality: hi cut kick
+        pattern: 4 on the floor
+        timing: constant
+
+      - category: Synth - Pad
+        label: ethereal glassy shimmer pad
+        tonality: >
+          a mid-high saw synth pad, band passed to occupy limited frequnecy range 
+          volume gated at a pseudo random pattern to sort of "shimmer"
+          reverbed
+        pattern: pad, oscillates between 2 notes
+        timing: constant
+
+      - category: Synth - Pluck
+        label: Main synth lead pluck
+        tonality: plucked saw lead
+        pattern: >
+          eighth notes
+          the pluck pattern uses a 16th note after the 2 A beat
+          and the 4 beat to cutoff the pluck a bit faster than
+          at other parts of the melody.
+        automation:
+          The cutoff gradually opens
+        timing: constant
+
+      - category: Vocals - Atmosphere
+        label: Oooo verbed out vocals
+        tonality: >
+          Soft, and ethereal heavily verbed vocals in the background.
+        pattern: half note / quarter note
+        timing: constant
+
   - section_name: Verse A
-    duration_bars: 24
+    duration_bars: 16
     chord_progression: ""
     global_transitions: >
     elements:
-          - category: Synth - Pluck
-            label: Maine synth lead pluck
-            tonality: plucked saw lead
-            pattern: eigth notes
-            automation:
-              the pluck pattern uses a 16th note after the 2 A beat
-              and the 4 beat to cutoff the pluck a bit faster than
-              at other parts of the melody.
-              The cutoff gradually opens
-            timing: bar 1-24
-          - category: Vocals - Atmosphere
-            label: Oooo verbed out vocals
-            tonality: >
-              Soft, and ethereal heavily verbed vocals in the background.
-            pattern: half note / quarter note
-            timing: bar 5-8
-          - category: Drums - Kick
-            label: Kick
-            tonality: >
-              Kick drum, punchy, high transient and treble content
-            pattern: >
-              quarter notes / 4 on the floor
-            timing: bar 1-24
-          - category: Drums - Hats
-            label: Hats
-            tonality: >
-              soft open ish hat
-            pattern: >
-              quarter notes
-            timing: bar 8-24
-          - category: Drums - Snare
-            label: soft snare
-            tonality: >
-             soft ish snare
-            pattern: >
-              2nd & 4th beats
-            timing: bar 8-24
+      - category: Synth - Pluck
+        label: Main synth lead pluck
+        tonality: plucked saw lead
+        pattern: eighth notes
+        automation:
+          the pluck pattern uses a 16th note after the 2 A beat
+          and the 4 beat to cutoff the pluck a bit faster than
+          at other parts of the melody.
+          The cutoff gradually opens, faster than in intro
+        timing: constant
+
+      - category: Drums - Kick
+        label: Kick
+        tonality: >
+          Kick drum, punchy, high transient and treble content
+        pattern: >
+          quarter notes / 4 on the floor
+        timing: constant
+
+      - category: Drums - Hats
+        label: Hats
+        tonality: >
+          soft open ish hat
+        pattern: >
+          quarter notes
+        timing: constant
+
+      - category: Drums - Snare
+        label: soft snare
+        tonality: >
+          soft ish snare
+        pattern: >
+          2nd & 4th beats
+        timing: constant
+
+      - category: Synth - Supersaw
+        label: rapid super saw lead
+        tonality: breathy, airy saw with a high transient
+        pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
+        timing: bar 13-16
+        automation: starts muted and volume & hi cut rise as final bar approaches
+
+      - category: Vocals - Lead
+        label: main vocals
+        tonality: falsetto - very soft male voice, lush reverb that rings out
+        pattern: eihgth notes primarily, some gaps for space
+        timing: constant
+
+
+  - section_name: bridge a
+    duration_bars: 24
+    chord_progression: unknown
+    elements:
+      - category: Synth - Supersaw
+        label: rapid super saw lead
+        tonality: breathy, airy saw with a high transient
+        pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
+        timing: bar 1-24
+        automation: starts muted and volume & hi cut rise as final bar approaches
+
+      - category: Drums - Kick
+        label: Kick
+        tonality: >
+          Kick drum, punchy, high transient and treble content
+        pattern: >
+          quarter notes / 4 on the floor
+        timing: constant
+
+      - category: Drums - Hats
+        label: rapid 16th note hats
+        tonality: unfiltered
+        pattern: >
+          16th notes, harder hits occurring on quarter notes
+        timing: bar 5-24
+        cuts: bar 8 beat 4
+
+      - category: Drums - Hats
+        label: upbeat hats
+        tonality: harder hit than rapid 16th hats
+        pattern: >
+          upbeats/ "And"s
+        timing: bar 17-24
+
+      - category: Drums - Snare
+        tonality: mid
+        pattern: beats 2 and 4
+        timing: bar 16 beat 2
+
+      - category: Bass
+        tonality: mid & sub bass
+        pattern: matches rapid super saw lead, but does not cut out completely on 16ths
+        timing: bar 8-bar24
+
+
+
+  - section_name: verse b
+    duration_bars: 16
+    chord_progression: unknown
+    elements:
+      - category: Synth - Supersaw
+        label: rapid super saw lead
+        tonality: breathy, airy saw with a high transient
+        pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
+        timing: bar 1-16
+        automation:
+
+      - category: Drums - Kick
+        label: Kick
+        tonality: >
+          Kick drum, punchy, high transient and treble content
+        pattern: >
+          quarter notes / 4 on the floor
+        timing: constant
+        cuts: >
+          bar 1 - bar 2
+          bars 13 - bar 16
+
+      - category: Drums - Hats
+        label: rapid 16th note hats
+        tonality: unfiltered
+        pattern: >
+          16th notes, harder hits occurring on quarter notes
+        timing:
+        cuts:
+
+      - category: Drums - Hats
+        label: upbeat hats
+        tonality: harder hit than rapid 16th hats
+        pattern: >
+          upbeats/ "And"s
+        timing:
+
+      - category: Drums - Snare
+        tonality: mid
+        pattern: beats 2 and 4
+        timing:
+
+      - category: Bass
+        tonality: mid & sub bass
+        pattern: matches rapid super saw lead, but does not cut out completely on 16ths
+        timing:
+
+      - category: Vocals - Lead
+        label: main vocals
+        tonality: falsetto - very soft male voice, lush reverb that rings out
+        pattern: quarter / eighth notes primarily, some gaps for space
+        timing: constant
+
+  - section_name: verse b outro
+    chord_progression: unknown
+    duration_bars: 8
+    elements:
+      - category: Drums - Kick
+        timing: constant
+        automation: low pass filter descends gradually
+
+      - category: Vocals - Lead
+        label: main vocals
+        tonality: falsetto - very soft male voice, lush reverb that rings out
+        pattern: quarter / eighth notes primarily, some gaps for space
+        timing: constant
+
+      - category: Synth - Pad
+        label: ethereal glassy shimmer pad
+        tonality: >
+          a mid-high saw synth pad, band passed to occupy limited frequnecy range 
+          volume gated at a pseudo random pattern to sort of "shimmer"
+          reverbed
+        pattern: pad, oscillates between 2 notes
+        timing: constant
+
+      - category: Synth - Supersaw
+        label: rapid super saw lead
+        tonality: breathy, airy saw with a high transient
+        pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
+        timing: bar 1-16
+        automation: >
+          hi cut is lower upon section start. 
+          volume and potentially cutoff lower as well
+          the note pattern progresses to a more static 16th note rhythm on a single note
+          and the final notes ring out for a few bars into the next section
+
+
+  - section_name: break
+    duration_bars: 16
+    elements:
+      - category: Vocals - Lead
+        label: main vocals
+        tonality: falsetto - very soft male voice, lush reverb that rings out
+        pattern: quarter / eighth notes primarily, some gaps for space
+        timing: constant
+
+      - category: Synth - Pluck
+        label: Main synth lead pluck
+        tonality: plucked saw lead
+        pattern: >
+          eighth notes
+          the pluck pattern uses a 16th note after the 2 A beat
+          and the 4 beat to cutoff the pluck a bit faster than
+          at other parts of the melody.
+        automation:
+          The cutoff gradually opens
+        timing: constant
+
+      - category: Synth - Pad
+        label: ethereal glassy shimmer pad
+        tonality: >
+          a mid-high saw synth pad, band passed to occupy limited frequnecy range 
+          volume gated at a pseudo random pattern to sort of "shimmer"
+          reverbed
+        pattern: pad, oscillates between 2 notes
+        timing: constant
+
+
+  - section_name: Verse C
+    duration_bars: 16
+    chord_progression: ""
+    global_transitions: >
+      sub sweep occurs near end of section
+    elements:
+      - category: Synth - Pluck
+        label: Main synth lead pluck
+        tonality: plucked saw lead
+        pattern: eighth notes
+        automation:
+          the pluck pattern uses a 16th note after the 2 A beat
+          and the 4 beat to cutoff the pluck a bit faster than
+          at other parts of the melody.
+          The cutoff gradually opens, faster than in intro
+        timing: constant
+
+      - category: Bass
+        tonality: mid & sub, soft
+        pattern: similar to main synth lead pluck
+        timing: constant
+
+      - category: Drums - Kick
+        label: Kick
+        tonality: >
+          Kick drum, punchy, high transient and treble content
+        pattern: >
+          quarter notes / 4 on the floor
+        timing: constant
+
+      - category: Drums - Snare
+        label: soft snare
+        tonality: >
+          soft ish snare
+        pattern: >
+          2nd & 4th beats
+        timing: constant
+
+      - category: Synth - Supersaw
+        label: rapid super saw lead
+        tonality: breathy, airy saw with a high transient
+        pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
+        timing: bar 13-16
+        automation: starts muted and volume & hi cut rise as final bar approaches
+
+      - category: Vocals - Lead
+        label: main vocals
+        tonality: falsetto - very soft male voice, lush reverb that rings out
+        pattern: eihgth notes primarily, some gaps for space
+        timing: constant
