@@ -40,6 +40,7 @@
                     "Drums - Clap",
                     "Drums - Shakers",
                     "Drums - Hats",
+                    "Drums - Rides",
                     "Drums - Other Percussive",
                     "Synth - Sustained",
                     "Synth - Pluck",
@@ -54,7 +55,9 @@
                     "Transition - Riser",
                     "FX - Foley",
                     "FX - Noise",
-                    "FX - Impact"
+                    "FX - Impact",
+                    "Guitar - Electric",
+                    "Guitar - Acoustic"
                   ]
                 },
                 "label": { "type": "string" },

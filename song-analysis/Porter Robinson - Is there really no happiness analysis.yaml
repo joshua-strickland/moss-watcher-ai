@@ -1,0 +1,180 @@
+# yaml-language-server: $schema=/song-schema.json
+
+track_metadata:
+  artist: Porter Robinson
+  title: Is there really no happiness
+  key_signature: F#/Gb Major
+  bpm: 98
+  time_signature: 4/4
+  genre: Electropop / Indietronica
+
+arrangement:
+  - section_name: Intro
+    duration_bars: 4
+    global_transitions: on bar 4 beat 3, everything cuts out. On beat 4, 2 eighth note muted guitar string strums are hit.
+    elements:
+      - category: Keys - Piano
+        tonality: band passed piano
+        timing:  bar 1 - bar 4 beat 2
+      - category: Synth - Pad
+        tonality: distorted / saturated, like a pad fed through a guitar amp
+        timing:  bar 1 - bar 4 beat 2
+      - category: Drums - Kick
+        tonality: low passed kick drum
+        timing: bar 3 - bar 4 beat 2
+        automation: low pass ascends until global transition
+      - category: Transition - Sweep
+        tonality: ascending frequency white noise sweep
+        timing: bar 4 beat 1 - bar 4 beat 2
+
+  - section_name: Intro 2 / Intro chorus
+    duration_bars: 9
+    global_transitions:
+      Bar 9 exists as a transitory bar, only bass and drums are active
+    elements:
+      - category: Bass
+        tonality: bass guitar feels like it has tons of space in frequency spectrum. amazing
+        timing: constant
+      - category: Vocals - Atmosphere
+        tonality: >
+          female vocals hover with a good amount of reverb, 
+          breathy Aaa vowels. 
+          rhythmically volume gated
+          primarily the volume gated vocals are present
+          with overlapping melodies being played occasionally.
+        timing: bar 1 - bar 8
+      - category: Drums - Kick
+        tonality: full presence
+        timing: constant
+      - category: Drums - Hats
+        tonality: full presence
+        timing: constant
+        pattern: 16th note fills interchange with constant 8th notes
+      - category: Drums - Snare
+        tonality:
+          sounds like a layer of a tacky edm snare and an actual full body snare. 
+          fair amount of low end
+        timing: constant
+      - category: Keys - Piano
+        timing: bar 1 - bar 8
+
+  - section_name: verse a
+    duration_bars: 16
+    elements:
+      - category: Guitar - Acoustic
+        timing: constant
+      - category: Drums - Kick
+        timing: constant
+        tonality: more muted / soft than in chorus
+      - category: Drums - Hats
+        timing: constant
+        pattern: 16th note fills interchange with constant 8th notes
+      - category: Drums - Snare
+        timing: constant
+      - category: Drums - Clap
+        timing: constant
+        pattern_variation: 16th note fill leads into break a
+      - category: Vocals - Lead
+        timing: constant
+      - category: Bass
+        tonality: almost like low end is cut, sounds kinda acoustic somewhat
+        timing: bar 9 - bar 16
+      - category: Keys - Piano
+        timing: constant
+
+  - section_name: break a
+    duration_bars: 8
+    global_transitions: on bar 4 beat 3, everything cuts out,
+    elements:
+      - category: Guitar - Acoustic
+        timing: constant
+      - category: Drums - Kick
+        timing: constant
+        tonality: more muted / soft than in chorus
+      - category: Drums - Hats
+        timing: constant
+        pattern: 16th note fills interchange with constant 8th notes
+        pattern_variation: fill with open hats occurs on bar 4 beat 1 - beat2
+      - category: Drums - Rides
+        timing: constant
+        pattern: 8th note
+      - category: Drums - Snare
+        timing: constant
+        pattern_variation: 16th note fill bar 4 beat 3 AND - beat 4 AND
+      - category: Vocals - Atmosphere
+        timing: constant
+        tonality: male voice volume gated
+      - category: Vocals - Lead
+        timing: Bar 8 beat 3 - bar 8 beat 4
+        tonality: male voice lead rings in loud and clear
+        pattern: matches snare fill, 8th / 16th notes
+      - category: Bass
+        tonality: almost like low end is cut, sounds kinda acoustic somewhat
+        timing: constant
+        pattern_variation: 32nd / 16th note prior to verse bass slides in again to transition
+      - category: Keys - Piano
+        timing: constant
+
+
+  - section_name: chorus a
+    duration_bars: 8
+    global_transitions:
+    elements:
+      - category: Bass
+        tonality: bass guitar feels like it has tons of space in frequency spectrum. amazing
+        timing: constant
+      - category: Vocals - Lead
+        timing: bar 1 - bar 8
+      - category: Drums - Kick
+        tonality: full presence
+        timing: constant
+      - category: Drums - Hats
+        tonality: full presence
+        timing: constant
+        pattern: 16th note fills interchange with constant 8th notes
+      - category: Drums - Rides
+        timing: constant
+        pattern: 8th note
+      - category: Drums - Snare
+        tonality:
+          sounds like a layer of a tacky edm snare and an actual full body snare.
+          fair amount of low end
+        timing: constant
+      - category: Keys - Piano
+        timing: bar 1 - bar 8
+      - category: Synth - Arp
+        timing: bar 1 - bar 8
+        tonality: gentle, slightly low passed saw like plucky lead / arp in the background
+
+  - section_name: Chorus A outro
+    duration_bars: 9
+    global_transitions:
+      Bar 9 exists as a transitory bar, only bass and drums are active
+    elements:
+      - category: Bass
+        tonality: bass guitar feels like it has tons of space in frequency spectrum. amazing
+        timing: constant
+      - category: Vocals - Atmosphere
+        tonality: >
+          female vocals hover with a good amount of reverb, 
+          breathy Aaa vowels. 
+          rhythmically volume gated
+          primarily the volume gated vocals are present
+          with overlapping melodies being played occasionally.
+        timing: bar 1 - bar 8
+      - category: Drums - Kick
+        tonality: full presence
+        timing: constant
+      - category: Drums - Hats
+        tonality: full presence
+        timing: constant
+        pattern: 16th note fills interchange with constant 8th notes
+      - category: Drums - Snare
+        tonality:
+          sounds like a layer of a tacky edm snare and an actual full body snare.
+          fair amount of low end
+        timing: constant
+      - category: Keys - Piano
+        timing: bar 1 - bar 8
+
+
