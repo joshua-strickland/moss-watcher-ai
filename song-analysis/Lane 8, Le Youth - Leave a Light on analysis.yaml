@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=./track_schema.json
+# yaml-language-server: $schema=./song-schema.json
 
 track_metadata:
   artist: Le Youth, Lane 8

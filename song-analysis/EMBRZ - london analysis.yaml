@@ -1,0 +1,85 @@
+# yaml-language-server: $schema=/song-schema.json
+
+track_metadata:
+  artist: EMBRZ
+  title: london
+  key_signature: C# Minor
+  bpm: 124
+  time_signature: 4/4
+  genre: Melodic House
+
+arrangement:
+  - section_name: pre Intro
+    duration_bars: 1
+    elements:
+      - category: Vocals - Atmosphere
+        label: Breathy vocal pad
+        tonality:
+          granular vocal pad, gated, breathy, verbed, washed sound
+          4th unique beat note ascends a bit higher
+        pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique
+        timing: bar 1
+
+  - section_name: Intro
+    duration_bars: 16
+    global_transitions: bar 16 beat 4 everything cuts out, and quick "london" vocal sample hits
+    elements:
+      - category: Vocals - Atmosphere
+        label: Breathy vocal pad
+        tonality:
+          granular vocal pad, gated, breathy, verbed, washed sound
+          4th unique beat note ascends a bit higher
+        pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique
+        timing: bar 1 - bar 16
+
+      - category: Synth - Pluck
+        tonality:
+          Warm cutoff plucky saw sustained synth.
+          While this does have a significant upwards low cutoff ascending pluck as an attack,
+          it is legato. notes are sustained until next note
+        pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique
+        timing: bar 1 - bar 16
+        automation: cutoff gradually rises
+
+      - category: Vocals - Background
+        tonality:
+          warm male vocals "oooo" vowels.
+          stays on one note
+        timing: bar 9-16
+
+      - category: Vocals - Background
+        tonality:
+          soft "ooo" and "aaa" vowels melody mixes in with other vocals background elements
+          notes shift up and down
+        timing: bar 9-16
+
+      - category: Transition - Sweep
+        tonality: resonant white noise
+        timing:
+          bar 15 - bar 16 beat 3
+
+  - section_name: Verse a
+    duration_bars: 32
+    elements:
+      - category: Drums - Kick
+        tonality: Deep kick, still some treble transient content / "click"
+        timing: constant
+        pattern: 4 on the floor
+
+      - category: Drums - Hats
+        tonality: Extremely high transient / loud, reminds me of bass house hats
+        timing: constant
+        pattern: 4 on the floor
+
+      - category: Drums - Snare
+        tonality: papery sort of dry sounding soft snare. some hi cut to it
+        timing: constant
+
+      - category: Vocals - Background
+        tonality:
+          potentially granular vocal pad.
+          volume ducks and rises with the hat.
+          very aligned with the hat. sort of "snaps" with it
+        timing: constant
+
+
