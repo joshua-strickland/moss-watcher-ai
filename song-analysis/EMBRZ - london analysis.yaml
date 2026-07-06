@@ -10,21 +10,21 @@ track_metadata:
 
 arrangement:
   - section_name: pre Intro
-    duration_bars: 1
+    duration_bars: 2
     elements:
-      - category: Vocals - Atmosphere
+      - category: Synth - Granular Pad
         label: Breathy vocal pad
         tonality:
           granular vocal pad, gated, breathy, verbed, washed sound
           4th unique beat note ascends a bit higher
         pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique
-        timing: bar 1
+        timing: bar 1 - 2
 
   - section_name: Intro
     duration_bars: 16
     global_transitions: bar 16 beat 4 everything cuts out, and quick "london" vocal sample hits
     elements:
-      - category: Vocals - Atmosphere
+      - category: Synth - Granular Pad
         label: Breathy vocal pad
         tonality:
           granular vocal pad, gated, breathy, verbed, washed sound
@@ -33,11 +33,14 @@ arrangement:
         timing: bar 1 - bar 16
 
       - category: Synth - Pluck
+        label: main pluck
         tonality:
           Warm cutoff plucky saw sustained synth.
           While this does have a significant upwards low cutoff ascending pluck as an attack,
           it is legato. notes are sustained until next note
-        pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique
+        pattern:
+          alternates between chords & single notes. 
+          single notes occur on beat 4, chords on beat 1
         timing: bar 1 - bar 16
         automation: cutoff gradually rises
 
@@ -60,26 +63,130 @@ arrangement:
 
   - section_name: Verse a
     duration_bars: 32
+    global_transitions:
+      On bar 16, beat 4, everything cuts out aside from transitory supersaw swell sweep
+      On bar 20, beat 4, everything cuts out aside from transitory supersaw swell sweep
+      On bar 24, beat 4, everything cuts out aside from transitory supersaw swell sweep
     elements:
       - category: Drums - Kick
-        tonality: Deep kick, still some treble transient content / "click"
+        tonality: Deep kick, low end heavy, mild treble transient content / "click"
         timing: constant
         pattern: 4 on the floor
 
       - category: Drums - Hats
+        label: prime hats
         tonality: Extremely high transient / loud, reminds me of bass house hats
         timing: constant
         pattern: 4 on the floor
 
+      - category: Drums - Rides
+        label: Second half verse ride accents
+        tonality: a "ride" cymbal like sound complementing the hats
+        timing: bar 17-32
+        pattern: 4 on the floor, occurring with hats
+
       - category: Drums - Snare
         tonality: papery sort of dry sounding soft snare. some hi cut to it
         timing: constant
+        pattern: 4 on the floor
 
-      - category: Vocals - Background
+      - category: Bass
+        tonality:
+          primarily seems like a fairly typical deep sub,
+          however, there are intermittent "plucks" that sound just like a bass guitar.
+        pattern: primarily note transitions occur on quarter notes
+          bass plucks occur approx 1 eigth note prior to SOME bars, but not all.
+        timing: constant
+
+      - category: Synth - Pluck
+        label: main pluck
+        tonality:
+          Warm cutoff plucky saw sustained synth.
+          While this does have a significant upwards low cutoff ascending pluck as an attack,
+          it is legato. notes are sustained until next note
+        pattern:
+          alternates between chords & single notes.
+          single notes occur on beat 4, chords on beat 1
+        timing: bar 1 - bar 16
+        automation:
+          low pass filter resets to a lower frequency as verse a begins
+          cutoff gradually rises
+
+      - category: Synth - Granular Pad
+        label: main ducking vocal pad
         tonality:
           potentially granular vocal pad.
           volume ducks and rises with the hat.
           very aligned with the hat. sort of "snaps" with it
         timing: constant
 
+      - category: Synth - Granular Pad
+        label: piano pad
+        tonality:
+          granular piano pad
+          sidechained to kick
+        pattern: notes stay constant
+        timing: bar
+        automation:
+          for bars 1-16, this is low passed and quiet. 
+          For bars 17-32, the low pass filter is opened and the pad is louder
+
+      - category: Synth - Pluck
+        label: bell transitory background pluck
+        tonality:
+          bell like synth pluch
+        pattern: 16th note sequence occurring just before next bar
+        timing:
+          approx every 2nd bar
+          absent on bar 8 for alternate bell transitory background pluck
+          absent on bar 16
+
+      - category: Synth - Pluck
+        label: alternate bell transitory background pluck
+        tonality:
+          sounds kinda like a guitar pluck
+        pattern:
+          Occurs on beats 1 And, 2, 3 And, 4
+        timing: Starting on bar 7, every 8 bars.
+
+      - category: Synth - Pluck
+        label: ultra light pluck
+        tonality:
+          very light hi passed saw pluck
+        pattern: 2 16th notes starting on bar.3.2 in ableton daw timing notation
+        timing:
+          bars 17-32
+          occuring every 2 bars
+
+      - category: Synth - Pluck
+        label: glassy ghost synth pluck
+        tonality:
+          very light hi passed saw pluck, with a longer reverb tail. ethereal sounding
+        pattern: on bar.1.1 and approx bar.4.3
+        timing:
+          bars 25-32
+
+      - category: Synth - Supersaw
+        label: transitory supersaw swell sweep
+        tonality:
+          it sounds like some tonal pad, maybe part synth, part vocals.
+          the sound has a quick but not instant volume gate causing a sort of "sweeping" effect
+          it seems to quickly switch from heavier side focus to heavier mid focus.
+        pattern: 8th notes
+        timing: bar 16 beat 4, transitory element leading to bar 17
+
+      - category: Synth - Granular Pad
+        label: alternate transitory granular vocal sweep
+        tonality:
+          it sounds like some vocal based pad.
+          the sound has a quick but not instant volume gate causing a sort of "sweeping" effect
+          it seems to quickly switch from heavier side focus to heavier mid focus.
+        pattern: 8th notes
+        timing: bar 20, beat 4, transitory element leading to bar 21
+
+      - category: Vocals - Background
+        label: background aaa vowel call / response
+        tonality: a brief bandpassed vocal sample
+        pattern: 2nd beat of every bar
+        timing: bar 25-32
 
