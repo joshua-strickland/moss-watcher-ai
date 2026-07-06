@@ -124,7 +124,7 @@ arrangement:
         label: piano pad
         tonality:
           granular piano pad
-          sidechained to kick
+          sidechained to every quarter note
         pattern: notes stay constant
         timing: bar
         automation:
@@ -190,3 +190,90 @@ arrangement:
         pattern: 2nd beat of every bar
         timing: bar 25-32
 
+  - section_name: break 1
+    duration_bars: 8
+    elements:
+      - category: Drums - Other Percussive
+        tonality: "clock" like shaker
+        timing: constant
+
+      - category: Drums - Kick
+        tonality: Deep kick, low end heavy, mild treble transient content / "click"
+        timing: bar 1-6
+        pattern: 4 on the floor
+
+      - category: Synth - Granular Pad
+        label: piano pad
+        tonality:
+          granular piano pad
+          sidechained to every quarter note
+        pattern: pad
+        timing: constant
+
+      - category: Synth - Pluck
+        label: glassy ghost synth pluck
+        tonality:
+          very light hi passed saw pluck, with a longer reverb tail. ethereal sounding
+        pattern: on bar.1.1 and approx bar.4.3
+        timing:
+          bars 1-8
+
+  - section_name: break 2
+    duration_bars: 16
+    global_transitions: bar 16 beat 4 everything cuts out, and quick "london" vocal sample hits
+    elements:
+      - category: Synth - Granular Pad
+        label: Breathy vocal pad
+        tonality:
+          granular vocal pad, gated, breathy, verbed, washed sound
+          4th unique beat note ascends a bit higher
+        pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique
+        timing: bar 1 - bar 16
+
+      - category: Synth - Pluck
+        label: main pluck
+        tonality:
+          Warm cutoff plucky saw sustained synth.
+          While this does have a significant upwards low cutoff ascending pluck as an attack,
+          it is legato. notes are sustained until next note
+        pattern:
+          alternates between chords & single notes.
+          single notes occur on beat 4, chords on beat 1
+        timing: bar 1 - bar 16
+        automation: cutoff gradually rises
+
+      - category: Vocals - Background
+        tonality:
+          warm male vocals "oooo" vowels.
+          stays on one note
+        timing: bar 9-16
+
+      - category: Vocals - Background
+        tonality:
+          soft "ooo" and "aaa" vowels melody mixes in with other vocals background elements
+          notes shift up and down
+        timing: bar 1-16
+
+      - category: Transition - Sweep
+        tonality: resonant white noise
+        timing:
+          bar 15 - bar 16 beat 3
+
+      - category: Transition - Sweep
+        label: minor sweep
+        tonality: resonant white noise
+        timing:
+          bar 8
+
+      - category: Drums - Hats
+        tonality: muted hats
+        timing: bar 9-16
+
+      - category: Synth - Pad
+        tonality: simple saw pad, sireny sounding
+        timing: bar 9-16
+
+      - category: Vocals - Chop
+        tonality: Aaa vowel female chops
+        timing: bar 15-bar 16
+        pattern: 2nd beat on each bar
