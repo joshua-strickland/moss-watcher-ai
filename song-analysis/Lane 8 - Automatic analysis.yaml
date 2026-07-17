@@ -33,7 +33,7 @@ arrangement:
         timing: Bars 1-16
         tonality: Warm sine/sawtooth sound.
         pattern: Simple melodic progression.
-        pattern_variation: Bar 8: Melody harmonizes as it leads into the second phrase.
+        pattern_variation: Bar 8 Melody harmonizes as it leads into the second phrase.
       - category: Bass
         label: Main Bass
         timing: Bars 9-16

@@ -48,6 +48,7 @@
                     "Synth - Granular Pad",
                     "Synth - Arp",
                     "Synth - Supersaw",
+                    "Synth - Swell",
                     "Keys - Piano",
                     "Vocals - Lead",
                     "Vocals - Background",
@@ -58,8 +59,10 @@
                     "FX - Foley",
                     "FX - Noise",
                     "FX - Impact",
+                    "FX - Synth",
                     "Guitar - Electric",
-                    "Guitar - Acoustic"
+                    "Guitar - Acoustic",
+                    "Strings - Violin"
                   ]
                 },
                 "label": { "type": "string" },
