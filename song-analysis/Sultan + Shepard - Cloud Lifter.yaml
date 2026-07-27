@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=/song-schema.json
+
+track_metadata:
+  artist: Sultan + Shepard
+  title: Raye
+  key_signature: C Major
+  bpm: 120
+  time_signature: 4/4
+  genre: Melodic House
+
+arrangement:
+  - section_name: intro
+

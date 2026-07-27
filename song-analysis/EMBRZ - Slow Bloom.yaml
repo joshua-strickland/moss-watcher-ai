@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=/song-schema.json
+
+track_metadata:
+  artist: EMBRZ
+  title: Slow Bloom
+  key_signature:
+  bpm:
+  time_signature: 4/4
+  genre: Melodic House
+
+arrangement:
+
+  - section_name: Intro

@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=/song-schema.json
+
+track_metadata:
+  artist: Seven Lions
+  title: Easy Lover
+  key_signature:
+  bpm:
+  time_signature: 4/4
+  genre: Melodic House / Future Bass
+
+arrangement:
+  - section_name: Intro
