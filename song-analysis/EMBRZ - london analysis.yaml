@@ -18,11 +18,11 @@ arrangement:
           granular vocal pad, gated, breathy, verbed, washed sound
           4th unique beat note ascends a bit higher
         pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique
-        timing: bar 1 - 2
+        timing: 1.1.1 - 3.1.1
 
   - section_name: Intro
     duration_bars: 16
-    global_transitions: bar 16 beat 4 everything cuts out, and quick "london" vocal sample hits
+    global_transitions: 16.4.1 everything cuts out, and quick "london" vocal sample hits
     elements:
       - category: Synth - Granular Pad
         label: Breathy vocal pad
@@ -30,7 +30,7 @@ arrangement:
           granular vocal pad, gated, breathy, verbed, washed sound
           4th unique beat note ascends a bit higher
         pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique
-        timing: bar 1 - bar 16
+        timing: 1.1.1 - 17.1.1
 
       - category: Synth - Pluck
         label: main pluck
@@ -41,32 +41,32 @@ arrangement:
         pattern:
           alternates between chords & single notes. 
           single notes occur on beat 4, chords on beat 1
-        timing: bar 1 - bar 16
+        timing: 1.1.1 - 17.1.1
         automation: cutoff gradually rises
 
       - category: Vocals - Background
         tonality:
           warm male vocals "oooo" vowels.
           stays on one note
-        timing: bar 9-16
+        timing: 9.1.1 - 17.1.1
 
       - category: Vocals - Background
         tonality:
           soft "ooo" and "aaa" vowels melody mixes in with other vocals background elements
           notes shift up and down
-        timing: bar 9-16
+        timing: 9.1.1 - 17.1.1
 
       - category: Transition - Sweep
         tonality: resonant white noise
         timing:
-          bar 15 - bar 16 beat 3
+          15.1.1 - 17.4.1
 
   - section_name: Verse a
     duration_bars: 32
     global_transitions:
-      On bar 16, beat 4, everything cuts out aside from transitory supersaw swell sweep
-      On bar 20, beat 4, everything cuts out aside from transitory supersaw swell sweep
-      On bar 24, beat 4, everything cuts out aside from transitory supersaw swell sweep
+      On 16.4.1, everything cuts out aside from transitory supersaw swell sweep
+      On 20.4.1, everything cuts out aside from transitory supersaw swell sweep
+      On 24.4.1, everything cuts out aside from transitory supersaw swell sweep
     elements:
       - category: Drums - Kick
         tonality: Deep kick, low end heavy, mild treble transient content / "click"
@@ -82,7 +82,7 @@ arrangement:
       - category: Drums - Rides
         label: Second half verse ride accents
         tonality: a "ride" cymbal like sound complementing the hats
-        timing: bar 17-32
+        timing: 17.1.1 - 33.1.1
         pattern: 4 on the floor, occurring with hats
 
       - category: Drums - Snare
@@ -107,7 +107,7 @@ arrangement:
         pattern:
           alternates between chords & single notes.
           single notes occur on beat 4, chords on beat 1
-        timing: bar 1 - bar 16
+        timing: 1.1.1 - 17.1.1
         automation:
           low pass filter resets to a lower frequency as verse a begins
           cutoff gradually rises
@@ -138,8 +138,8 @@ arrangement:
         pattern: 16th note sequence occurring just before next bar
         timing:
           approx every 2nd bar
-          absent on bar 8 for alternate bell transitory background pluck
-          absent on bar 16
+          absent on 8.1.1 for alternate bell transitory background pluck
+          absent on 16.1.1
 
       - category: Synth - Pluck
         label: alternate bell transitory background pluck
@@ -147,13 +147,13 @@ arrangement:
           sounds kinda like a guitar pluck
         pattern:
           Occurs on beats 1 And, 2, 3 And, 4
-        timing: Starting on bar 7, every 8 bars.
+        timing: Starting on 7.1.1, every 8 bars.
 
       - category: Synth - Pluck
         label: ultra light pluck
         tonality:
           very light hi passed saw pluck
-        pattern: 2 16th notes starting on bar.3.2 in ableton daw timing notation
+        pattern: 2 16th notes starting on x.3.2
         timing:
           bars 17-32
           occuring every 2 bars
@@ -162,7 +162,7 @@ arrangement:
         label: glassy ghost synth pluck
         tonality:
           very light hi passed saw pluck, with a longer reverb tail. ethereal sounding
-        pattern: on bar.1.1 and approx bar.4.3
+        pattern: on x.1.1 and approx x.4.3
         timing:
           bars 25-32
 
@@ -173,7 +173,7 @@ arrangement:
           the sound has a quick but not instant volume gate causing a sort of "sweeping" effect
           it seems to quickly switch from heavier side focus to heavier mid focus.
         pattern: 8th notes
-        timing: bar 16 beat 4, transitory element leading to bar 17
+        timing: 16.4.1, transitory element leading to 17.1.1
 
       - category: Synth - Granular Pad
         label: alternate transitory granular vocal sweep
@@ -182,13 +182,13 @@ arrangement:
           the sound has a quick but not instant volume gate causing a sort of "sweeping" effect
           it seems to quickly switch from heavier side focus to heavier mid focus.
         pattern: 8th notes
-        timing: bar 20, beat 4, transitory element leading to bar 21
+        timing: 20.4.1, transitory element leading to 21.1.1
 
       - category: Vocals - Background
         label: background aaa vowel call / response
         tonality: a brief bandpassed vocal sample
         pattern: 2nd beat of every bar
-        timing: bar 25-32
+        timing: 25.1.1 - 33.1.1
 
   - section_name: break 1
     duration_bars: 8
@@ -199,7 +199,7 @@ arrangement:
 
       - category: Drums - Kick
         tonality: Deep kick, low end heavy, mild treble transient content / "click"
-        timing: bar 1-6
+        timing: 1.1.1 - 7.1.1
         pattern: 4 on the floor
 
       - category: Synth - Granular Pad
@@ -214,13 +214,13 @@ arrangement:
         label: glassy ghost synth pluck
         tonality:
           very light hi passed saw pluck, with a longer reverb tail. ethereal sounding
-        pattern: on bar.1.1 and approx bar.4.3
+        pattern: on x.1.1 and approx x.4.3
         timing:
           bars 1-8
 
   - section_name: break 2
     duration_bars: 16
-    global_transitions: bar 16 beat 4 everything cuts out, and quick "london" vocal sample hits
+    global_transitions: 16.4.1 everything cuts out, and quick "london" vocal sample hits
     elements:
       - category: Synth - Granular Pad
         label: Breathy vocal pad
@@ -228,7 +228,7 @@ arrangement:
           granular vocal pad, gated, breathy, verbed, washed sound
           4th unique beat note ascends a bit higher
         pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique
-        timing: bar 1 - bar 16
+        timing: 1.1.1 - 17.1.1
 
       - category: Synth - Pluck
         label: main pluck
@@ -239,41 +239,41 @@ arrangement:
         pattern:
           alternates between chords & single notes.
           single notes occur on beat 4, chords on beat 1
-        timing: bar 1 - bar 16
+        timing: 1.1.1 - 17.1.1
         automation: cutoff gradually rises
 
       - category: Vocals - Background
         tonality:
           warm male vocals "oooo" vowels.
           stays on one note
-        timing: bar 9-16
+        timing: 9.1.1 - 17.1.1
 
       - category: Vocals - Background
         tonality:
           soft "ooo" and "aaa" vowels melody mixes in with other vocals background elements
           notes shift up and down
-        timing: bar 1-16
+        timing: 1.1.1 - 17.1.1
 
       - category: Transition - Sweep
         tonality: resonant white noise
         timing:
-          bar 15 - bar 16 beat 3
+          15.1.1 - 17.4.1
 
       - category: Transition - Sweep
         label: minor sweep
         tonality: resonant white noise
         timing:
-          bar 8
+          8.1.1
 
       - category: Drums - Hats
         tonality: muted hats
-        timing: bar 9-16
+        timing: 9.1.1 - 17.1.1
 
       - category: Synth - Pad
         tonality: simple saw pad, sireny sounding
-        timing: bar 9-16
+        timing: 9.1.1 - 17.1.1
 
       - category: Vocals - Chop
         tonality: Aaa vowel female chops
-        timing: bar 15-bar 16
+        timing: 15.1.1 - 17.1.1
         pattern: 2nd beat on each bar

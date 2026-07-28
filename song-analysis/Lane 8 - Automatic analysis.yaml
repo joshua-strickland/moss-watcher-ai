@@ -33,7 +33,7 @@ arrangement:
         timing: Bars 1-16
         tonality: Warm sine/sawtooth sound.
         pattern: Simple melodic progression.
-        pattern_variation: Bar 8 Melody harmonizes as it leads into the second phrase.
+        pattern_variation: 8.1.1 Melody harmonizes as it leads into the second phrase.
       - category: Bass
         label: Main Bass
         timing: Bars 9-16
@@ -158,7 +158,7 @@ arrangement:
   - section_name: Break C
     duration_bars: 16
     global_transitions: >
-      Bar 15: All vocals and remaining instrumental sounds cut abruptly.
+      15.1.1: All vocals and remaining instrumental sounds cut abruptly.
     elements:
       - category: Bass
         label: Main Bass
@@ -191,7 +191,7 @@ arrangement:
   - section_name: Finale
     duration_bars: 16
     global_transitions: >
-      Bar 9 to 16: Elements progressively become more subtle leading into the outro.
+      9.1.1 - 17.1.1 Elements progressively become more subtle leading into the outro.
     elements:
       - category: Synth - Pad
         label: Aggressive Saw Pad
@@ -239,7 +239,7 @@ arrangement:
         pattern: Core melodic progression returns isolated.
       - category: Drums - Snare
         label: Transition Snare Fill
-        timing: Bar 8
+        timing: 8.1.1
         tonality: Standard snare.
         pattern: Snare fill leading into the second half of the outro.
       - category: Drums - Kick

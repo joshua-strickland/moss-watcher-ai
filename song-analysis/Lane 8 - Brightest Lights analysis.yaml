@@ -14,7 +14,7 @@ arrangement:
     elements:
       - category: Transition - Sweep
         label: Reverse Swell
-        timing: Bar 1
+        timing: 1.1.1
         tonality: Reverse sound.
         pattern: Swells right away on the first beat.
       - category: Drums - Kick
@@ -22,7 +22,7 @@ arrangement:
         timing: Bars 1-32
         tonality: Standard foundational kick.
         pattern: Four-on-the-floor rhythm.
-        pattern_variation: Begins on beat 2 of Bar 1.
+        pattern_variation: Begins on 1.2.1.
       - category: Synth - Pad
         label: LFO Pad
         timing: Bars 1-32
@@ -57,7 +57,7 @@ arrangement:
   - section_name: Post Intro
     duration_bars: 16
     global_transitions: >
-      Bar 1: Kick drum exits completely.
+      1.1.1: Kick drum exits completely.
     elements:
       - category: Vocals - Atmosphere
         label: Vocal FX
@@ -69,7 +69,7 @@ arrangement:
         timing: Bars 1-16
         tonality: Warm synthesizer sound using distortion.
         pattern: Comes and goes throughout the section.
-        automation: Distortion becomes more aggressive from bar 9 to 16.
+        automation: Distortion becomes more aggressive from 9.1.1 - 17.1.1
       - category: Drums - Kick
         label: Sub Kick
         timing: Bars 9-16
@@ -89,7 +89,7 @@ arrangement:
         timing: Bars 1-16
         tonality: Standard kick (not cutoff).
         pattern: Four-on-the-floor rhythm.
-        pattern_variation: Exits on bar 15.
+        pattern_variation: Exits on 15.1.1.
       - category: Synth - Pad
         label: LFO Pad
         timing: Bars 1-16
@@ -121,7 +121,7 @@ arrangement:
     duration_bars: 24
     chord_progression: "VI - VII - I - III - II, VI - VII - I - III - V"
     global_transitions: >
-      Bar 17: Kicks and plucks exit for the verse break.
+      17.1.1: Kicks and plucks exit for the verse break.
     elements:
       - category: Vocals - Lead
         label: Main Vocals
@@ -177,13 +177,13 @@ arrangement:
         timing: Bars 1-16
         tonality: Very similar to Verse A1, but a bit less cutoff.
         pattern: Core melodic rhythm.
-        pattern_variation: Exits on bar 15.
+        pattern_variation: Exits on 15.1.1.
       - category: Drums - Kick
         label: Main Kick
         timing: Bars 1-16
         tonality: Standard kick.
         pattern: Four-on-the-floor.
-        pattern_variation: Exits on bar 15.
+        pattern_variation: Exits on 15.1.1.
       - category: Synth - Sustained
         label: Telephone Synth
         timing: Bars 17-24
@@ -213,5 +213,5 @@ arrangement:
         timing: Bars 1-8
         tonality: Standard kick.
         pattern: Half-notes instead of quarter-notes.
-        pattern_variation: Does not come in until bar 2.
+        pattern_variation: Does not come in until 2.1.1.
 

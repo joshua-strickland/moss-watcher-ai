@@ -19,14 +19,14 @@ arrangement:
           Soft, wispy, and ethereal sound effects.
         pattern: >
           Occurs throughout this minor section
-        timing: bar 1-4
+        timing: 1.1.1 - 5.1.1
       - category: Bass
         label: Sub Bass
         tonality: Bass
         pattern: swell
         automation:
           simple volume swell
-        timing: bar 4
+        timing: 4.1.1
   - section_name: Intro
     duration_bars: 8
     chord_progression: unknown
@@ -109,7 +109,7 @@ arrangement:
         label: rapid super saw lead
         tonality: breathy, airy saw with a high transient
         pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
-        timing: bar 13-16
+        timing: 13.1.1 - 17.1.1
         automation: starts muted and volume & hi cut rise as final bar approaches
 
       - category: Vocals - Lead
@@ -127,7 +127,7 @@ arrangement:
         label: rapid super saw lead
         tonality: breathy, airy saw with a high transient
         pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
-        timing: bar 1-24
+        timing: 1.1.1 - 25.1.1
         automation: starts muted and volume & hi cut rise as final bar approaches
 
       - category: Drums - Kick
@@ -143,25 +143,25 @@ arrangement:
         tonality: unfiltered
         pattern: >
           16th notes, harder hits occurring on quarter notes
-        timing: bar 5-24
-        pattern_variation: cut bar 8 beat 4
+        timing: 5.1.1 - 25.1.1
+        pattern_variation: cut 8.4.1
 
       - category: Drums - Hats
         label: upbeat hats
         tonality: harder hit than rapid 16th hats
         pattern: >
           upbeats/ "And"s
-        timing: bar 17-24
+        timing: 17.1.1 - 25.1.1
 
       - category: Drums - Snare
         tonality: mid
         pattern: beats 2 and 4
-        timing: bar 16 beat 2
+        timing: 16.2.1
 
       - category: Bass
         tonality: mid & sub bass
         pattern: matches rapid super saw lead, but does not cut out completely on 16ths
-        timing: bar 8-bar24
+        timing: 8.1.1 - 25.1.1
 
 
 
@@ -173,7 +173,7 @@ arrangement:
         label: rapid super saw lead
         tonality: breathy, airy saw with a high transient
         pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
-        timing: bar 1-16
+        timing: 1.1.1 - 17.1.1
 
       - category: Drums - Kick
         label: Kick
@@ -183,8 +183,8 @@ arrangement:
           quarter notes / 4 on the floor
         timing: constant
         pattern_variation: >
-          cut bar 1 - bar 2
-          cut bars 13 - bar 16
+          cut 1.1.1 - 3.1.1
+          cut bars 13 - 16.1.1
 
       - category: Drums - Hats
         label: rapid 16th note hats
@@ -198,7 +198,7 @@ arrangement:
         tonality: harder hit than rapid 16th hats
         pattern: >
           upbeats/ "And"s
-        timing: bar 9-16
+        timing: 9.1.1 - 17.1.1
 
       - category: Drums - Snare
         tonality: mid
@@ -243,7 +243,7 @@ arrangement:
         label: rapid super saw lead
         tonality: breathy, airy saw with a high transient
         pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
-        timing: bar 1-16
+        timing: 1.1.1 - 17.1.1
         automation: >
           hi cut is lower upon section start. 
           volume and potentially cutoff gradually lower
@@ -324,7 +324,7 @@ arrangement:
         label: rapid super saw lead
         tonality: breathy, airy saw with a high transient
         pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
-        timing: bar 13-16
+        timing: 13.1.1 - 17.1.1
         automation: starts muted and volume & hi cut rise as final bar approaches
 
       - category: Vocals - Lead
@@ -355,7 +355,7 @@ arrangement:
           Kick drum, punchy, high transient and treble content
         pattern: >
           quarter notes / 4 on the floor
-        timing: bar 3-16
+        timing: 3.1.1 - 17.1.1
 
       - category: Drums - Snare
         label: hard snare
@@ -363,22 +363,22 @@ arrangement:
           heavy transient hard hitting snare, very pounchy
         pattern: >
           2nd & 4th beats
-        timing: bar 3-16
+        timing: 3.1.1 - 17.1.1
 
       - category: Drums - Hats
         label: rapid 16th note hats
         tonality: unfiltered
         pattern: >
           16th notes, harder hits occurring on quarter notes
-        pattern_variation: cut bar 8 beat 4
-        timing: bar 3-16
+        pattern_variation: cut 8.4.1
+        timing: 3.1.1 - 17.1.1
 
       - category: Drums - Hats
         label: upbeat hats
         tonality: harder hit than rapid 16th hats
         pattern: >
           upbeats/ "And"s
-        timing: bar 9-16
+        timing: 9.1.1 - 17.1.1
 
   - section_name: verse d
     duration_bars: 16
@@ -389,7 +389,7 @@ arrangement:
         label: rapid super saw lead
         tonality: breathy, airy saw with a high transient
         pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
-        timing: bar 1-16
+        timing: 1.1.1 - 17.1.1
 
       - category: Drums - Kick
         label: Kick
@@ -399,8 +399,8 @@ arrangement:
           quarter notes / 4 on the floor
         timing: constant
         pattern_variation: >
-          cut bar 1 - bar 2
-          cut bars 13 - bar 16
+          cut 1.1.1 - 3.1.1
+          cut 13.1.1 - 17.1.1
 
       - category: Drums - Hats
         label: rapid 16th note hats
@@ -414,7 +414,7 @@ arrangement:
         tonality: harder hit than rapid 16th hats
         pattern: >
           upbeats/ "And"s
-        timing: bar 9-16
+        timing: 9.1.1 - 17.1.1
 
       - category: Drums - Snare
         tonality: mid
@@ -447,7 +447,7 @@ arrangement:
           breathy, airy saw with a high transient
           pretty cut off as outro section starts
         pattern: rapid 16th notes, pausing for a 16th note around the And of beat 2
-        timing: bar 1-8
+        timing: 1.1.1 - 9.1.1
         automation: hi cut gradually lowers
 
       - category: Vocals - Atmosphere

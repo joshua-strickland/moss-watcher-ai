@@ -21,7 +21,7 @@ arrangement:
         label: Main Pad
         timing: Bars 1-24
         tonality: Smooth sustained chords.
-        automation: Cutoff frequency raises continually from bar 9 through 24.
+        automation: Cutoff frequency raises continually from 9.1.1 - 25.1.1.
       - category: Synth - Sustained
         label: Synth Lead
         timing: Bars 9-24
@@ -34,7 +34,7 @@ arrangement:
         pattern: Sweeps upward into the chorus drop.
       - category: Vocals - Lead
         label: Vocal Phrase
-        timing: Bar 24
+        timing: 24.1.1
         tonality: Clear vocal delivery.
         pattern: Sings "I will leave a light on" just before entry to chorus.
 
@@ -47,14 +47,14 @@ arrangement:
         timing: Bars 1-32
         tonality: Shifted an octave up; more trebly tone.
         pattern: Continuous melodic lead.
-        pattern_variation: Bar 25: Merges with another synth; original sound dies out and cutoff drops.
+        pattern_variation: 25.1.1 Merges with another synth; original sound dies out and cutoff drops.
         automation: Cutoff raises and falls slightly throughout.
       - category: Drums - Kick
         label: Main Kick
         timing: Bars 1-32
         tonality: Standard foundational kick.
         pattern: Four-on-the-floor beat (hitting on 1, 2, 3, 4).
-        automation: Fades away around bar 29.
+        automation: Fades away around 29.1.1.
       - category: Drums - Snare
         label: Main Snare
         timing: Bars 1-32
@@ -71,10 +71,10 @@ arrangement:
         timing: Bars 1-32
         tonality: Reese-like timbre.
         pattern: 1/4 note rhythm throughout the chorus.
-        automation: Filter is heavily LFO'd. Bass fades away around bar 29.
+        automation: Filter is heavily LFO'd. Bass fades away around 29.1.1.
       - category: Vocals - Atmosphere
         label: Swell Vocal FX
-        timing: Bar 5
+        timing: 5.1.1
         tonality: Processed vocal swell.
         pattern: Swells in and dies back out.
       - category: Drums - Hats
@@ -82,7 +82,7 @@ arrangement:
         timing: Bars 9-32
         tonality: Additional hi-hat layer.
         pattern: Hits on the off-beats ("ands").
-        automation: Gets progressively louder starting around bar 17.
+        automation: Gets progressively louder starting around 17.1.1.
 
   - section_name: Intro B
     duration_bars: 16
@@ -94,9 +94,9 @@ arrangement:
         pattern: Continuous underlying presence with slightly different lyrics.
       - category: Synth - Sustained
         label: Synth Lead
-        timing: Bar 8
+        timing: 8.1.1
         tonality: Heavily filtered.
-        pattern: Plays a very cut-off minor melody just before bar 9.
+        pattern: Plays a very cut-off minor melody just before 9.1.1.
       - category: Transition - Sweep
         label: Noise Swell
         timing: Bars 15-16
@@ -104,7 +104,7 @@ arrangement:
         pattern: Upward swell leading into the buildup.
       - category: Vocals - Lead
         label: Vocal Phrase
-        timing: Bar 16
+        timing: 16.1.1
         tonality: Clear vocal delivery.
         pattern: Sings "I will leave a light on" leading into the buildup.
 
@@ -120,10 +120,10 @@ arrangement:
         label: Main Pad
         timing: Bars 1-32
         tonality: Sustained chords.
-        automation: Cutoff frequency rises from bar 17 to 32.
+        automation: Cutoff frequency rises from 17.1.1 - 33.1.1
       - category: FX - Noise
         label: High-Pitched Transition
-        timing: Bar 8
+        timing: 8.1.1
         tonality: High-pitched sound element.
         pattern: Leads directly into the snare buildup.
       - category: Drums - Snare
@@ -131,7 +131,7 @@ arrangement:
         timing: Bars 9-32
         tonality: Standard snare drum.
         pattern: Snare roll buildup lasting through the rest of the section.
-        automation: Gets louder and utilizes less cutoff from bar 25 to 32.
+        automation: Gets louder and utilizes less cutoff from 25.1.1 - 33.1.1
       - category: Transition - Riser
         label: Main Riser
         timing: Bars 25-32
@@ -156,7 +156,7 @@ arrangement:
         timing: Bars 1-16
         tonality: Treble-heavy pad texture.
         pattern: Maintains chords throughout the section.
-        pattern_variation: Shifts notes slightly around bar 4.
+        pattern_variation: Shifts notes slightly around 4.1.1.
       - category: Bass
         label: Main Bass
         timing: Bars 1-16
@@ -170,6 +170,6 @@ arrangement:
         pattern: Core melodic progression.
       - category: Drums - Other Percussive
         label: Odd Percussion
-        timing: Bar 2
+        timing: 2.1.1
         tonality: Unique percussive hit.
         pattern: Single odd percussive accent.

@@ -108,7 +108,7 @@ arrangement:
           notes ascend then come back to starting note
         timing: constant
         automation: hi cut ascends gradually. 
-          on 12.1.1 - 17.1.1, cut ascends more rapidly. resets on bar 17
+          on 12.1.1 - 17.1.1, cut ascends more rapidly. resets on 17.1.1
 
       - category: Synth - Sustained
         label: volume gated rhythm chord sustained synth
@@ -121,7 +121,7 @@ arrangement:
         timing: constant
 
       - category: Synth - Pad
-        timing: 17.1.1 and on
+        timing: 17.1.1
         tonality: high freq content =, simple saw reverb pad, potentially heavy boost on one particular high resonant frequency
 
       - category: Vocals - Background
@@ -132,7 +132,7 @@ arrangement:
           sound lingers for approx a bar
 
       - category: Vocals - Chop
-        timing: 25.1.1 and on
+        timing: 25.1.1
         tonality:
           A very odd sounding what I think is a vocal chop sample but heavily distorted and bandpassed both high and low.
           occurs on 1.3.1, 2.2.1, 3.1.1. This is 3 16th notes apart. It is a dotted eigth note pattern.
@@ -153,7 +153,7 @@ arrangement:
 
       - category: Transition - Sweep
         timing: 16.1.1 - 18.1.1
-        tonality: basic noise sweep. very little mid / low frequency content. reverb tail rings into bar 17
+        tonality: basic noise sweep. very little mid / low frequency content. reverb tail rings into 17.1.1
 
       - category: Strings - Violin
         tonality: string sample volume gated with quarter notes
@@ -345,7 +345,7 @@ arrangement:
           metallic / almost hat sounding like percussives occur in eighth notes
           each one has a fair bit of reverb to it
         timing: 15.1.1 - 17.1.1, 
-          again at bar 24 as 4 eighth notes in a row lasting 2 beats, transitory element leading into next phrase
+          again at 24.1.1 as 4 eighth notes in a row lasting 2 beats, transitory element leading into next phrase
 
       - category: Keys - Piano
         tonality: piano with sustain pedal pressed
@@ -363,12 +363,12 @@ arrangement:
 
   - section_name: verse b buildup
     duration_bars: 32
-    global_transitions: every instrument cuts out at bar 32, leaving just some reverb tails ringing until verse b.
+    global_transitions: every instrument cuts out at 32.1.1, leaving just some reverb tails ringing until verse b.
     elements:
       - category: Drums - Kick
         label: quiet kick
         pattern: 4 on the floor
-        pattern_variation: bar 32.4 kickoccurs with transitionary fill  to final verse
+        pattern_variation: 32.4.1 kick occurs with transitionary fill  to final verse
         tonality:
           I think this is the same kick, but heavily filtered so its rather muffled.
           both low end & high end seem cut
@@ -440,7 +440,7 @@ arrangement:
         timing: 1.1.1 and on
         automation:
           its very cut off as section begins
-          hi cut filter starts gradually expanding around bar 9 to nearly entirely open until verse b ends
+          hi cut filter starts gradually expanding around 9.1.1 to nearly entirely open until verse b ends
 
       - category: Drums - Hats
         pattern:
@@ -453,7 +453,7 @@ arrangement:
         pattern: 4 on floor
         timing: 9.1.1 and on
         tonality: fairly heavy snare, barely any reverb if any
-        automation: on bar 16, low end seems cut from sound during transition to outro
+        automation: on 16.1.1, low end seems cut from sound during transition to outro
 
       - category: Transition - Sweep
         timing: 15.1.1 - 17.1.1

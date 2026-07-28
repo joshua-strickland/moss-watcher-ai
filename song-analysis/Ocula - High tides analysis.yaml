@@ -38,7 +38,7 @@ arrangement:
     duration_bars: 16
     chord_progression: "D# (Root)"
     global_transitions: >
-      Bar 13: Instruments begin to cut out aside from the lead synth and vocals.
+      13.1.1: Instruments begin to cut out aside from the lead synth and vocals.
     elements:
       - category: Bass
         label: Main Bass
@@ -83,17 +83,17 @@ arrangement:
         pattern: Re-enters to support the groove.
       - category: Drums - Other Percussive
         label: Drop Percussion
-        timing: Bar 4
+        timing: 4.1.1
         tonality: Liquid, drop-in-a-bucket character.
         pattern: Single odd, out-of-place hit.
       - category: Drums - Snare
         label: Buildup Snare
-        timing: Bar 8
+        timing: 8.1.1
         tonality: Standard snare drum.
         pattern: Snare roll buildup transitioning into the chorus.
       - category: Vocals - Lead
         label: Main Vocal
-        timing: Bar 8
+        timing: 8.1.1
         tonality: Clear lead vocal.
         pattern: Vocal phrase leading into the drop.
 
@@ -145,7 +145,7 @@ arrangement:
     elements:
       - category: Transition - Sweep
         label: Noise Swell
-        timing: Bar 1
+        timing: 1.1.1
         tonality: White noise.
         pattern: Quickly fades out from the previous section.
       - category: Synth - Pad
@@ -189,15 +189,15 @@ arrangement:
         automation: Cutoff filter dynamically raises and lowers.
       - category: Vocals - Atmosphere
         label: Reverse Vocal
-        timing: Bar 16
+        timing: 16.1.1
         tonality: Processed human voice.
         pattern: Minor reverse swell transitioning to the next section.
 
   - section_name: Verse B
     duration_bars: 16
     global_transitions: >
-      Bar 13: Most instruments cut out of the mix.
-      Bar 14: Bassline volume is lowered.
+      13.1.1: Most instruments cut out of the mix.
+      14.1.1: Bassline volume is lowered.
     elements:
       - category: Vocals - Lead
         label: Main Vocal
@@ -215,7 +215,7 @@ arrangement:
         timing: Bars 1-16
         tonality: Sawtooth lead.
         pattern: Melodic phrasing.
-        automation: Cutoff filter rises to build tension. Gradually high-passed alongside the snare from Bar 9 to 16.
+        automation: Cutoff filter rises to build tension. Gradually high-passed alongside the snare from 9.1.1 to 16.
       - category: Drums - Snare
         label: 8th Note Snare
         timing: Bars 4-8
@@ -241,7 +241,7 @@ arrangement:
         timing: Bars 1-8
         tonality: Foundational kick.
         pattern: Four-on-the-floor rhythm.
-        pattern_variation: Bar 8, beat 3: Kicks stop completely.
+        pattern_variation: 8.3.1 Kicks stop completely.
       - category: Transition - Sweep
         label: Pre-Chorus Noise
         timing: Bars 1-6
@@ -264,12 +264,12 @@ arrangement:
         pattern: Layers with the cutoff lead.
       - category: Drums - Hats
         label: Off-beat Hat
-        timing: Bar 8
+        timing: 8.1.1
         tonality: Standard hi-hat.
         pattern: Hits on the off-beats leading into the transition.
       - category: Drums - Snare
         label: Transition Snare
-        timing: Bar 8, beat 4
+        timing: 8.4.1
         tonality: Standard snare.
         pattern: Single hit to lead into Chorus B2.
       - category: Vocals - Lead
