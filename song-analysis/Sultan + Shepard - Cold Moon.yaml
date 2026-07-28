@@ -29,7 +29,7 @@ arrangement:
 
       - category: Vocals - Background
         pattern: once, but sounds delayed approx every quarter note
-        timing: bar 8
+        timing: 8.1.1
         tonality:
           tonal "whoop" sort of sound, saturation applies more heavily as sound lingers.
           sound lingers for approx a bar
@@ -37,24 +37,24 @@ arrangement:
       - category: Vocals - Background
         pattern: eighth notes
         tonality: "ey" vowel sounding chops, fairly heavy reverb
-        timing: bar 12.2
+        timing: 12.2.1
 
       - category: FX - Synth
         label: rapid gated synth FX background sound
         pattern: once
         tonality: rapid gated synth fx background sound.
           very rapid volume gate on it. serves as a transitory element
-        timing: bar 4.3
+        timing: 4.3.1
 
       - category: FX - Synth
         pattern: 16th or 32nd notes
         tonality: a rapid volume gated vocal sample "uh" vowel sounding
-        timing: bar 14.3
+        timing: 14.3.1
 
       - category: Transition - Riser
         pattern: once
         tonality: low end quick transitory swell into next phrase
-        timing: bar 16.4
+        timing: 16.4.1
 
       - category: Transition - Riser
         label: primary background synth swell gated riser
@@ -62,7 +62,7 @@ arrangement:
         tonality:
           volume gated verbed synth, very similar to primary background synth swell
           the  tail rings out well into verse a
-        timing: bar 16.4
+        timing: 16.4.1
 
       - category: Bass
         label: warm background intro bass
@@ -72,7 +72,7 @@ arrangement:
 
       - category: Drums - Kick
         pattern: 4 on the floor
-        pattern_variation: bar 16.3 kick cuts out entirely
+        pattern_variation: 16.3.1 kick cuts out entirely
         tonality:
           full low end content. prominent between 200-40hz, with some content all the way to 30 and even lower
           mid range content slightly attenuated
@@ -81,9 +81,12 @@ arrangement:
         timing: constant
 
       - category: Drums - Hats
-        pattern: 16th notes
+        pattern:
+          16th notes except for 1st 16th note of each beat.
+          The velocity of each note is a bit different to create a more pronounced 2nd note in between the 1st and 3rd.
+          This results in a sort of quiet-loud-quiet sound
         tonality: fairly heavily verbed, perhaps some hicut
-        timing: bar 8.2 - 8.4
+        timing: 8.2.1 - 9.1.1
 
   - section_name: verse a
     duration_bars: 48
@@ -95,7 +98,7 @@ arrangement:
           This seems to extend the tail of the primary background synth swell
           this is the pad form of the primary background synth swell. extremely similar tonally,
           basically the same but without a gate.
-        timing: bar 1 and on.
+        timing: 1.1.1 and on.
 
       - category: Synth - Pluck
         label: main warm saw pluck
@@ -105,7 +108,7 @@ arrangement:
           notes ascend then come back to starting note
         timing: constant
         automation: hi cut ascends gradually. 
-          on bar 12-16, cut ascends more rapidly. resets on bar 17
+          on 12.1.1 - 17.1.1, cut ascends more rapidly. resets on bar 17
 
       - category: Synth - Sustained
         label: volume gated rhythm chord sustained synth
@@ -118,51 +121,51 @@ arrangement:
         timing: constant
 
       - category: Synth - Pad
-        timing: bar 17 and on
+        timing: 17.1.1 and on
         tonality: high freq content =, simple saw reverb pad, potentially heavy boost on one particular high resonant frequency
 
       - category: Vocals - Background
         pattern: once, but sounds delayed approx every quarter note
-        timing: bar 8
+        timing: 8.1.1
         tonality:
           tonal "whoop" sort of sound, saturation applies more heavily as sound lingers.
           sound lingers for approx a bar
 
       - category: Vocals - Chop
-        timing: bar 25 and on
+        timing: 25.1.1 and on
         tonality:
           A very odd sounding what I think is a vocal chop sample but heavily distorted and bandpassed both high and low.
-          occurs on bar.1.3, bar.2.2, bar.3.1. This is 3 16th notes apart. It is a dotted eigth note pattern.
+          occurs on 1.3.1, 2.2.1, 3.1.1. This is 3 16th notes apart. It is a dotted eigth note pattern.
 
       - category: Vocals - Background
         tonality: hi cut, reverb fx applied to background "all I need" vocal phrases
-        timing: bar 32 - bar 48
+        timing: 32.1.1 - 49.1.1
 
       - category: Transition - Riser
         label: supersaw like riser
-        timing: bar 16
+        timing: 16.1.1
         tonality: a heavily volume ducked / gated saw in sync with quarter notes
 
       - category: FX - Synth
         label: very rapid volume gated synth
         tonality: incredibly fast volume gated swell like sound.
-        timing: bar 16.3
+        timing: 16.3.1
 
       - category: Transition - Sweep
-        timing: bar 16-bar 17
+        timing: 16.1.1 - 18.1.1
         tonality: basic noise sweep. very little mid / low frequency content. reverb tail rings into bar 17
 
       - category: Strings - Violin
         tonality: string sample volume gated with quarter notes
-        timing: bar 40 - bar 48
+        timing: 40.1.1 - 49.1.1
 
       - category: Transition - Riser
         tonality: high frequency saw synth riser
-        timing: bar 44-48
+        timing: 44.1.1 - 49.1.1
 
       - category: Transition - Sweep
         tonality: basic white noise sweep layered on top of riser
-        timing: bar 44-48
+        timing: 44.1.1 - 49.1.1
 
       - category: Bass
         label: warm sub  bass
@@ -176,7 +179,7 @@ arrangement:
 
       - category: Drums - Kick
         pattern: 4 on the floor
-        pattern_variation: bar 16.3 kick cuts out entirely
+        pattern_variation: 16.3.1 kick cuts out entirely
         tonality:
           full low end content. prominent between 200-40hz, with some content all the way to 30 and even lower
           mid range content slightly attenuated
@@ -186,23 +189,26 @@ arrangement:
 
       - category: Drums - Snare
         pattern: 4 on floor
-        timing: bar 9 and on
+        timing: 9.1.1 and on
         tonality: fairly heavy snare, barely any reverb if any
 
       - category: Drums - Clap
         pattern: once
-        pattern_variation: on bar 8.4.4, clap occurs just before next phrase as transitory element
-        timing: bar 8.4.4 and on
+        pattern_variation: on 8.4.4, clap occurs just before next phrase as transitory element
+        timing: 8.4.4 and on
         tonality: prominent, heavy reverb fx with long reverb tail
 
       - category: Drums - Shakers
         pattern: 4 on floor + 2 16th notes every other beat.
           x.1.2, x.1.3, x.2.3, x.3.2, x.3.3, x.4.3
-        timing: bar 17 and on
+        timing: 17.1.1 and on
 
       - category: Drums - Hats
-        pattern: 16th notes except for 1st 16th note of each beat
-        timing: bar 32 and on
+        pattern:
+          16th notes except for 1st 16th note of each beat.
+          The velocity of each note is a bit different to create a more pronounced 2nd note in between the 1st and 3rd.
+          This results in a sort of quiet-loud-quiet sound
+        timing: 32.1.1 and on
 
   - section_name: verse a outro
     duration_bars: 8
@@ -230,7 +236,7 @@ arrangement:
 
       - category: Vocals - Background
         tonality: hi cut, reverb fx applied to background "all I need" vocal phrases
-        timing: bar 32 - bar 48
+        timing: 32.1.1 - 49.1.1
 
       - category: Transition - Riser
         label: primary background synth swell gated riser
@@ -238,11 +244,11 @@ arrangement:
         tonality:
           volume gated verbed synth, very similar to primary background synth swell
           the  tail rings out 2-6 bars into the break
-        timing: bar 8
+        timing: 8.1.1
 
       - category: Transition - Sweep
         tonality: basic white noise sweep layered on top of riser
-        timing: bar 6
+        timing: 6.1.1
 
       - category: Bass
         label: warm sub bass
@@ -252,16 +258,20 @@ arrangement:
           fundamental frequency appears to be around 45hz at lowest to 95 hz at highest
           frequency content overlaps with kick, specifically around 40-60 hz region,
           sidechain ducking with quarter notes attenuates, but doesn't entirely mute sound. ducking appears even across frequency spectrum
+          there is a mid layer to the bass content, I think somewhere around 15-600 hz somewhere
         timing: constant
 
       - category: Drums - Hats
-        pattern: 16th notes except for 1st 16th note of each beat
-        timing: bar 32 and on
+        pattern:
+          16th notes except for 1st 16th note of each beat.
+          The velocity of each note is a bit different to create a more pronounced 2nd note in between the 1st and 3rd.
+          This results in a sort of quiet-loud-quiet sound
+        timing: 32.1.1 and on
         automation: volume and low pass filter descends into things are almost quiet
 
       - category: Drums - Snare
         pattern: 4 on floor
-        timing: bar 9 and on
+        timing: 9.1.1 and on
         tonality: fairly heavy snare, barely any reverb if any
 
   - section_name: break
@@ -289,13 +299,13 @@ arrangement:
         tonality:
           very "angelic" sounding pad like lots of synth notes in harmony washed together with lots of reverb
           relatively quiet, in the background
-        timing: bar 3 and on
+        timing: 3.1.1 and on
 
       - category: Synth - Swell
         label: primary background synth swell
         pattern: Hits on 1.1.1, 1.2.3, 1.3.3, 1.4.3, 2.2.3, 2.3.3 repeating this pattern every 2 bars.
         tonality: simple verbed swell saw sound with slow attack
-        timing: bar 5 and on
+        timing: 5.1.1 and on
 
       - category: Transition - Riser
         label: Fast synth riser
@@ -305,13 +315,13 @@ arrangement:
           tonal, some sort of synth, probably a saw
           high passed, with a high cut filter that gradually ascends as the riser progresses
           rapid volume gate - 16th or 32nd notes
-        timing: bar 7-bar8
+        timing: 7.1.1 - 9.1.1
         automation: a high cut filter that gradually ascends as the riser progresses
 
       - category: FX - Synth
         label: very rapid volume gated synth
         tonality: incredibly fast volume gated swell like sound.
-        timing: bar 32.3.1
+        timing: 32.3.1
 
       - category: Vocals - Background
         tonality: This may not be a vocal sample, but it sounds like a "ey" vowel sound volume gated
@@ -321,28 +331,28 @@ arrangement:
         tonality:
           very warm sub bass / perhaps some mid bass layers
           volume quieter relative to other sections
-        timing: bar 9 - bar 25
+        timing: 9.1.1 - 26.1.1
 
       - category: Vocals - Lead
         tonality:
           harmony engine / vocal harmony tool adding many different harmonies at once.
           Has that auto tune / vocoder sort of synth sound to it.
-          Gentle warm male vocals
-        timing: bar 9 and on
+          Gentle warm male vocals using intermittent falsettos
+        timing: 9.1.1 and on
 
       - category: Drums - Other Percussive
         tonality:
           metallic / almost hat sounding like percussives occur in eighth notes
           each one has a fair bit of reverb to it
-        timing: bar 15 - bar 16, 
+        timing: 15.1.1 - 17.1.1, 
           again at bar 24 as 4 eighth notes in a row lasting 2 beats, transitory element leading into next phrase
 
       - category: Keys - Piano
         tonality: piano with sustain pedal pressed
-        timing: bar 17 and on
+        timing: 17.1.1 and on
 
       - category: Strings - Violin
-        timing: bar 25 and on
+        timing: 25.1.1 and on
 
       - category: Drums - Kick
         label: break FX reverb kick
@@ -363,7 +373,7 @@ arrangement:
           I think this is the same kick, but heavily filtered so its rather muffled.
           both low end & high end seem cut
           fundamental freq content & tuning seems to be around 40-50hz
-        timing: bar 1- bar 31.
+        timing: 1.1.1 - 32.1.1.
 
       - category: Synth - Pluck
         label: main warm saw pluck
@@ -372,14 +382,16 @@ arrangement:
           3 16th notes in a row occurring at varying positions within the bar.
           notes ascend then come back to starting note
         timing: constant
-        automation: hi cut filter gradually ascends up the frequency spectrum
+        automation:
+          this section the hi cut filter is at a pretty low frequency cutoff
+          hi cut filter gradually ascends up the frequency spectrum
 
       - category: Strings - Violin
-        timing: bar 1 and on
+        timing: 1.1.1 and on
 
       - category: Synth - Sustained
         tonality: string sounding synth, kindof muffled saw like sound
-        timing: bar 5 and on
+        timing: 5.1.1 and on
 
       - category: Drums - Snare
         label: snare buildup
@@ -387,13 +399,62 @@ arrangement:
           fairly simple snare, short ish tail, dying down before next snare hits so less than 1/8th note long
           snappy, but not a heavy snare
         pattern: eighth notes
-        pattern_variation: bar 32.4 snare occurs with transitionary fill to final verse
-        timing: bar 17 - bar 31
+        pattern_variation: 32.4.1 snare occurs with transitionary fill to final verse
+        timing: 17.1.1 - 32.1.1
 
       - category: Transition - Riser
         tonality: siren sounding simple synth riser. high passed around mid frequencies
-        timing: bar 25 - bar 31
+        timing: 25.1.1 - 32.1.1
 
   - section_name: verse b
     duration_bars: 16
     elements:
+      - category: Synth - Pluck
+        label: main warm saw pluck
+        tonality: simple warm saw hi cut pluck. some verb and 16th note delay
+        pattern:
+          3 16th notes in a row occurring at varying positions within the bar.
+          notes ascend then come back to starting note
+        timing: constant
+        automation:
+          the cutoff frequency begins at or near a high frequency, near or at where the verse b build up automation stopped
+          it rises more gradually to expand the filter almost entirely near the end, just prior to the outro
+
+      - category: Bass
+        label: warm sub bass
+        pattern: on 1st beat of each bar
+        tonality:
+          very warm simple sine / sub. Comes in full force as verse a starts
+          fundamental frequency appears to be around 45hz at lowest to 95 hz at highest
+          frequency content overlaps with kick, specifically around 40-60 hz region,
+          sidechain ducking with quarter notes attenuates, but doesn't entirely mute sound. ducking appears even across frequency spectrum
+          there is a mid layer to the bass content, I think somewhere around 15-600 hz somewhere
+        timing: constant
+
+      - category: Drums - Kick
+        pattern: 4 on the floor
+        timing: 1.1.1 - 16.1.1
+
+      - category: Synth - Arp
+        tonality: "shimmering" saw lie plucking arp
+        timing: 1.1.1 and on
+        automation:
+          its very cut off as section begins
+          hi cut filter starts gradually expanding around bar 9 to nearly entirely open until verse b ends
+
+      - category: Drums - Hats
+        pattern:
+          16th notes except for 1st 16th note of each beat.
+          The velocity of each note is a bit different to create a more pronounced 2nd note in between the 1st and 3rd.
+          This results in a sort of quiet-loud-quiet sound
+        timing: 32.1.1 and on
+
+      - category: Drums - Snare
+        pattern: 4 on floor
+        timing: 9.1.1 and on
+        tonality: fairly heavy snare, barely any reverb if any
+        automation: on bar 16, low end seems cut from sound during transition to outro
+
+      - category: Transition - Sweep
+        timing: 15.1.1 - 17.1.1
+        tonality: basic noise sweep. very little mid / low frequency content. reverb tail rings into bar 17
