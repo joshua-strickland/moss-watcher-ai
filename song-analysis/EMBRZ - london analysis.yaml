@@ -128,8 +128,8 @@ arrangement:
         pattern: notes stay constant
         timing: bar
         automation:
-          for bars 1-16, this is low passed and quiet. 
-          For bars 17-32, the low pass filter is opened and the pad is louder
+          for 1.1.1 - 17.1.1, this is low passed and quiet. 
+          For 17.1.1 - 33.1.1, the low pass filter is opened and the pad is louder
 
       - category: Synth - Pluck
         label: bell transitory background pluck
@@ -155,7 +155,7 @@ arrangement:
           very light hi passed saw pluck
         pattern: 2 16th notes starting on x.3.2
         timing:
-          bars 17-32
+          17.1.1 - 33.1.1
           occuring every 2 bars
 
       - category: Synth - Pluck
@@ -164,7 +164,7 @@ arrangement:
           very light hi passed saw pluck, with a longer reverb tail. ethereal sounding
         pattern: on x.1.1 and approx x.4.3
         timing:
-          bars 25-32
+          25.1.1 - 33.1.1
 
       - category: Synth - Supersaw
         label: transitory supersaw swell sweep
@@ -216,7 +216,7 @@ arrangement:
           very light hi passed saw pluck, with a longer reverb tail. ethereal sounding
         pattern: on x.1.1 and approx x.4.3
         timing:
-          bars 1-8
+          1.1.1 - 9.1.1
 
   - section_name: break 2
     duration_bars: 16

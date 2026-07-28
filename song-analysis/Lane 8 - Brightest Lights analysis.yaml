@@ -19,38 +19,38 @@ arrangement:
         pattern: Swells right away on the first beat.
       - category: Drums - Kick
         label: Main Kick
-        timing: Bars 1-32
+        timing: 1.1.1 - 33.1.1
         tonality: Standard foundational kick.
         pattern: Four-on-the-floor rhythm.
         pattern_variation: Begins on 1.2.1.
       - category: Synth - Pad
         label: LFO Pad
-        timing: Bars 1-32
+        timing: 1.1.1 - 33.1.1
         tonality: Synthesizer pad with heavy modulation.
         pattern: Quarter notes.
       - category: Vocals - Atmosphere
         label: Vocal FX
-        timing: Bars 1-32
+        timing: 1.1.1 - 33.1.1
         tonality: Processed human voice.
         pattern: Occurs intermittently throughout the section.
       - category: Drums - Other Percussive
         label: Steel Drum Melody
-        timing: Bars 1-32
+        timing: 1.1.1 - 33.1.1
         tonality: Cutoff steel drums character.
         pattern: Subtle percussive melody.
       - category: Drums - Hats
         label: Intro Hats
-        timing: Bars 9-32
+        timing: 9.1.1 - 33.1.1
         tonality: Standard hi-hats.
         pattern: Rhythmic hat pattern introduced.
       - category: Drums - Other Percussive
         label: Harmonic Percussion
-        timing: Bars 17-32
+        timing: 17.1.1 - 33.1.1
         tonality: Percussive element containing harmonic content.
         pattern: Interlocking rhythm.
       - category: Drums - Hats
         label: Secondary Hats
-        timing: Bars 25-32
+        timing: 25.1.1 - 33.1.1
         tonality: Light open hats.
         pattern: Additional hat rhythm that leads into the post intro.
 
@@ -61,23 +61,23 @@ arrangement:
     elements:
       - category: Vocals - Atmosphere
         label: Vocal FX
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Processed human voice.
         pattern: Continues intermittently.
       - category: Synth - Sustained
         label: Warm Synth
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Warm synthesizer sound using distortion.
         pattern: Comes and goes throughout the section.
         automation: Distortion becomes more aggressive from 9.1.1 - 17.1.1
       - category: Drums - Kick
         label: Sub Kick
-        timing: Bars 9-16
+        timing: 9.1.1 - 17.1.1
         tonality: Real subtle, low cutoff.
         pattern: Soft driving beat.
       - category: Synth - Pad
         label: Post Intro Pad
-        timing: Bars 9-16
+        timing: 9.1.1 - 17.1.1
         tonality: Smooth sustaining pad.
         pattern: Background texture.
 
@@ -86,34 +86,34 @@ arrangement:
     elements:
       - category: Drums - Kick
         label: Main Kick
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Standard kick (not cutoff).
         pattern: Four-on-the-floor rhythm.
         pattern_variation: Exits on 15.1.1.
       - category: Synth - Pad
         label: LFO Pad
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Light, heavily modulated pad.
         pattern: Quarter notes, comes and goes.
       - category: Synth - Pluck
         label: Automated Pluck
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Light plucky synth.
         pattern: Intermittent phrasing.
         automation: Volume automated in and out.
       - category: Vocals - Atmosphere
         label: Vocal FX
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Subtle processed vocals.
         pattern: Light background presence.
       - category: Drums - Snare
         label: Percussive Snare
-        timing: Bars 9-16
+        timing: 9.1.1 - 17.1.1
         tonality: Percussive snare-like element.
         pattern: Hits strictly on the 2nd beats.
       - category: Drums - Hats
         label: Transition Hats
-        timing: Bars 15-16
+        timing: 15.1.1 - 17.1.1
         tonality: Open hi-hat.
         pattern: Ascending rhythm leading into the verse.
 
@@ -125,32 +125,32 @@ arrangement:
     elements:
       - category: Vocals - Lead
         label: Main Vocals
-        timing: Bars 1-24
+        timing: 1.1.1 - 25.1.1
         tonality: Clear lead vocal.
         pattern: Main melody lines enter.
       - category: Drums - Kick
         label: Main Kick
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Standard kick.
         pattern: Four-on-the-floor rhythm.
       - category: Drums - Hats
         label: Main Hats
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Standard hi-hats.
         pattern: Top rhythmic layer.
       - category: Synth - Pluck
         label: Verse Plucks
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Plucky melodic synth.
         pattern: Core accompaniment.
       - category: Synth - Pad
         label: Ringing Pad
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Resonant, ringing pad character.
         pattern: Pings specifically on beat 1 and 2a.
       - category: Synth - Pad
         label: Verse Break Pad
-        timing: Bars 17-24
+        timing: 17.1.1 - 25.1.1
         tonality: Softer pad, not ringy.
         pattern: Replaces the ringing pad for the vocal break.
 
@@ -159,34 +159,34 @@ arrangement:
     elements:
       - category: Vocals - Lead
         label: Main Vocals
-        timing: Bars 1-24
+        timing: 1.1.1 - 25.1.1
         tonality: Clear lead vocal ("all the brightest lights").
         pattern: Sings main chorus phrasing.
       - category: Vocals - Lead
         label: Vocal Harmony
-        timing: Bars 9-16
+        timing: 9.1.1 - 17.1.1
         tonality: Harmonized vocal layer.
         pattern: Accompanies the main vocal melody.
       - category: Vocals - Lead
         label: Outro Vocals
-        timing: Bars 17-24
+        timing: 17.1.1 - 25.1.1
         tonality: Atmospheric "whoo oo oo oo" vocal lines.
         pattern: Ethereal phrasing.
       - category: Synth - Pluck
         label: Chorus Plucks
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Very similar to Verse A1, but a bit less cutoff.
         pattern: Core melodic rhythm.
         pattern_variation: Exits on 15.1.1.
       - category: Drums - Kick
         label: Main Kick
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Standard kick.
         pattern: Four-on-the-floor.
         pattern_variation: Exits on 15.1.1.
       - category: Synth - Sustained
         label: Telephone Synth
-        timing: Bars 17-24
+        timing: 17.1.1 - 25.1.1
         tonality: Warm, cutoff telephone ring character.
         pattern: New melodic synthesizer element.
 
@@ -195,22 +195,22 @@ arrangement:
     elements:
       - category: Vocals - Lead
         label: Main Vocals
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Clear lead vocal.
         pattern: Follows Verse A structure.
       - category: Synth - Pluck
         label: Verse Plucks
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Plucky melodic synth.
         pattern: Core accompaniment.
       - category: Drums - Hats
         label: Main Hats
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Standard hi-hats.
         pattern: Top rhythmic layer.
       - category: Drums - Kick
         label: Half-Time Kick
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Standard kick.
         pattern: Half-notes instead of quarter-notes.
         pattern_variation: Does not come in until 2.1.1.

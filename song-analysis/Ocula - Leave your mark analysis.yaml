@@ -184,7 +184,7 @@ arrangement:
         timing: constant
         pattern_variation: >
           cut 1.1.1 - 3.1.1
-          cut bars 13 - 16.1.1
+          cut 13.1.1 - 17.1.1.1.1
 
       - category: Drums - Hats
         label: rapid 16th note hats

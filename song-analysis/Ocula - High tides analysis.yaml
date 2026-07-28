@@ -15,22 +15,22 @@ arrangement:
     elements:
       - category: Vocals - Lead
         label: Harmonized Whisper
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Low whisper harmonized with an octave higher layer.
         pattern: Continuous underlying vocal texture.
       - category: Synth - Pad
         label: Smooth Cutoff Pad
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Smooth sawtooth pad with low-end shifting.
         pattern: Constant sustained note.
       - category: Bass
         label: Main Bass
-        timing: Bars 9-16
+        timing: 9.1.1 - 17.1.1
         tonality: Foundational low-end anchor.
         pattern: Driving bassline establishing the chord progression.
       - category: Synth - Sustained
         label: Cutoff Saw Lead
-        timing: Bars 9-16
+        timing: 9.1.1 - 17.1.1
         tonality: Sawtooth lead with a filtered cutoff.
         pattern: Core melodic introduction.
 
@@ -42,23 +42,23 @@ arrangement:
     elements:
       - category: Bass
         label: Main Bass
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Foundational low-end anchor.
         pattern: Bassline continues as before.
       - category: Synth - Sustained
         label: Cutoff Saw Lead
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Sawtooth lead.
         pattern: Core melody.
         automation: Cutoff frequency gradually rises and lowers throughout the section.
       - category: Synth - Pad
         label: Smooth Cutoff Pad
-        timing: Bars 1-12
+        timing: 1.1.1 - 13.1.1
         tonality: Smooth sawtooth pad.
         pattern: Constant sustained note.
       - category: Synth - Arp
         label: Supersaw Plucker
-        timing: Bars 14-16
+        timing: 14.1.1 - 17.1.1
         tonality: Plucky supersaw synthesizer.
         pattern: 8th-note rhythmic plucking pattern.
 
@@ -67,18 +67,18 @@ arrangement:
     elements:
       - category: Synth - Arp
         label: Supersaw Plucker
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Plucky supersaw synthesizer.
         pattern: Syncopated rhythm on 1a, 2, 2a, 3a, 4, 4a.
         automation: Fades via sidechain compression when the kick drum hits.
       - category: Drums - Kick
         label: Main Kick
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Standard foundational kick.
         pattern: Four-on-the-floor rhythm.
       - category: Bass
         label: Main Bass
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Foundational low-end anchor.
         pattern: Re-enters to support the groove.
       - category: Drums - Other Percussive
@@ -102,22 +102,22 @@ arrangement:
     elements:
       - category: Drums - Snare
         label: Main Snare
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Standard snare.
         pattern: New driving drum pattern.
       - category: Drums - Hats
         label: Main Hats
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Standard hi-hats.
         pattern: Interlocking groove with the snare.
       - category: Vocals - Lead
         label: Main Vocal
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Clear lead vocal.
         pattern: Sings lyrical phrase "as the days come and go".
       - category: Synth - Sustained
         label: Cutoff Saw Lead
-        timing: Bars 9-16
+        timing: 9.1.1 - 17.1.1
         tonality: Sawtooth lead.
         pattern: Melodic lead re-enters the mix.
 
@@ -126,17 +126,17 @@ arrangement:
     elements:
       - category: Drums - Hats
         label: Main Hats
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Standard hi-hats.
         pattern: Hi-hat rhythm accelerates throughout the section.
       - category: Vocals - Atmosphere
         label: Falsetto Ooo
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: High-register falsetto texture.
         pattern: Sustained background vocal.
       - category: Transition - Sweep
         label: Noise Swell
-        timing: Bars 7-8
+        timing: 7.1.1 - 9.1.1
         tonality: White noise.
         pattern: Tension-building swell sweeping upward.
 
@@ -150,40 +150,40 @@ arrangement:
         pattern: Quickly fades out from the previous section.
       - category: Synth - Pad
         label: Subtle Pad
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Soft, understated synthesizer pad.
         pattern: Continuous background presence.
       - category: Synth - Sustained
         label: Cutoff Saw Lead (Fading)
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Delayed sawtooth lead.
         pattern: Rings out from the previous section.
         automation: Cutoff filter slowly closes and dies down.
       - category: FX - Noise
         label: Staccato FX
-        timing: Bars 3-5
+        timing: 3.1.1 - 6.1.1
         tonality: Noise-based textured hits.
         pattern: Staccato rhythmic pattern.
       - category: Keys - Piano
         label: Background Piano
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Extremely subtle acoustic piano.
         pattern: Background melodic support.
       - category: Synth - Pad
         label: Oscillating Pad
-        timing: Bars 9-16
+        timing: 9.1.1 - 17.1.1
         tonality: Synthesizer pad with heavy modulation.
         pattern: Continuous sustained chords.
         automation: LFO/oscillation frequency gradually accelerates. Becomes more pronounced in the mix.
       - category: Bass
         label: Main Bass
-        timing: Bars 9-16
+        timing: 9.1.1 - 17.1.1
         tonality: Foundational low end.
         pattern: Re-enters the arrangement.
         automation: Gradually increases in volume throughout the section.
       - category: Synth - Sustained
         label: Cutoff Saw Lead (Active)
-        timing: Bars 9-16
+        timing: 9.1.1 - 17.1.1
         tonality: Sawtooth lead.
         pattern: Melodic phrasing.
         automation: Cutoff filter dynamically raises and lowers.
@@ -201,35 +201,35 @@ arrangement:
     elements:
       - category: Vocals - Lead
         label: Main Vocal
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Clear lead vocal.
         pattern: Re-enters the arrangement.
       - category: Synth - Pad
         label: Oscillating Pad
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Synthesizer pad with heavy modulation.
         pattern: Continuous sustained chords.
         automation: Oscillation speed becomes very fast.
       - category: Synth - Sustained
         label: Cutoff Saw Lead
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Sawtooth lead.
         pattern: Melodic phrasing.
         automation: Cutoff filter rises to build tension. Gradually high-passed alongside the snare from 9.1.1 to 16.
       - category: Drums - Snare
         label: 8th Note Snare
-        timing: Bars 4-8
+        timing: 4.1.1 - 9.1.1
         tonality: Standard snare drum.
         pattern: Begins hitting steadily on 8th notes halfway through the phrase.
       - category: Drums - Snare
         label: 16th Note Snare
-        timing: Bars 9-16
+        timing: 9.1.1 - 17.1.1
         tonality: Standard snare drum.
         pattern: Rhythm accelerates to continuous 16th notes.
         automation: Gradually high-passed as a transitionary element.
       - category: Transition - Sweep
         label: Pre-Chorus Noise
-        timing: Bars 15-16
+        timing: 15.1.1 - 17.1.1
         tonality: White noise.
         pattern: Upward swell leading into the chorus drop.
 
@@ -238,28 +238,28 @@ arrangement:
     elements:
       - category: Drums - Kick
         label: Main Kick
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Foundational kick.
         pattern: Four-on-the-floor rhythm.
         pattern_variation: 8.3.1 Kicks stop completely.
       - category: Transition - Sweep
         label: Pre-Chorus Noise
-        timing: Bars 1-6
+        timing: 1.1.1 - 7.1.1
         tonality: White noise.
         pattern: Gradually dies down over the first 6 bars.
       - category: Synth - Arp
         label: Supersaw Plucker
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Plucky supersaw from Chorus A1.
         pattern: Returns to drive the rhythmic melody.
       - category: Synth - Sustained
         label: Cutoff Saw Lead
-        timing: Bars 1-16
+        timing: 1.1.1 - 17.1.1
         tonality: Original sawtooth lead.
         pattern: Core melody.
       - category: Synth - Sustained
         label: Secondary Lead
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: Additional synthesized lead texture.
         pattern: Layers with the cutoff lead.
       - category: Drums - Hats
@@ -274,17 +274,17 @@ arrangement:
         pattern: Single hit to lead into Chorus B2.
       - category: Vocals - Lead
         label: Main Vocal
-        timing: Bars 9-16
+        timing: 9.1.1 - 17.1.1
         tonality: Clear lead vocal.
         pattern: Sings the core chorus phrasing.
       - category: Drums - Hats
         label: Main Hats
-        timing: Bars 9-16
+        timing: 9.1.1 - 17.1.1
         tonality: Standard hi-hats.
         pattern: Re-enters to establish the full groove.
       - category: Drums - Snare
         label: Main Snare
-        timing: Bars 9-16
+        timing: 9.1.1 - 17.1.1
         tonality: Standard snare drum.
         pattern: Re-enters for the backbeat.
 
@@ -295,6 +295,6 @@ arrangement:
     elements:
       - category: Vocals - Atmosphere
         label: Falsetto Ooo
-        timing: Bars 1-8
+        timing: 1.1.1 - 9.1.1
         tonality: High-register falsetto texture.
         pattern: Sustained background vocal texture.
