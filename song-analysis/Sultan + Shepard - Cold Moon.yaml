@@ -458,3 +458,28 @@ arrangement:
       - category: Transition - Sweep
         timing: 15.1.1 - 17.1.1
         tonality: basic noise sweep. very little mid / low frequency content. reverb tail rings into bar 17
+
+  - section_name: Outro
+    duration_bars: 32
+    global_transitions: at bar 16, everything but the kick cut out
+    elements:
+      - category: Synth - Sustained
+        label: volume gated rhythm chord sustained synth
+        pattern: 16th notes
+        tonality:
+          fairly heavy hi cut filter applied to synth, prob saw
+          a rhythmic 16th note volume gate
+          this sounds very similar to the delay of the main warm saw pluck, however I believe it is distinct
+          it focuses on a single note throughout I believe. though the main saw pluck also hits this same note, it does not do so constantly
+        timing: constant
+        automation: the cutoff frequency is a tad lower I think than in verse a
+
+      - category: Synth - Pad
+        pattern: pad
+        tonality: multitonal synth wash / reverb like sound, similar to one in break. volume ducked to quarter notes / with kick
+        timing: constant
+
+      - category: Drums - Kick
+        pattern: 4 on the floor
+        tonality: full presence
+        timing: constant
