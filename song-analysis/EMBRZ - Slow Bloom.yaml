@@ -3,11 +3,88 @@
 track_metadata:
   artist: EMBRZ
   title: Slow Bloom
-  key_signature:
-  bpm:
+  key_signature: E Major
+  bpm: 120
   time_signature: 4/4
   genre: Melodic House
 
 arrangement:
 
-  - section_name: Intro
+  - section_name: pre intro
+    duration_bars: 2
+    elements:
+      - category: Keys - Piano
+        label: lead melody keys
+        timing: constant
+
+      - category: FX - Foley
+        tonality: Ocean waves like noise, very quiet
+        timing: not audible all the time, comes and goes like waves
+
+      - category: Vocals - Lead
+        tonality: soft female vocals fair amount of reverb
+          Ahh vowel
+        timing: 2.3.1
+
+      - category: Keys - Piano
+        label: rhythm chord keys
+        timing: 2.3.1
+
+  - section_name: buildup
+    duration_bars: 20
+    global_transitions: 20.4.1 everything but piano cuts out
+    elements:
+      - category: Keys - Piano
+        label: lead melody keys
+        timing: constant
+
+      - category: Keys - Piano
+        label: rhythm chord keys
+        tonality: Hi cut filter applied, maybe a bit of distortion
+          seems volume ducked slightly every quarter note
+        timing: 2.3.1
+
+      - category: Synth - Swell
+        tonality: Saw swell, slow ish attack and lots of reverb, very similar to the hypa saw swell preset.
+          very much in the background / quiet
+        timing: once every 4 bars
+          also occurs at 12.1.1
+
+      - category: Vocals - Lead
+        tonality: soft female vocals fair amount of reverb
+        timing: constant
+        automation: hi cut gradually adjusts up and down as section progresses
+
+      - category: Drums - Shakers
+        pattern: just a single shake on upbeats
+        pattern_variation: on bar 13.1.1, pattern changes to 2 16th note shakes, starting on upbeats
+        tonality: hi cut shaker
+        timing: constant
+
+      - category: Drums - Clap
+        label: snap clap
+        pattern: 2nd and 4th beat
+        tonality: snap sounding clap, slight hi cut
+        timing: 5.1.1 and on
+        automation: 9.1.1, hi cut is removed? sounds louder and with more high frequency content
+
+      - category: Drums - Kick
+        timing: 13.1.1, 15.1.1, 16.1.1, 17.1.1, 19.1.1, 20.1.1
+        pattern: alternates between every 2 bars and every bar, see timing
+
+      - category: Synth - Pluck
+        label: lead pluck
+        tonality: hi cut saw pluck
+        timing: 13.1.1 and on
+
+      - category: Drums - Hats
+        pattern: x.1.3, x.2.1, x.2.3, x.3.3, x.4.1, x.4.3, repeating every bar
+        timing: 17.1.1
+
+      - category: FX - Synth
+        pattern: once
+        tonality: lazer like sounding high frequency oscillator controlled synth noise
+          LFO increases in frequency over a beat or two
+        timing: 20.1.1 - 20.4.3
+
+
