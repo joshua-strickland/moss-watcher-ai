@@ -88,3 +88,72 @@ arrangement:
         timing: 20.1.1 - 20.4.3
 
 
+  - section_name: verse a
+    duration_bars: 24
+    global_transitions: 24.3.1 everything cuts except for bass, synth swell, and vocals
+      24.4.1 clap hits, bass cuts, quick 2 note descending synth melody
+    elements:
+      - category: Drums - Kick
+        pattern: 4 on the floor
+        timing: constant
+
+      - category: Drums - Clap
+        label: snap clap
+        pattern: 2nd and 4th beat
+        tonality: snap sounding clap, slight hi cut
+        timing: 1.1.1 and on
+
+      - category: Drums - Clap
+        label: reverse snap clap
+        pattern: every 4th clap hit
+        timing: 1.1.1 and on
+
+      - category: Drums - Hats
+        pattern: 4 on the floor
+        pattern_variation: no hit occurs on 8.4.3
+        timing: 1.1.1 and on
+
+      - category: Drums - Other Percussive
+        tonality: wood block hit like sound
+        pattern: 1.2.4, 2.2.3, repeating every 2 bars
+        timing: 1.1.1 and on
+
+      - category: Vocals - Background
+        tonality: Ehh vowel sound, heavy reverb
+        timing: 1.1.1
+
+      - category: Bass
+        tonality: Growly bass, has that sort of rapid volume jitter effect from saturation or OTT similar
+        pattern: 1.1.1, 3.1.1, 4.1.1, 4.3.1 repeating every 4 bars
+        timing: 1.1.1 and on
+
+      - category: Synth - Swell
+        tonality: chord saw synth swell layered with the bass
+        pattern: 1.1.1, 3.1.1, 4.1.1, 4.3.1 repeating every 4 bars
+        timing: 1.1.1 and on
+
+      - category: Synth - Sustained
+        label: background synth hit
+        pattern: 2nd and 4th beats
+        tonality: vocal like synth sounding hit creating a call and response like pattern
+        timing: 1.1.1 and on
+
+      - category: Vocals - Chop
+        tonality: Ah vowel, reverb
+        timing: 7.1.1
+
+      - category: Vocals - Lead
+        tonality: soft female vocals fair amount of reverb
+        timing: constant
+        automation: this is so heavily hi cut that it is basically inaudible as section starts
+          9.1.1 - begins to become audible, hi cut begins ascending for 8 bars
+          17.1.1 - hi cut resets to a slightly lower frequency cut off point
+
+      - category: Keys - Piano
+        tonality: hi cut, reverb, background gentle keys, very subtle
+        timing: 9.1.1
+
+  - section_name: break
+    duration_bars: 16
+    elements:
+      -
