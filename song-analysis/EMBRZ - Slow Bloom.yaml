@@ -153,6 +153,10 @@ arrangement:
         tonality: hi cut, reverb, background gentle keys, very subtle
         timing: 9.1.1
 
+      - category: Drums - Shakers
+        pattern: 2 16th note shakes, starting on upbeats
+        timing: 17.1.1 and on
+
   - section_name: break
     duration_bars: 16
     elements:
