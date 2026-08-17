@@ -13,26 +13,52 @@ arrangement:
   - section_name: pre intro
     duration_bars: 2
     elements:
-      - category: Keys - Piano
-        label: lead melody keys
-        timing: constant
-
       - category: FX - Foley
         tonality: Ocean waves like noise, very quiet
         timing: not audible all the time, comes and goes like waves
 
-      - category: Vocals - Lead
+      - category: Synth - Pad
+        tonality: simple saw like pad mid range, little bass content
+        timing: constant
+
+  - section_name: intro
+    duration_bars: 8
+    elements:
+      - category: Keys - Piano
+        label: lead melody keys
+        pattern: dotted eighth note kind of melody
+        timing: constant
+
+      - category: Vocals - Background
         tonality: soft female vocals fair amount of reverb
           Ahh vowel
-        timing: 2.3.1
+          medium hi cut applied,
+        pattern: plays one note with a fairly long decay every 2 bars
+        timing: 4.1.1
+
+      - category: Synth - Pad
+        label: gentle piano rhythm / warmth pad
+        tonality: a sort of heavy cut off, piano sounding like pad, adding just a bit of depth to the piano melody
+        pattern: plays one note with a fairly long decay every 2 bars
+        timing: 4.1.1 - 9.1.1
+        automation: consistent volume for the most part until 7.1.1 where volume rises somewhat sharply leading into next section
+
+      - category: Synth - Pad
+        tonality: simple saw like pad mid range, little bass content
+        timing: constant
 
       - category: Keys - Piano
-        label: rhythm chord keys
-        timing: 2.3.1
+        label: sampled sounding rhtyhm chord keys
+        tonality: "sampled" sounding key chords enter here, sample start occurs just slightly after the transient
+        timing: 8.3.1
+
+      - category: Drums - Shakers
+        timing: 8.4.3
+        pattern: A single shaker occurs serving as transitionary element leading to thee next section
 
   - section_name: buildup
     duration_bars: 20
-    global_transitions: 20.4.1 everything but piano cuts out
+    global_transitions: 20.4.3 everything but piano cuts out
     elements:
       - category: Keys - Piano
         label: lead melody keys
@@ -59,6 +85,8 @@ arrangement:
         pattern: just a single shake on upbeats
         pattern_variation: on bar 13.1.1, pattern changes to 2 16th note shakes, starting on upbeats
         tonality: hi cut shaker
+          Sounds potentially mixed with some white noise.
+          unsure if the white noise is distinct or layered with shaker, but occurs with the same pattern
         timing: constant
 
       - category: Drums - Clap
@@ -105,10 +133,12 @@ arrangement:
 
       - category: Drums - Clap
         label: reverse snap clap
+        tonality: snap sounding clap, slight hi cut reversed
         pattern: every 4th clap hit
         timing: 1.1.1 and on
 
       - category: Drums - Hats
+        tonality: rather high impact sounding, pretty high volume, adding a lot of energy to the track
         pattern: 4 on the floor
         pattern_variation: no hit occurs on 8.4.3
         timing: 1.1.1 and on
@@ -119,18 +149,44 @@ arrangement:
         timing: 1.1.1 and on
 
       - category: Vocals - Background
-        tonality: Ehh vowel sound, heavy reverb
+        label: background female soft reverb vocal ambience
+        tonality: Ehh and ahh vowel sounds, heavy reverb
+        pattern: every bar a new vocal sound strikes and then fades out over approx 2-3 beats
         timing: 1.1.1
 
       - category: Bass
+        label: core swell bass layer
         tonality: Growly bass, has that sort of rapid volume jitter effect from saturation or OTT similar
+          kinda sounds like a bass guitar in isolation
+          fundamentals fairly low around 55hz, 47hz, 74hz
+          some mid layers extend upwards to 800-2k at times
+          The bass seems to have a long decay that completely stops when the next note is played. Suspect some monophonic voicing in play
+          Sidechained to each quarter note.
+          Bass also seems to decay the hi cut so that the hi cut descends gradually as the notes ring out.
+          The decay and the sidechain combine so that each "gate opening" of the side chain is a little bit quieter and a little bit more cut off
         pattern: 1.1.1, 3.1.1, 4.1.1, 4.3.1 repeating every 4 bars
+        pattern_variation: Occasionally there is another swell on 4.4.1
+          On 8.4.1, bass is heavily muted to lower and raise tension prior to next bar
         timing: 1.1.1 and on
 
       - category: Synth - Swell
+        label: core swell synth layer
         tonality: chord saw synth swell layered with the bass
+          This is still side chained to the kick so it swells just after
+          fairly similar in tonality to the plucks, just a longer attack, and maybe a hair bit more lows cut
+          The swell seems to have a long decay that completely stops when the next note is played. Suspect some monophonic voicing in play
+          Sidechained to each quarter note.
+          Swell also seems to decay the hi cut so that the hi cut descends gradually as the notes ring out.
+          The decay and the sidechain combine so that each "gate opening" of the side chain is a little bit quieter and a little bit more cut off
         pattern: 1.1.1, 3.1.1, 4.1.1, 4.3.1 repeating every 4 bars
+        pattern_variation: Occasionally there is another swell on 4.4.1
         timing: 1.1.1 and on
+
+      - category: Synth - Pluck
+        label: quick transitionary pluck
+        tonality: A pluck sounding almost identical to the core swell synth. gentle warm melodic house saw pluck
+        timing: once on 8.4.3
+        pattern: Just a single hit as a transitionary piece
 
       - category: Synth - Sustained
         label: background synth hit
@@ -146,7 +202,7 @@ arrangement:
         tonality: soft female vocals fair amount of reverb
         timing: constant
         automation: this is so heavily hi cut that it is basically inaudible as section starts
-          9.1.1 - begins to become audible, hi cut begins ascending for 8 bars
+          9.1.1 - begins to become "clearly" audible, though still very quiet  hi cut begins ascending for 8 bars
           17.1.1 - hi cut resets to a slightly lower frequency cut off point
 
       - category: Keys - Piano
