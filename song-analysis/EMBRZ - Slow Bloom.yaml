@@ -73,6 +73,7 @@ arrangement:
       - category: Synth - Swell
         tonality: Saw swell, slow ish attack and lots of reverb, very similar to the hypa saw swell preset.
           very much in the background / quiet
+          long decay
         timing: once every 4 bars
           also occurs at 12.1.1
 
@@ -215,5 +216,178 @@ arrangement:
 
   - section_name: break
     duration_bars: 16
+    global_transitions: everything but piano layer cuts on 16.4.1
     elements:
-      -
+      - category: Drums - Shakers
+        pattern: 2 16th note shakes, starting on upbeats
+        timing: 1.1.1 and on
+
+      - category: Keys - Piano
+        tonality: hi cut, reverb, background gentle keys, very subtle
+          this keys layer fades in and out with the synth pluck layer, which plays identical notes
+        timing: 1.1.1 and on
+
+      - category: Synth - Pluck
+        tonality: hi cut, reverb, background gentle keys, very subtle.
+          This synth layer fades in and out with the keys layer, which plays identical notes
+        pattern: this follows the background gently keys melody, but is a synth layer.
+        timing: 1.1.1 and on
+
+      - category: Bass
+        label: core swell bass layer
+        tonality: Growly bass, has that sort of rapid volume jitter effect from saturation or OTT similar
+          kinda sounds like a bass guitar in isolation
+          fundamentals fairly low around 55hz, 47hz, 74hz
+          some mid layers extend upwards to 800-2k at times
+          The bass seems to have a long decay that completely stops when the next note is played. Suspect some monophonic voicing in play
+          Sidechained to each quarter note.
+          Bass also seems to decay the hi cut so that the hi cut descends gradually as the notes ring out.
+          The decay and the sidechain combine so that each "gate opening" of the side chain is a little bit quieter and a little bit more cut off
+        pattern: 1.1.1, 3.1.1, 4.1.1, 4.3.1 repeating every 4 bars
+        pattern_variation: Occasionally there is another swell on 4.4.1
+          On 16.4.1, bass is cut
+        timing: 1.1.1 and on
+
+      - category: Synth - Swell
+        tonality: Saw swell, slow ish attack and lots of reverb, very similar to the hypa saw swell preset.
+          very much in the background / quiet
+          long decay
+        timing: once every 4 bars
+          also occurs at 12.1.1
+
+      - category: Drums - Kick
+        pattern: 4 on the floor
+        pattern_variation: no kicks occur on 16.3.1 or 16.4.1
+        timing: constant
+
+      - category: Drums - Clap
+        label: snap clap
+        pattern: 2nd and 4th beat
+        tonality: snap sounding clap, slight hi cut
+        timing: 1.1.1 and on
+
+      - category: Drums - Clap
+        label: reverse snap clap
+        tonality: snap sounding clap, slight hi cut reversed
+        pattern: every 4th clap hit
+        timing: 1.1.1 and on
+
+      - category: Transition - Sweep
+        tonality: band passed white noise sweep
+        timing: 16.3.1 and on
+
+  - section_name: verse b
+    duration_bars: 16
+    elements:
+      - category: Drums - Kick
+        pattern: 4 on the floor
+        timing: constant
+
+      - category: Drums - Clap
+        label: snap clap
+        pattern: 2nd and 4th beat
+        tonality: snap sounding clap, slight hi cut
+        timing: 1.1.1 and on
+
+      - category: Drums - Hats
+        tonality: rather high impact sounding, pretty high volume, adding a lot of energy to the track
+        pattern: 4 on the floor
+        pattern_variation: no hit occurs on 8.4.3
+        timing: 1.1.1 and on
+
+      - category: Drums - Other Percussive
+        tonality: wood block hit like sound
+        pattern: 1.2.4, 2.2.3, repeating every 2 bars
+        timing: 1.1.1 and on
+
+      - category: Bass
+        label: core swell bass layer
+        tonality: Growly bass, has that sort of rapid volume jitter effect from saturation or OTT similar
+          kinda sounds like a bass guitar in isolation
+          fundamentals fairly low around 55hz, 47hz, 74hz
+          some mid layers extend upwards to 800-2k at times
+          The bass seems to have a long decay that completely stops when the next note is played. Suspect some monophonic voicing in play
+          Sidechained to each quarter note.
+          Bass also seems to decay the hi cut so that the hi cut descends gradually as the notes ring out.
+          The decay and the sidechain combine so that each "gate opening" of the side chain is a little bit quieter and a little bit more cut off
+        pattern: 1.1.1, 3.1.1, 4.1.1, 4.3.1 repeating every 4 bars
+        pattern_variation: Occasionally there is another swell on 4.4.1
+        timing: 1.1.1 and on
+
+      - category: Synth - Swell
+        label: core swell synth layer
+        tonality: chord saw synth swell layered with the bass
+          This is still side chained to the kick so it swells just after
+          fairly similar in tonality to the plucks, just a longer attack, and maybe a hair bit more lows cut
+          The swell seems to have a long decay that completely stops when the next note is played. Suspect some monophonic voicing in play
+          Sidechained to each quarter note.
+          Swell also seems to decay the hi cut so that the hi cut descends gradually as the notes ring out.
+          The decay and the sidechain combine so that each "gate opening" of the side chain is a little bit quieter and a little bit more cut off
+        pattern: 1.1.1, 3.1.1, 4.1.1, 4.3.1 repeating every 4 bars
+        pattern_variation: Occasionally there is another swell on 4.4.1
+        timing: 1.1.1 and on
+
+      - category: Synth - Pluck
+        label: quick transitionary pluck
+        tonality: A pluck sounding almost identical to the core swell synth. gentle warm melodic house saw pluck
+        timing: once on 8.4.3
+        pattern: Just a single hit as a transitionary piece
+
+      - category: Synth - Swell
+        tonality: Saw swell, slow ish attack and lots of reverb, very similar to the hypa saw swell preset.
+          very much in the background / quiet
+        timing: once every 4 bars
+          also occurs at 12.1.1
+
+      - category: Vocals - Lead
+        tonality: soft female vocals fair amount of reverb
+        timing: constant
+        automation: filter is entirely open this time. 
+          hi cut filter begins descending approx 4.1.1, opens up again around 7.1.1
+
+      - category: Keys - Piano
+        tonality: hi cut, reverb, background gentle keys, very subtle
+        timing: 9.1.1
+
+      - category: Drums - Shakers
+        pattern: 2 16th note shakes, starting on upbeats
+        timing: 17.1.1 and on
+
+  - section_name: outro 1
+    duration_bars: 16
+    elements:
+      - category: Vocals - Lead
+        tonality: soft female vocals fair amount of reverb
+        timing: constant
+        automation: filter is entirely open this time.
+          hi cut filter begins descending approx 4.1.1, opens up again around 7.1.1
+
+      - category: Drums - Kick
+        pattern: 4 on the floor
+        timing: constant
+
+      - category: Keys - Piano
+        tonality: hi cut, reverb, background gentle keys, very subtle
+        timing: 1.1.1
+
+      - category: Bass
+        label: core swell bass layer
+        tonality: Growly bass, has that sort of rapid volume jitter effect from saturation or OTT similar
+          kinda sounds like a bass guitar in isolation
+          fundamentals fairly low around 55hz, 47hz, 74hz
+          some mid layers extend upwards to 800-2k at times
+          The bass seems to have a long decay that completely stops when the next note is played. Suspect some monophonic voicing in play
+          Sidechained to each quarter note.
+          Bass also seems to decay the hi cut so that the hi cut descends gradually as the notes ring out.
+          The decay and the sidechain combine so that each "gate opening" of the side chain is a little bit quieter and a little bit more cut off
+        pattern: 1.1.1, 3.1.1, 4.1.1, 4.3.1 repeating every 4 bars
+        pattern_variation: Occasionally there is another swell on 4.4.1
+        timing: 1.1.1 and on
+
+  - section_name: outro 2
+    duration_bars: 16
+    elements:
+      - category: Keys - Piano
+        tonality: little filter if any applied
+        pattern: same melody as intro
+        timing: 1.1.1 and on
