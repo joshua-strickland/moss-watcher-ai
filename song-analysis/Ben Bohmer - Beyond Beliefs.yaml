@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=/song-schema.json
+
+track_metadata:
+  artist: Ben Bohmer
+  title: Beyond Beliefs
+  key_signature: D# Major
+  bpm: 124
+  time_signature: 4/4
+  genre: Melodic House
+
+arrangement:
+  - section_name: intro
+
+
