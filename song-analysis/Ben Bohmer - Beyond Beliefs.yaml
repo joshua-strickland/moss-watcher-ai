@@ -10,5 +10,76 @@ track_metadata:
 
 arrangement:
   - section_name: intro
+    duration_bars: 8
+    elements:
+      - category: Drums - Hats
+        tonality: white noise like sounding hats
+        pattern: 16th notes
+        timing: constant
+
+      - category: Synth - Arp
+        tonality: warm saw synth arp
+        timing: constant
+        pattern: 16th & 8th notes intermixed pattern
+
+      - category: Drums - Other Percussive
+        tonality: click, almost clip like kick, only treble content
+        timing: constant
+        pattern: Every 3rd beat
+
+      - category: Synth - Pluck
+        label: prime synth pluck
+        tonality: lower note range pluck, 
+          has that sort of rapid gated sound on lower notes 
+          from the wave form being slow enough to hear the 
+          peak of the saw slamming on waveform reset
+        timing: 7.4.3
+        pattern: shifts between 8th & quarter notes
+
+  - section_name: verse a
+    duration_bars: 48 bars
+    elements:
+      - category: Drums - Hats
+        tonality: white noise like sounding hats
+        pattern: 16th notes
+        timing: constant
+
+      - category: Drums - Hats
+        tonality: actual hats, seems to be another layer on top of original hats
+        pattern: 16th notes
+        timing: constant
+
+      - category: Drums - Other Percussive
+        label: metallic hit
+        tonality: Sort of cowbell like sounding metallic hit, 
+          but with much less resonance.
+          There is a 16th note delay of some sort
+        pattern: x.1.3 and x.3.3, repeating every bar
+        timing: constant
+
+      - category: Drums - Kick
+        tonality: full sounding kick, mild click, 
+          short duration - roughly slightly longer than a single 16th note
+        pattern: 4 on the floor
+        timing: constant
+
+      - category: Synth - Pluck
+        label: prime synth pluck
+        tonality: lower note range pluck,
+          has that sort of rapid gated sound on lower notes
+          from the wave form being slow enough to hear the
+          peak of the saw slamming on waveform reset
+        timing: constant
+        pattern: shifts between 8th & quarter notes. 
+          seems to come in around every 4th bar ish,
+          then cuts out, leaving space for bars 1-3
+
+      - category: Synth - Pad
+        pattern: comes in after the prime synth pad cuts out primarily
+        tonality: has that washed multi tonal verbed out sound.
+          very ambient & lush soundscape, "heavenly".
+          reverb tail lasts approx two bars
+        timing: swells in just before bar 12
+
 
 
