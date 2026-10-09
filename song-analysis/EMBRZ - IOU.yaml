@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=/song-schema.json
+
+track_metadata:
+  artist: EMBRZ
+  title: IOU
+  key_signature: E Major
+  bpm: 120
+  time_signature: 4/4
+  genre: Melodic House
+
+arrangement:
+
