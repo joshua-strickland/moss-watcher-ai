@@ -33,18 +33,25 @@ arrangement:
           has that sort of rapid gated sound on lower notes 
           from the wave form being slow enough to hear the 
           peak of the saw slamming on waveform reset
+          fair amount of reverb and delay
+          the notes play a short melody which then waits a several bars before coming in again,
+          in other words there is a lot of space between when these come in.
+          The reverb and delay ring out for a bar or two. 
+          This makes the pluck sound fairly massive
         timing: 7.4.3
         pattern: shifts between 8th & quarter notes
 
   - section_name: verse a
-    duration_bars: 48 bars
+    duration_bars: 48
     elements:
       - category: Drums - Hats
+        label: soft hat noise layer 1
         tonality: white noise like sounding hats
         pattern: 16th notes
         timing: constant
 
       - category: Drums - Hats
+        label: soft hats layer 2
         tonality: actual hats, seems to be another layer on top of original hats
         pattern: 16th notes
         timing: constant
@@ -61,7 +68,13 @@ arrangement:
         tonality: full sounding kick, mild click, 
           short duration - roughly slightly longer than a single 16th note
         pattern: 4 on the floor
+        pattern_variation: cuts out 16.4.1
         timing: constant
+
+      - category: Synth - Arp
+        tonality: warm saw synth arp
+        timing: constant
+        pattern: 16th & 8th notes intermixed pattern
 
       - category: Synth - Pluck
         label: prime synth pluck
@@ -69,17 +82,39 @@ arrangement:
           has that sort of rapid gated sound on lower notes
           from the wave form being slow enough to hear the
           peak of the saw slamming on waveform reset
-        timing: constant
-        pattern: shifts between 8th & quarter notes. 
-          seems to come in around every 4th bar ish,
-          then cuts out, leaving space for bars 1-3
+          fair amount of reverb and delay
+          the notes play a short melody which then waits a several bars before coming in again,
+          in other words there is a lot of space between when these come in.
+          The reverb and delay ring out for a bar or two.
+          This makes the pluck sound fairly massive
+        timing: 7.4.3
+        pattern: shifts between 8th & quarter notes
 
-      - category: Synth - Pad
+      - category: Synth - Swell
+        label: heavenly swell
         pattern: comes in after the prime synth pad cuts out primarily
         tonality: has that washed multi tonal verbed out sound.
           very ambient & lush soundscape, "heavenly".
           reverb tail lasts approx two bars
         timing: swells in just before bar 12
 
+      - category: FX - Synth
+        label: vowel like transitory synth sound
+        pattern: once, 3 descending notes
+        tonality: Weird muffled vowel like synth sound
+        timing: just prior to bar 17
 
+      - category: Drums - Hats
+        label: sharp hi hat layer 3
+        tonality: actual hats, another layer on top of original hats
+        pattern: 8th notes
+        timing: 17.1.1 and on
+
+      - category: Synth - Swell
+        label: heavenly swell higher pitch
+        pattern: comes in after the prime synth pad cuts out primarily
+        tonality: has that washed multi tonal verbed out sound.
+          very ambient & lush soundscape, "heavenly".
+          reverb tail lasts approx two bars
+        timing: 17.2.1 - 19.1.1
 

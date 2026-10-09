@@ -52,29 +52,35 @@ arrangement:
         timing: >
           5.1.1 - 17.1.1
           except for on 16.4.1, where kick is absent as transitory pattern shift
+
       - category: Drums - Other Percussive
         label: gentle speaker pops
         tonality: like a vinyl crackle or low quality speaker pops with low filter
         pattern: seemingly random
         timing: 5.1.1 - 17.1.1
+
       - category: Bass
         tonality: very warm gentle bass, sub and maybe mid bass
         pattern: primarily changes every bar, but intermittently changes on quarter notes
         timing: 9.1.1 - 17.1.1
+
       - category: Transition - Riser
         label: intro to verse riser
         tonality: band passed pad like saw
         pattern: note descends approx one interval once after 15th bar
         timing: 15.1.1 - 17.1.1 or so?
+
       - category: Synth - Pad
         tonality: Sounds kinda like a trumpet
         pattern: pad
         timing: 9.1.1 - 17.1.1
         automation: cutoff gradually changes
+
       - category: Drums - Hats
         tonality: varying velocity hi hat hits, transitory
         pattern: 16th notes
         timing: 16.4.1
+
       - category: Vocals - Lead
         tonality: clean, unfiltered
         pattern: transitionary timing occurring on final bar beat 3 "And"
