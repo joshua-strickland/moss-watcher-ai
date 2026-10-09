@@ -50,9 +50,9 @@ arrangement:
         pattern: 16th notes
         timing: constant
 
-      - category: Drums - Hats
-        label: soft hats layer 2
-        tonality: actual hats, seems to be another layer on top of original hats
+      - category: Drums - Shakers
+        label: soft shaker
+        tonality: This is sort of like the christmas shaker sound in sleigh bells
         pattern: 16th notes
         timing: constant
 
@@ -76,6 +76,12 @@ arrangement:
         timing: constant
         pattern: 16th & 8th notes intermixed pattern
 
+      - category: Bass
+        tonality: sub, ducks with kick, duck continues even if kick is absent
+          pointing to the usage of a periodic duck through something like
+          shaperbox
+        timing: constant
+
       - category: Synth - Pluck
         label: prime synth pluck
         tonality: lower note range pluck,
@@ -83,20 +89,32 @@ arrangement:
           from the wave form being slow enough to hear the
           peak of the saw slamming on waveform reset
           fair amount of reverb and delay
-          the notes play a short melody which then waits a several bars before coming in again,
+          the notes play a short melody which then waits about 3-4 bars before coming in again,
           in other words there is a lot of space between when these come in.
-          The reverb and delay ring out for a bar or two.
-          This makes the pluck sound fairly massive
+          The reverb and delay ring  out for a bar or two.
+          This makes the pluck sound fairly massive.
+          sometimes the pluck is given more or less reverb to accentuate certain
+          notes
         timing: 7.4.3
         pattern: shifts between 8th & quarter notes
 
       - category: Synth - Swell
         label: heavenly swell
-        pattern: comes in after the prime synth pad cuts out primarily
+        pattern: comes once in after the prime synth pluck cuts out primarily
+          about once every 4 bars
         tonality: has that washed multi tonal verbed out sound.
           very ambient & lush soundscape, "heavenly".
           reverb tail lasts approx two bars
-        timing: swells in just before bar 12
+          The sound changes notes pitch every time it comes in
+        timing: swells in just before bar 12 at first, the reoccurs every 3-4 bars
+
+      - category: Synth - Swell
+        label:  rapid reverse synth swell
+        pattern: comes once in after the prime synth pluck cuts out primarily
+          about once every 4 bars, very frequently along with the heavenly swell
+        tonality: sounds like a rapid delay on top of a slow attack saw
+          fair amount of reverb applies, fades out over a bar or two
+        timing: swells in just before bar 12 at first, the reoccurs every 3-4 bars
 
       - category: FX - Synth
         label: vowel like transitory synth sound
@@ -107,14 +125,14 @@ arrangement:
       - category: Drums - Hats
         label: sharp hi hat layer 3
         tonality: actual hats, another layer on top of original hats
-        pattern: 8th notes
+        pattern: 8th notes on up beat
         timing: 17.1.1 and on
 
-      - category: Synth - Swell
-        label: heavenly swell higher pitch
-        pattern: comes in after the prime synth pad cuts out primarily
-        tonality: has that washed multi tonal verbed out sound.
-          very ambient & lush soundscape, "heavenly".
-          reverb tail lasts approx two bars
-        timing: 17.2.1 - 19.1.1
+      - category: Drums - Snare
+        label: snare brush
+        tonality: sounds like a snare brush
+        pattern: x.1.3, x.3.1, x.4.1, x.4.3
+        timing: 17.1.1 and on
+
+
 
