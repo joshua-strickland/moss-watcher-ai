@@ -8,168 +8,237 @@ track_metadata:
   time_signature: 4/4
   genre: Melodic House
 
+sounds:
+  pad_vocals:
+    category: Vocals - Lead
+    label: Pad Vocals
+    tonality: Pad-like vocal texture.
+
+  vocal_phrase:
+    category: Vocals - Lead
+    label: Vocal Phrase
+    tonality: Clear vocal delivery.
+
+  main_pad:
+    category: Synth - Pad
+    label: Main Pad
+    tonality: Smooth sustained chords.
+
+  trebly_pad:
+    category: Synth - Pad
+    label: Trebly Pad
+    tonality: Treble-heavy pad texture.
+
+  synth_lead:
+    category: Synth - Sustained
+    label: Synth Lead
+    tonality: Melodic lead synthesizer.
+
+  synth_leads:
+    category: Synth - Sustained
+    label: Synth Leads
+    tonality: Layered melodic leads.
+
+  pre_chorus_riser:
+    category: Transition - Riser
+    label: Pre-Chorus Riser
+    tonality: Rising tension element.
+
+  main_riser:
+    category: Transition - Riser
+    label: Main Riser
+    tonality: Pitch-rising tension element.
+
+  noise_swell:
+    category: Transition - Sweep
+    label: Noise Swell
+    tonality: White noise.
+
+  high_pitched_transition:
+    category: FX - Noise
+    label: High-Pitched Transition
+    tonality: High-pitched sound element.
+
+  main_kick:
+    category: Drums - Kick
+    label: Main Kick
+    tonality: Standard foundational kick.
+
+  main_snare:
+    category: Drums - Snare
+    label: Main Snare
+    tonality: Standard snare drum.
+
+  sixteenth_hats:
+    category: Drums - Hats
+    label: 16th Note Hats
+    tonality: Standard closed hi-hats.
+
+  off_beat_hats:
+    category: Drums - Hats
+    label: Off-Beat Hats
+    tonality: Additional hi-hat layer.
+
+  odd_percussion:
+    category: Drums - Other Percussive
+    label: Odd Percussion
+    tonality: Unique percussive hit.
+
+  reese_bass:
+    category: Bass
+    label: Reese Bass
+    tonality: Reese-like timbre.
+
+  main_bass:
+    category: Bass
+    label: Main Bass
+    tonality: Foundational low-end.
+
+  swell_vocal_fx:
+    category: Vocals - Atmosphere
+    label: Swell Vocal FX
+    tonality: Processed vocal swell.
+
 arrangement:
   - section_name: Intro
     duration_bars: 24
     elements:
-      - category: Vocals - Lead
-        label: Pad Vocals
-        timing: 1.1.1 - 25.1.1
-        tonality: Pad-like vocal texture.
+      - sound: pad_vocals
         pattern: Continuous underlying presence.
-      - category: Synth - Pad
-        label: Main Pad
-        timing: 1.1.1 - 25.1.1
-        tonality: Smooth sustained chords.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_pad
         automation: Cutoff frequency raises continually from 9.1.1 - 25.1.1.
-      - category: Synth - Sustained
-        label: Synth Lead
-        timing: 9.1.1 - 25.1.1
-        tonality: Melodic lead synthesizer.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: synth_lead
         automation: Cutoff frequency raises continually alongside the pad.
-      - category: Transition - Riser
-        label: Pre-Chorus Riser
-        timing: 17.1.1 - 25.1.1
-        tonality: Rising tension element.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: pre_chorus_riser
         pattern: Sweeps upward into the chorus drop.
-      - category: Vocals - Lead
-        label: Vocal Phrase
-        timing: 24.1.1
-        tonality: Clear vocal delivery.
+        timing:
+          active: ["17.1.1 - end"]
+      - sound: vocal_phrase
         pattern: Sings "I will leave a light on" just before entry to chorus.
+        timing:
+          hits: ["24.1.1"]
 
   - section_name: Chorus A
     duration_bars: 32
     chord_progression: "IV - V - VI - V"
     elements:
-      - category: Synth - Sustained
-        label: Synth Lead
-        timing: 1.1.1 - 33.1.1
-        tonality: Shifted an octave up; more trebly tone.
+      - sound: synth_lead
+        notes: Shifted an octave up; more trebly tone.
         pattern: Continuous melodic lead.
         pattern_variation: 25.1.1 Merges with another synth; original sound dies out and cutoff drops.
         automation: Cutoff raises and falls slightly throughout.
-      - category: Drums - Kick
-        label: Main Kick
-        timing: 1.1.1 - 33.1.1
-        tonality: Standard foundational kick.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_kick
         pattern: Four-on-the-floor beat (hitting on 1, 2, 3, 4).
         automation: Fades away around 29.1.1.
-      - category: Drums - Snare
-        label: Main Snare
-        timing: 1.1.1 - 33.1.1
-        tonality: Standard snare drum.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_snare
         pattern: Hits consistently on beats 2 and 4.
-      - category: Drums - Hats
-        label: 16th Note Hats
-        timing: 1.1.1 - 33.1.1
-        tonality: Standard closed hi-hats.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: sixteenth_hats
         pattern: Continuous 16th-note rhythm.
         automation: The "1 e and a" notes increase in volume slightly before going into the 2nd beat with the snare.
-      - category: Bass
-        label: Reese Bass
-        timing: 1.1.1 - 33.1.1
-        tonality: Reese-like timbre.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: reese_bass
         pattern: 1/4 note rhythm throughout the chorus.
         automation: Filter is heavily LFO'd. Bass fades away around 29.1.1.
-      - category: Vocals - Atmosphere
-        label: Swell Vocal FX
-        timing: 5.1.1
-        tonality: Processed vocal swell.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: swell_vocal_fx
         pattern: Swells in and dies back out.
-      - category: Drums - Hats
-        label: Off-Beat Hats
-        timing: 9.1.1 - 33.1.1
-        tonality: Additional hi-hat layer.
+        timing:
+          hits: ["5.1.1"]
+      - sound: off_beat_hats
         pattern: Hits on the off-beats ("ands").
         automation: Gets progressively louder starting around 17.1.1.
+        timing:
+          active: ["9.1.1 - end"]
 
   - section_name: Intro B
     duration_bars: 16
     elements:
-      - category: Vocals - Lead
-        label: Pad Vocals
-        timing: 1.1.1 - 17.1.1
-        tonality: Similar to the first intro.
+      - sound: pad_vocals
+        notes: Similar to the first intro.
         pattern: Continuous underlying presence with slightly different lyrics.
-      - category: Synth - Sustained
-        label: Synth Lead
-        timing: 8.1.1
-        tonality: Heavily filtered.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: synth_lead
+        notes: Heavily filtered.
         pattern: Plays a very cut-off minor melody just before 9.1.1.
-      - category: Transition - Sweep
-        label: Noise Swell
-        timing: 15.1.1 - 17.1.1
-        tonality: White noise.
+        timing:
+          hits: ["8.1.1"]
+      - sound: noise_swell
         pattern: Upward swell leading into the buildup.
-      - category: Vocals - Lead
-        label: Vocal Phrase
-        timing: 16.1.1
-        tonality: Clear vocal delivery.
+        timing:
+          active: ["15.1.1 - end"]
+      - sound: vocal_phrase
         pattern: Sings "I will leave a light on" leading into the buildup.
+        timing:
+          hits: ["16.1.1"]
 
   - section_name: Buildup
     duration_bars: 32
     elements:
-      - category: Synth - Sustained
-        label: Synth Lead
-        timing: 1.1.1 - 33.1.1
-        tonality: Melodic lead.
+      - sound: synth_lead
         automation: Cutoff remains pretty high throughout.
-      - category: Synth - Pad
-        label: Main Pad
-        timing: 1.1.1 - 33.1.1
-        tonality: Sustained chords.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_pad
         automation: Cutoff frequency rises from 17.1.1 - 33.1.1
-      - category: FX - Noise
-        label: High-Pitched Transition
-        timing: 8.1.1
-        tonality: High-pitched sound element.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: high_pitched_transition
         pattern: Leads directly into the snare buildup.
-      - category: Drums - Snare
-        label: Buildup Snare
-        timing: 9.1.1 - 33.1.1
-        tonality: Standard snare drum.
+        timing:
+          hits: ["8.1.1"]
+      - sound: main_snare
         pattern: Snare roll buildup lasting through the rest of the section.
         automation: Gets louder and utilizes less cutoff from 25.1.1 - 33.1.1
-      - category: Transition - Riser
-        label: Main Riser
-        timing: 25.1.1 - 33.1.1
-        tonality: Pitch-rising tension element.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: main_riser
         pattern: Continuous sweep leading into the final chorus.
+        timing:
+          active: ["25.1.1 - end"]
 
   - section_name: Chorus B
     duration_bars: 16
     elements:
-      - category: Drums - Kick
-        label: Main Kick
-        timing: 1.1.1 - 17.1.1
-        tonality: Different sample or louder/less cutoff compared to Chorus A.
+      - sound: main_kick
+        notes: Different sample or louder/less cutoff compared to Chorus A.
         pattern: Four-on-the-floor beat.
-      - category: Drums - Snare
-        label: Main Snare
-        timing: 1.1.1 - 17.1.1
-        tonality: Different sample or louder/less cutoff compared to Chorus A.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_snare
+        notes: Different sample or louder/less cutoff compared to Chorus A.
         pattern: Hits on beats 2 and 4.
-      - category: Synth - Pad
-        label: Trebly Pad
-        timing: 1.1.1 - 17.1.1
-        tonality: Treble-heavy pad texture.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: trebly_pad
         pattern: Maintains chords throughout the section.
         pattern_variation: Shifts notes slightly around 4.1.1.
-      - category: Bass
-        label: Main Bass
-        timing: 1.1.1 - 17.1.1
-        tonality: Foundational low-end.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_bass
         pattern: 1/4 note rhythm.
         automation: Filter is heavily LFO'd.
-      - category: Synth - Sustained
-        label: Synth Leads
-        timing: 1.1.1 - 17.1.1
-        tonality: Layered melodic leads.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: synth_leads
         pattern: Core melodic progression.
-      - category: Drums - Other Percussive
-        label: Odd Percussion
-        timing: 2.1.1
-        tonality: Unique percussive hit.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: odd_percussion
         pattern: Single odd percussive accent.
+        timing:
+          hits: ["2.1.1"]

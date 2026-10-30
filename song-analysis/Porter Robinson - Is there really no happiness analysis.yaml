@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=/song-schema.json
+# yaml-language-server: $schema=./song-schema.json
 
 track_metadata:
   artist: Porter Robinson
@@ -8,173 +8,239 @@ track_metadata:
   time_signature: 4/4
   genre: Electropop / Indietronica
 
+sounds:
+  piano:
+    category: Keys - Piano
+
+  distorted_pad:
+    category: Synth - Pad
+    tonality: distorted / saturated, like a pad fed through a guitar amp
+
+  kick:
+    category: Drums - Kick
+    tonality: full presence
+
+  hats:
+    category: Drums - Hats
+    tonality: full presence
+
+  snare:
+    category: Drums - Snare
+    tonality:
+      sounds like a layer of a tacky edm snare and an actual full body snare.
+      fair amount of low end
+
+  clap:
+    category: Drums - Clap
+
+  ride:
+    category: Drums - Rides
+
+  noise_sweep:
+    category: Transition - Sweep
+    tonality: ascending frequency white noise sweep
+
+  bass:
+    category: Bass
+    tonality: bass guitar feels like it has tons of space in frequency spectrum. amazing
+
+  female_vocal_pad:
+    category: Vocals - Atmosphere
+    tonality: >
+      female vocals hover with a good amount of reverb,
+      breathy Aaa vowels.
+      rhythmically volume gated
+
+  male_vocal_gate:
+    category: Vocals - Atmosphere
+    tonality: male voice volume gated
+
+  lead_vocals:
+    category: Vocals - Lead
+
+  acoustic_guitar:
+    category: Guitar - Acoustic
+
+  background_arp:
+    category: Synth - Arp
+    tonality: gentle, slightly low passed saw like plucky lead / arp in the background
+
 arrangement:
   - section_name: Intro
     duration_bars: 4
     global_transitions: on 4.3.1, everything cuts out. On 4.4.1, 2 eighth note muted guitar string strums are hit.
     elements:
-      - category: Keys - Piano
-        tonality: band passed piano
-        timing:  1.1.1 - 5.2.1
-      - category: Synth - Pad
-        tonality: distorted / saturated, like a pad fed through a guitar amp
-        timing:  1.1.1 - 5.2.1
-      - category: Drums - Kick
-        tonality: low passed kick drum
-        timing: 3.1.1 - 5.2.1
+      - sound: piano
+        notes: band passed piano
+        timing:
+          active: ["1.1.1 - 5.2.1"]
+      - sound: distorted_pad
+        timing:
+          active: ["1.1.1 - 5.2.1"]
+      - sound: kick
+        notes: low passed kick drum
         automation: low pass ascends until global transition
-      - category: Transition - Sweep
-        tonality: ascending frequency white noise sweep
-        timing: 4.1.1 - 4.2.1
+        timing:
+          active: ["3.1.1 - 5.2.1"]
+      - sound: noise_sweep
+        timing:
+          active: ["4.1.1 - 4.2.1"]
 
   - section_name: Intro 2 / Intro chorus
     duration_bars: 9
     global_transitions:
       9.1.1 exists as a transitory bar, only bass and drums are active
     elements:
-      - category: Bass
-        tonality: bass guitar feels like it has tons of space in frequency spectrum. amazing
-        timing: constant
-      - category: Vocals - Atmosphere
-        tonality: >
-          female vocals hover with a good amount of reverb, 
-          breathy Aaa vowels. 
-          rhythmically volume gated
+      - sound: bass
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: female_vocal_pad
+        pattern: >
           primarily the volume gated vocals are present
           with overlapping melodies being played occasionally.
-        timing: 1.1.1 - 9.1.1
-      - category: Drums - Kick
-        tonality: full presence
-        timing: constant
-      - category: Drums - Hats
-        tonality: full presence
-        timing: constant
+        timing:
+          active: ["1.1.1 - 9.1.1"]
+      - sound: kick
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: hats
         pattern: 16th note fills interchange with constant 8th notes
-      - category: Drums - Snare
-        tonality:
-          sounds like a layer of a tacky edm snare and an actual full body snare. 
-          fair amount of low end
-        timing: constant
-      - category: Keys - Piano
-        timing: 1.1.1 - 9.1.1
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: snare
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: piano
+        timing:
+          active: ["1.1.1 - 9.1.1"]
 
   - section_name: verse a
     duration_bars: 16
     elements:
-      - category: Guitar - Acoustic
-        timing: constant
-      - category: Drums - Kick
-        timing: constant
-        tonality: more muted / soft than in chorus
-      - category: Drums - Hats
-        timing: constant
+      - sound: acoustic_guitar
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: kick
+        notes: more muted / soft than in chorus
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: hats
         pattern: 16th note fills interchange with constant 8th notes
-      - category: Drums - Snare
-        timing: constant
-      - category: Drums - Clap
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: snare
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: clap
         pattern_variation: 16th note fill leads into break a
-      - category: Vocals - Lead
-        timing: constant
-      - category: Bass
-        tonality: almost like low end is cut, sounds kinda acoustic somewhat
-        timing: 9.1.1 - 17.1.1
-      - category: Keys - Piano
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: lead_vocals
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: bass
+        notes: almost like low end is cut, sounds kinda acoustic somewhat
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: piano
+        timing:
+          active: ["1.1.1 - end"]
 
   - section_name: break a
     duration_bars: 8
     global_transitions: on 4.3.1, everything cuts out,
     elements:
-      - category: Guitar - Acoustic
-        timing: constant
-      - category: Drums - Kick
-        timing: constant
-        tonality: more muted / soft than in chorus
-      - category: Drums - Hats
-        timing: constant
+      - sound: acoustic_guitar
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: kick
+        notes: more muted / soft than in chorus
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: hats
         pattern: 16th note fills interchange with constant 8th notes
         pattern_variation: fill with open hats occurs on 4.1.1 - 4.2.1
-      - category: Drums - Rides
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: ride
         pattern: 8th note
-      - category: Drums - Snare
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: snare
         pattern_variation: 16th note fill 4.3.3 - 4.4.3
-      - category: Vocals - Atmosphere
-        timing: constant
-        tonality: male voice volume gated
-      - category: Vocals - Lead
-        timing: 8.3.1 - 8.4.1
-        tonality: male voice lead rings in loud and clear
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: male_vocal_gate
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: lead_vocals
+        notes: male voice lead rings in loud and clear
         pattern: matches snare fill, 8th / 16th notes
-      - category: Bass
-        tonality: almost like low end is cut, sounds kinda acoustic somewhat
-        timing: constant
+        timing:
+          active: ["8.3.1 - 8.4.1"]
+      - sound: bass
+        notes: almost like low end is cut, sounds kinda acoustic somewhat
         pattern_variation: 32nd / 16th note prior to verse bass slides in again to transition
-      - category: Keys - Piano
-        timing: constant
-
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: piano
+        timing:
+          active: ["1.1.1 - end"]
 
   - section_name: chorus a
     duration_bars: 8
-    global_transitions:
     elements:
-      - category: Bass
-        tonality: bass guitar feels like it has tons of space in frequency spectrum. amazing
-        timing: constant
-      - category: Vocals - Lead
-        timing: 1.1.1 - 9.1.1
-      - category: Drums - Kick
-        tonality: full presence
-        timing: constant
-      - category: Drums - Hats
-        tonality: full presence
-        timing: constant
+      - sound: bass
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: lead_vocals
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: kick
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: hats
         pattern: 16th note fills interchange with constant 8th notes
-      - category: Drums - Rides
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: ride
         pattern: 8th note
-      - category: Drums - Snare
-        tonality:
-          sounds like a layer of a tacky edm snare and an actual full body snare.
-          fair amount of low end
-        timing: constant
-      - category: Keys - Piano
-        timing: 1.1.1 - 9.1.1
-      - category: Synth - Arp
-        timing: 1.1.1 - 9.1.1
-        tonality: gentle, slightly low passed saw like plucky lead / arp in the background
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: snare
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: piano
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: background_arp
+        timing:
+          active: ["1.1.1 - end"]
 
   - section_name: Chorus A outro
     duration_bars: 9
     global_transitions:
       Bar 9 exists as a transitory bar, only bass and drums are active
     elements:
-      - category: Bass
-        tonality: bass guitar feels like it has tons of space in frequency spectrum. amazing
-        timing: constant
-      - category: Vocals - Atmosphere
-        tonality: >
-          female vocals hover with a good amount of reverb, 
-          breathy Aaa vowels. 
-          rhythmically volume gated
+      - sound: bass
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: female_vocal_pad
+        pattern: >
           primarily the volume gated vocals are present
           with overlapping melodies being played occasionally.
-        timing: 1.1.1 - 9.1.1
-      - category: Drums - Kick
-        tonality: full presence
-        timing: constant
-      - category: Drums - Hats
-        tonality: full presence
-        timing: constant
+        timing:
+          active: ["1.1.1 - 9.1.1"]
+      - sound: kick
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: hats
         pattern: 16th note fills interchange with constant 8th notes
-      - category: Drums - Snare
-        tonality:
-          sounds like a layer of a tacky edm snare and an actual full body snare.
-          fair amount of low end
-        timing: constant
-      - category: Keys - Piano
-        timing: 1.1.1 - 9.1.1
-
-
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: snare
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: piano
+        timing:
+          active: ["1.1.1 - 9.1.1"]

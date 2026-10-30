@@ -8,131 +8,188 @@ track_metadata:
   time_signature: 4/4
   genre: Melodic House
 
+sounds:
+  noise_hats:
+    category: Drums - Hats
+    label: soft hat noise layer 1
+    tonality: white noise like sounding hats
+
+  sharp_hats:
+    category: Drums - Hats
+    label: sharp hi hat layer 3
+    tonality: actual hats, another layer on top of original hats
+
+  treble_click:
+    category: Drums - Other Percussive
+    tonality: click, almost clip like kick, only treble content
+
+  kick:
+    category: Drums - Kick
+    tonality: full sounding kick, mild click,
+      short duration - roughly slightly longer than a single 16th note
+
+  soft_shaker:
+    category: Drums - Shakers
+    label: soft shaker
+    tonality: This is sort of like the Christmas shaker sound in sleigh bells
+      at times there is a sort of ringing tonality where extra high frequency content
+      rings out. other times the hits have a relatively short release / duration
+
+  metallic_hit:
+    category: Drums - Other Percussive
+    label: metallic hit
+    tonality: Sort of cowbell like sounding metallic hit,
+      but with much less resonance.
+      There is a 16th note delay of some sort
+
+  snare_brush:
+    category: Drums - Snare
+    label: snare brush
+    tonality: sounds like a snare brush
+
+  sub_bass:
+    category: Bass
+    tonality: sub, ducks with kick, duck continues even if kick is absent
+      pointing to the usage of a periodic duck through something like
+      shaperbox
+
+  warm_arp:
+    category: Synth - Arp
+    tonality: warm saw synth arp
+
+  prime_pluck:
+    category: Synth - Pluck
+    label: prime synth pluck
+    tonality: lower note range pluck,
+      has that sort of rapid gated sound on lower notes
+      from the wave form being slow enough to hear the
+      peak of the saw slamming on waveform reset
+      fair amount of reverb and delay.
+      The reverb and delay ring out for a bar or two.
+      This makes the pluck sound fairly massive
+      sometimes the pluck is given more or less reverb to accentuate certain
+      notes
+
+  heavenly_swell:
+    category: Synth - Swell
+    label: heavenly swell
+    tonality: has that washed multi tonal verbed out sound.
+      very ambient & lush soundscape, "heavenly".
+      reverb tail lasts approx two bars
+      The sound changes notes pitch every time it comes in
+
+  reverse_swell:
+    category: Synth - Swell
+    label: rapid reverse synth swell
+    tonality: sounds like a rapid delay on top of a slow attack saw
+      fair amount of reverb applies, fades out over a bar or two
+
 arrangement:
   - section_name: intro
     duration_bars: 8
     elements:
-      - category: Drums - Hats
-        tonality: white noise like sounding hats
+      - sound: noise_hats
         pattern: 16th notes
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Synth - Arp
-        tonality: warm saw synth arp
-        timing: constant
+      - sound: warm_arp
         pattern: 16th & 8th notes intermixed pattern
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Other Percussive
-        tonality: click, almost clip like kick, only treble content
-        timing: constant
+      - sound: treble_click
         pattern: Every 3rd beat
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Synth - Pluck
-        label: prime synth pluck
-        tonality: lower note range pluck, 
-          has that sort of rapid gated sound on lower notes 
-          from the wave form being slow enough to hear the 
-          peak of the saw slamming on waveform reset
-          fair amount of reverb and delay
-          the notes play a short melody which then waits a several bars before coming in again,
-          in other words there is a lot of space between when these come in.
-          The reverb and delay ring out for a bar or two. 
-          This makes the pluck sound fairly massive
-        timing: 7.4.3
-        pattern: shifts between 8th & quarter notes
+      - sound: prime_pluck
+        pattern: shifts between 8th & quarter notes.
+          the notes play a short melody which then waits several bars before coming in again,
+          in other words there is a lot of space between when these come in
+        timing:
+          hits: ["7.4.3"]
 
   - section_name: verse a
     duration_bars: 48
     elements:
-      - category: Drums - Hats
-        label: soft hat noise layer 1
-        tonality: white noise like sounding hats
+      - sound: noise_hats
         pattern: 16th notes
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Shakers
-        label: soft shaker
-        tonality: This is sort of like the christmas shaker sound in sleigh bells
+      - sound: soft_shaker
         pattern: 16th notes
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Other Percussive
-        label: metallic hit
-        tonality: Sort of cowbell like sounding metallic hit, 
-          but with much less resonance.
-          There is a 16th note delay of some sort
+      - sound: metallic_hit
         pattern: x.1.3 and x.3.3, repeating every bar
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Kick
-        tonality: full sounding kick, mild click, 
-          short duration - roughly slightly longer than a single 16th note
+      - sound: kick
         pattern: 4 on the floor
-        pattern_variation: cuts out 16.4.1
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
+          mutes:
+            - "16.4.1"
+            - "48.1.1 - end"
 
-      - category: Synth - Arp
-        tonality: warm saw synth arp
-        timing: constant
+      - sound: warm_arp
         pattern: 16th & 8th notes intermixed pattern
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Bass
-        tonality: sub, ducks with kick, duck continues even if kick is absent
-          pointing to the usage of a periodic duck through something like
-          shaperbox
-        timing: constant
+      - sound: sub_bass
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Synth - Pluck
-        label: prime synth pluck
-        tonality: lower note range pluck,
-          has that sort of rapid gated sound on lower notes
-          from the wave form being slow enough to hear the
-          peak of the saw slamming on waveform reset
-          fair amount of reverb and delay
-          the notes play a short melody which then waits about 3-4 bars before coming in again,
-          in other words there is a lot of space between when these come in.
-          The reverb and delay ring  out for a bar or two.
-          This makes the pluck sound fairly massive.
-          sometimes the pluck is given more or less reverb to accentuate certain
-          notes
-        timing: 7.4.3
-        pattern: shifts between 8th & quarter notes
+      - sound: prime_pluck
+        pattern: shifts between 8th & quarter notes.
+          the notes play a short melody which then waits about 3-4 bars before coming in again
+        timing:
+          hits: ["7.4.3"]
 
-      - category: Synth - Swell
-        label: heavenly swell
-        pattern: comes once in after the prime synth pluck cuts out primarily
-          about once every 4 bars
-        tonality: has that washed multi tonal verbed out sound.
-          very ambient & lush soundscape, "heavenly".
-          reverb tail lasts approx two bars
-          The sound changes notes pitch every time it comes in
-        timing: swells in just before bar 12 at first, the reoccurs every 3-4 bars
+      - sound: heavenly_swell
+        pattern: comes in once after the prime synth pluck cuts out
+        timing:
+          description: swells in just before bar 13 at first, then reoccurs every 3-4 bars
+          repeat:
+            - start: "12.4.1"
+              every_bars: 4
+              length_bars: 2
 
-      - category: Synth - Swell
-        label:  rapid reverse synth swell
-        pattern: comes once in after the prime synth pluck cuts out primarily
-          about once every 4 bars, very frequently along with the heavenly swell
-        tonality: sounds like a rapid delay on top of a slow attack saw
-          fair amount of reverb applies, fades out over a bar or two
-        timing: swells in just before bar 12 at first, the reoccurs every 3-4 bars
+      - sound: reverse_swell
+        pattern: comes in once after the prime synth pluck cuts out,
+          very frequently along with the heavenly swell
+        timing:
+          description: swells in just before bar 13 at first, then reoccurs every 3-4 bars
+          repeat:
+            - start: "12.4.1"
+              every_bars: 4
+              length_bars: 2
 
       - category: FX - Synth
         label: vowel like transitory synth sound
         pattern: once, 3 descending notes
         tonality: Weird muffled vowel like synth sound
-        timing: just prior to bar 17
+        timing:
+          description: just prior to bar 17
+          hits: ["16.4.1"]
 
-      - category: Drums - Hats
-        label: sharp hi hat layer 3
-        tonality: actual hats, another layer on top of original hats
+      - sound: sharp_hats
         pattern: 8th notes on up beat
-        timing: 17.1.1 and on
+        timing:
+          active: ["17.1.1 - end"]
 
-      - category: Drums - Snare
-        label: snare brush
-        tonality: sounds like a snare brush
+      - sound: snare_brush
         pattern: x.1.3, x.3.1, x.4.1, x.4.3
-        timing: 17.1.1 and on
+        notes: On bar 32 the hit gets louder
+        timing:
+          active: ["17.1.1 - end"]
 
-
-
+  - section_name: break a
+    duration_bars: 0
+    elements:
+      -

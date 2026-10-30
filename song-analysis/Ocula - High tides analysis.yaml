@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=/song-schema.json
+# yaml-language-server: $schema=./song-schema.json
 
 track_metadata:
   artist: Ocula
@@ -8,31 +8,118 @@ track_metadata:
   time_signature: 4/4
   genre: Melodic House
 
+sounds:
+  harmonized_whisper:
+    category: Vocals - Lead
+    label: Harmonized Whisper
+    tonality: Low whisper harmonized with an octave higher layer.
+
+  main_vocal:
+    category: Vocals - Lead
+    label: Main Vocal
+    tonality: Clear lead vocal.
+
+  falsetto_ooo:
+    category: Vocals - Atmosphere
+    label: Falsetto Ooo
+    tonality: High-register falsetto texture.
+
+  reverse_vocal:
+    category: Vocals - Atmosphere
+    label: Reverse Vocal
+    tonality: Processed human voice.
+
+  smooth_cutoff_pad:
+    category: Synth - Pad
+    label: Smooth Cutoff Pad
+    tonality: Smooth sawtooth pad with low-end shifting.
+
+  subtle_pad:
+    category: Synth - Pad
+    label: Subtle Pad
+    tonality: Soft, understated synthesizer pad.
+
+  oscillating_pad:
+    category: Synth - Pad
+    label: Oscillating Pad
+    tonality: Synthesizer pad with heavy modulation.
+
+  cutoff_saw_lead:
+    category: Synth - Sustained
+    label: Cutoff Saw Lead
+    tonality: Sawtooth lead with a filtered cutoff.
+
+  secondary_lead:
+    category: Synth - Sustained
+    label: Secondary Lead
+    tonality: Additional synthesized lead texture.
+
+  supersaw_plucker:
+    category: Synth - Arp
+    label: Supersaw Plucker
+    tonality: Plucky supersaw synthesizer.
+
+  main_bass:
+    category: Bass
+    label: Main Bass
+    tonality: Foundational low-end anchor.
+
+  main_kick:
+    category: Drums - Kick
+    label: Main Kick
+    tonality: Standard foundational kick.
+
+  main_snare:
+    category: Drums - Snare
+    label: Main Snare
+    tonality: Standard snare drum.
+
+  main_hats:
+    category: Drums - Hats
+    label: Main Hats
+    tonality: Standard hi-hats.
+
+  drop_percussion:
+    category: Drums - Other Percussive
+    label: Drop Percussion
+    tonality: Liquid, drop-in-a-bucket character.
+
+  noise_swell:
+    category: Transition - Sweep
+    label: Noise Swell
+    tonality: White noise.
+
+  staccato_fx:
+    category: FX - Noise
+    label: Staccato FX
+    tonality: Noise-based textured hits.
+
+  background_piano:
+    category: Keys - Piano
+    label: Background Piano
+    tonality: Extremely subtle acoustic piano.
+
 arrangement:
   - section_name: Intro
     duration_bars: 16
     chord_progression: "I - III - IV - V - VI - III - IV"
     elements:
-      - category: Vocals - Lead
-        label: Harmonized Whisper
-        timing: 1.1.1 - 17.1.1
-        tonality: Low whisper harmonized with an octave higher layer.
+      - sound: harmonized_whisper
         pattern: Continuous underlying vocal texture.
-      - category: Synth - Pad
-        label: Smooth Cutoff Pad
-        timing: 1.1.1 - 17.1.1
-        tonality: Smooth sawtooth pad with low-end shifting.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: smooth_cutoff_pad
         pattern: Constant sustained note.
-      - category: Bass
-        label: Main Bass
-        timing: 9.1.1 - 17.1.1
-        tonality: Foundational low-end anchor.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_bass
         pattern: Driving bassline establishing the chord progression.
-      - category: Synth - Sustained
-        label: Cutoff Saw Lead
-        timing: 9.1.1 - 17.1.1
-        tonality: Sawtooth lead with a filtered cutoff.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: cutoff_saw_lead
         pattern: Core melodic introduction.
+        timing:
+          active: ["9.1.1 - end"]
 
   - section_name: Verse A
     duration_bars: 16
@@ -40,158 +127,134 @@ arrangement:
     global_transitions: >
       13.1.1: Instruments begin to cut out aside from the lead synth and vocals.
     elements:
-      - category: Bass
-        label: Main Bass
-        timing: 1.1.1 - 17.1.1
-        tonality: Foundational low-end anchor.
+      - sound: main_bass
         pattern: Bassline continues as before.
-      - category: Synth - Sustained
-        label: Cutoff Saw Lead
-        timing: 1.1.1 - 17.1.1
-        tonality: Sawtooth lead.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: cutoff_saw_lead
         pattern: Core melody.
         automation: Cutoff frequency gradually rises and lowers throughout the section.
-      - category: Synth - Pad
-        label: Smooth Cutoff Pad
-        timing: 1.1.1 - 13.1.1
-        tonality: Smooth sawtooth pad.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: smooth_cutoff_pad
         pattern: Constant sustained note.
-      - category: Synth - Arp
-        label: Supersaw Plucker
-        timing: 14.1.1 - 17.1.1
-        tonality: Plucky supersaw synthesizer.
+        timing:
+          active: ["1.1.1 - 13.1.1"]
+      - sound: supersaw_plucker
         pattern: 8th-note rhythmic plucking pattern.
+        timing:
+          active: ["14.1.1 - end"]
 
   - section_name: buildup
     duration_bars: 8
     elements:
-      - category: Synth - Arp
-        label: Supersaw Plucker
-        timing: 1.1.1 - 9.1.1
-        tonality: Plucky supersaw synthesizer.
+      - sound: supersaw_plucker
         pattern: Syncopated rhythm on 1a, 2, 2a, 3a, 4, 4a.
         automation: Fades via sidechain compression when the kick drum hits.
-      - category: Drums - Kick
-        label: Main Kick
-        timing: 1.1.1 - 9.1.1
-        tonality: Standard foundational kick.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_kick
         pattern: Four-on-the-floor rhythm.
-      - category: Bass
-        label: Main Bass
-        timing: 1.1.1 - 9.1.1
-        tonality: Foundational low-end anchor.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_bass
         pattern: Re-enters to support the groove.
-      - category: Drums - Other Percussive
-        label: Drop Percussion
-        timing: 4.1.1
-        tonality: Liquid, drop-in-a-bucket character.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: drop_percussion
         pattern: Single odd, out-of-place hit.
-      - category: Drums - Snare
-        label: Buildup Snare
-        timing: 8.1.1
-        tonality: Standard snare drum.
+        timing:
+          hits: ["4.1.1"]
+      - sound: main_snare
         pattern: Snare roll buildup transitioning into the chorus.
-      - category: Vocals - Lead
-        label: Main Vocal
-        timing: 8.1.1
-        tonality: Clear lead vocal.
+        timing:
+          hits: ["8.1.1"]
+      - sound: main_vocal
         pattern: Vocal phrase leading into the drop.
+        timing:
+          hits: ["8.1.1"]
 
   - section_name: Chorus A
     duration_bars: 16
     elements:
-      - category: Drums - Snare
-        label: Main Snare
-        timing: 1.1.1 - 17.1.1
-        tonality: Standard snare.
+      - sound: main_snare
         pattern: New driving drum pattern.
-      - category: Drums - Hats
-        label: Main Hats
-        timing: 1.1.1 - 17.1.1
-        tonality: Standard hi-hats.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_hats
         pattern: Interlocking groove with the snare.
-      - category: Vocals - Lead
-        label: Main Vocal
-        timing: 1.1.1 - 17.1.1
-        tonality: Clear lead vocal.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_vocal
         pattern: Sings lyrical phrase "as the days come and go".
-      - category: Synth - Sustained
-        label: Cutoff Saw Lead
-        timing: 9.1.1 - 17.1.1
-        tonality: Sawtooth lead.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: cutoff_saw_lead
         pattern: Melodic lead re-enters the mix.
+        timing:
+          active: ["9.1.1 - end"]
 
   - section_name: chorus a outtro
     duration_bars: 8
     elements:
-      - category: Drums - Hats
-        label: Main Hats
-        timing: 1.1.1 - 9.1.1
-        tonality: Standard hi-hats.
+      - sound: main_hats
         pattern: Hi-hat rhythm accelerates throughout the section.
-      - category: Vocals - Atmosphere
-        label: Falsetto Ooo
-        timing: 1.1.1 - 9.1.1
-        tonality: High-register falsetto texture.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: falsetto_ooo
         pattern: Sustained background vocal.
-      - category: Transition - Sweep
-        label: Noise Swell
-        timing: 7.1.1 - 9.1.1
-        tonality: White noise.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: noise_swell
         pattern: Tension-building swell sweeping upward.
+        timing:
+          active: ["7.1.1 - end"]
 
   - section_name: Preverse B
     duration_bars: 16
     elements:
-      - category: Transition - Sweep
-        label: Noise Swell
-        timing: 1.1.1
-        tonality: White noise.
+      - sound: noise_swell
         pattern: Quickly fades out from the previous section.
-      - category: Synth - Pad
-        label: Subtle Pad
-        timing: 1.1.1 - 9.1.1
-        tonality: Soft, understated synthesizer pad.
+        timing:
+          hits: ["1.1.1"]
+      - sound: subtle_pad
         pattern: Continuous background presence.
-      - category: Synth - Sustained
-        label: Cutoff Saw Lead (Fading)
-        timing: 1.1.1 - 9.1.1
-        tonality: Delayed sawtooth lead.
+        timing:
+          active: ["1.1.1 - 9.1.1"]
+      - sound: cutoff_saw_lead
+        notes: Delayed; fading out.
         pattern: Rings out from the previous section.
         automation: Cutoff filter slowly closes and dies down.
-      - category: FX - Noise
-        label: Staccato FX
-        timing: 3.1.1 - 6.1.1
-        tonality: Noise-based textured hits.
+        timing:
+          active: ["1.1.1 - 9.1.1"]
+      - sound: staccato_fx
         pattern: Staccato rhythmic pattern.
-      - category: Keys - Piano
-        label: Background Piano
-        timing: 1.1.1 - 9.1.1
-        tonality: Extremely subtle acoustic piano.
+        timing:
+          active: ["3.1.1 - 6.1.1"]
+      - sound: background_piano
         pattern: Background melodic support.
-      - category: Synth - Pad
-        label: Oscillating Pad
-        timing: 9.1.1 - 17.1.1
-        tonality: Synthesizer pad with heavy modulation.
+        timing:
+          active: ["1.1.1 - 9.1.1"]
+      - sound: oscillating_pad
         pattern: Continuous sustained chords.
         automation: LFO/oscillation frequency gradually accelerates. Becomes more pronounced in the mix.
-      - category: Bass
-        label: Main Bass
-        timing: 9.1.1 - 17.1.1
-        tonality: Foundational low end.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: main_bass
         pattern: Re-enters the arrangement.
         automation: Gradually increases in volume throughout the section.
-      - category: Synth - Sustained
-        label: Cutoff Saw Lead (Active)
-        timing: 9.1.1 - 17.1.1
-        tonality: Sawtooth lead.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: cutoff_saw_lead
+        notes: Active again after fading.
         pattern: Melodic phrasing.
         automation: Cutoff filter dynamically raises and lowers.
-      - category: Vocals - Atmosphere
-        label: Reverse Vocal
-        timing: 16.1.1
-        tonality: Processed human voice.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: reverse_vocal
         pattern: Minor reverse swell transitioning to the next section.
+        timing:
+          hits: ["16.1.1"]
 
   - section_name: Verse B
     duration_bars: 16
@@ -199,102 +262,84 @@ arrangement:
       13.1.1: Most instruments cut out of the mix.
       14.1.1: Bassline volume is lowered.
     elements:
-      - category: Vocals - Lead
-        label: Main Vocal
-        timing: 1.1.1 - 9.1.1
-        tonality: Clear lead vocal.
+      - sound: main_vocal
         pattern: Re-enters the arrangement.
-      - category: Synth - Pad
-        label: Oscillating Pad
-        timing: 1.1.1 - 9.1.1
-        tonality: Synthesizer pad with heavy modulation.
+        timing:
+          active: ["1.1.1 - 9.1.1"]
+      - sound: oscillating_pad
         pattern: Continuous sustained chords.
         automation: Oscillation speed becomes very fast.
-      - category: Synth - Sustained
-        label: Cutoff Saw Lead
-        timing: 1.1.1 - 17.1.1
-        tonality: Sawtooth lead.
+        timing:
+          active: ["1.1.1 - 9.1.1"]
+      - sound: cutoff_saw_lead
         pattern: Melodic phrasing.
         automation: Cutoff filter rises to build tension. Gradually high-passed alongside the snare from 9.1.1 to 16.
-      - category: Drums - Snare
-        label: 8th Note Snare
-        timing: 4.1.1 - 9.1.1
-        tonality: Standard snare drum.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_snare
         pattern: Begins hitting steadily on 8th notes halfway through the phrase.
-      - category: Drums - Snare
-        label: 16th Note Snare
-        timing: 9.1.1 - 17.1.1
-        tonality: Standard snare drum.
+        timing:
+          active: ["4.1.1 - 9.1.1"]
+      - sound: main_snare
         pattern: Rhythm accelerates to continuous 16th notes.
         automation: Gradually high-passed as a transitionary element.
-      - category: Transition - Sweep
-        label: Pre-Chorus Noise
-        timing: 15.1.1 - 17.1.1
-        tonality: White noise.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: noise_swell
         pattern: Upward swell leading into the chorus drop.
+        timing:
+          active: ["15.1.1 - end"]
 
   - section_name: Chorus B
     duration_bars: 16
     elements:
-      - category: Drums - Kick
-        label: Main Kick
-        timing: 1.1.1 - 9.1.1
-        tonality: Foundational kick.
+      - sound: main_kick
         pattern: Four-on-the-floor rhythm.
-        pattern_variation: 8.3.1 Kicks stop completely.
-      - category: Transition - Sweep
-        label: Pre-Chorus Noise
-        timing: 1.1.1 - 7.1.1
-        tonality: White noise.
+        timing:
+          active: ["1.1.1 - 8.3.1"]
+      - sound: noise_swell
         pattern: Gradually dies down over the first 6 bars.
-      - category: Synth - Arp
-        label: Supersaw Plucker
-        timing: 1.1.1 - 9.1.1
-        tonality: Plucky supersaw from Chorus A1.
+        timing:
+          active: ["1.1.1 - 7.1.1"]
+      - sound: supersaw_plucker
         pattern: Returns to drive the rhythmic melody.
-      - category: Synth - Sustained
-        label: Cutoff Saw Lead
-        timing: 1.1.1 - 17.1.1
-        tonality: Original sawtooth lead.
+        timing:
+          active: ["1.1.1 - 9.1.1"]
+      - sound: cutoff_saw_lead
         pattern: Core melody.
-      - category: Synth - Sustained
-        label: Secondary Lead
-        timing: 1.1.1 - 9.1.1
-        tonality: Additional synthesized lead texture.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: secondary_lead
         pattern: Layers with the cutoff lead.
-      - category: Drums - Hats
-        label: Off-beat Hat
-        timing: 8.1.1
-        tonality: Standard hi-hat.
+        timing:
+          active: ["1.1.1 - 9.1.1"]
+      - sound: main_hats
         pattern: Hits on the off-beats leading into the transition.
-      - category: Drums - Snare
-        label: Transition Snare
-        timing: 8.4.1
-        tonality: Standard snare.
+        timing:
+          hits: ["8.1.1"]
+      - sound: main_snare
         pattern: Single hit to lead into Chorus B2.
-      - category: Vocals - Lead
-        label: Main Vocal
-        timing: 9.1.1 - 17.1.1
-        tonality: Clear lead vocal.
+        timing:
+          hits: ["8.4.1"]
+      - sound: main_vocal
         pattern: Sings the core chorus phrasing.
-      - category: Drums - Hats
-        label: Main Hats
-        timing: 9.1.1 - 17.1.1
-        tonality: Standard hi-hats.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: main_hats
         pattern: Re-enters to establish the full groove.
-      - category: Drums - Snare
-        label: Main Snare
-        timing: 9.1.1 - 17.1.1
-        tonality: Standard snare drum.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: main_snare
         pattern: Re-enters for the backbeat.
+        timing:
+          active: ["9.1.1 - end"]
 
   - section_name: Chorus b outtro
     duration_bars: 8
     global_transitions: >
       Instruments gradually fade out and die down over the course of the 8 bars.
     elements:
-      - category: Vocals - Atmosphere
-        label: Falsetto Ooo
-        timing: 1.1.1 - 9.1.1
-        tonality: High-register falsetto texture.
+      - sound: falsetto_ooo
         pattern: Sustained background vocal texture.
+        timing:
+          active: ["1.1.1 - end"]

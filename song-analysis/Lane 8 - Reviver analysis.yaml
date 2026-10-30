@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=/song-schema.json
+# yaml-language-server: $schema=./song-schema.json
 
 track_metadata:
   artist: Lane 8
@@ -8,6 +8,89 @@ track_metadata:
   time_signature: 4/4
   genre: Melodic House
 
+sounds:
+  sonar_ping:
+    category: Synth - Pluck
+    label: Sonar Ping
+    tonality: >
+      Heavily filtered "sonar" style synth pings.
+
+  warm_saw:
+    category: Synth - Sustained
+    label: Warm Saw
+    tonality: >
+      Warm low-mid sawtooth synthesizer.
+
+  warm_cutoff_saw:
+    category: Synth - Sustained
+    label: Warm cutoff sustained saw
+    tonality: Warm cutoff sustained saw
+
+  main_arp:
+    category: Synth - Arp
+    label: Main 16th Arp
+    tonality: >
+      Plucky synthesizer sharing notes with the piano melody.
+
+  main_saw:
+    category: Synth - Pluck
+    label: Main Melody Saw
+    tonality: >
+      Main saw synth featuring a strong reverb tail.
+
+  melodic_riser:
+    category: Synth - Sustained
+    label: Melodic Riser
+    tonality: >
+      Soft melodic synthesizer.
+
+  piano:
+    category: Keys - Piano
+    label: Piano
+    tonality: >
+      Delayed acoustic piano.
+
+  descending_vocal_chop:
+    category: Vocals - Chop
+    label: Descending Vocal Chop
+    tonality: >
+      Female vocal with a lush reverb tail.
+
+  ahh_ayy:
+    category: Vocals - Chop
+    label: Ahh Ayy
+    tonality: female, breathy, Ah vowels, reverbed
+
+  mid_vocal_chop:
+    category: Vocals - Chop
+    label: Mid Vocal Chop
+    tonality: >
+      Mid-range audible with a fair amount of reverb; tail ends within a few seconds.
+
+  main_kick:
+    category: Drums - Kick
+    label: Main Kick
+    tonality: >
+      Full-sounding kick with med-high treble content for punch. Fundamental around 80-110Hz. Short overall envelope.
+
+  main_snare:
+    category: Drums - Snare
+    label: Main Snare
+    tonality: >
+      Punchy but smooth. Features an unzip/zip compressor effect that "swishes" the volume.
+
+  sub_bass:
+    category: Bass
+    label: Sub Bass
+    tonality: >
+      Sub-bass foundation.
+
+  main_closed_hat:
+    category: Drums - Hats
+    label: Main Closed Hat
+    tonality: >
+      Standard tight closed hi-hat.
+
 arrangement:
   - section_name: Intro
     duration_bars: 16
@@ -15,38 +98,32 @@ arrangement:
     global_transitions: >
       15.1.1: Hard cut of all instruments. Reverb tail of the vocal chop and plucky synth rings out. One more sonar two-note descending synth ping occurs during the silence.
     elements:
-      - category: Synth - Pluck
-        label: Sonar Ping
-        tonality: >
-          Heavily filtered "sonar" style synth pings.
+      - sound: sonar_ping
         pattern: >
           Occurs either on beat 1 or on beat 1 and 3
-        timing: Starts on 9.1.1, then Every 1-2 bars after
-      - category: Synth - Sustained
-        label: Warm Saw
-        tonality: >
-          Warm low-mid sawtooth synthesizer.
+        timing:
+          description: Starts on 9.1.1, then every 1-2 bars after
+          active: ["9.1.1 - 15.1.1"]
+      - sound: warm_saw
         pattern: >
           Lasts 1 bar 3 beats.
         automation: >
           Low-pass filter gradually opens further.
-        timing: Occurs every bar from 1.1.1 - 15.1.1
-      - category: Synth - Arp
-        label: Main 16th Arp
-        tonality: >
-          Plucky synthesizer sharing notes with the piano melody.
+        timing:
+          description: Occurs every bar from 1.1.1 - 15.1.1
+          active: ["1.1.1 - 15.1.1"]
+      - sound: main_arp
         pattern: >
           16th-note arpeggiated rhythm.
         automation: >
           Low pass filter gradually opens up.
-        timing: 9.1.1 - 17.1.1
-      - category: Vocals - Chop
-        label: Descending Vocal Chop
-        tonality: >
-          Female vocal with a lush reverb tail.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: descending_vocal_chop
         pattern: >
           Two-note descending melody hitting once near the end of the section.
-        timing: 14.4.1
+        timing:
+          hits: ["14.4.1"]
 
   - section_name: Verse A
     duration_bars: 16
@@ -55,34 +132,26 @@ arrangement:
       14.2.1: Main Melody Saw and Warm cutoff sustained saw stop and reverb tail
       fades out.
     elements:
-      - category: Synth - Pluck
-        label: Sonar Ping
-        tonality: >
-          Heavily filtered "sonar" style synth pings.
+      - sound: sonar_ping
         pattern: >
           Occurs about once every 4 bars, on beats 1 and 3
-        timing: 1.1.1 - 17.1.1
-      - category: Synth - Pluck
-        label: Main Melody Saw
-        tonality: >
-          Main saw synth featuring a strong reverb tail.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_saw
         pattern: >
           Core melody utilizing a quick portamento (glide) between notes.
-        timing: >
-          1.1.1 - 14.3.1
         automation: >
           Heavily sidechain-compressed (ducked) against the kick drum to create a "lead breath" pumping effect.
-      - category: Synth - Sustained
-        label: Warm cutoff sustained saw
-        tonality: Warm cutoff sustained saw
+        timing:
+          active: ["1.1.1 - 14.3.1"]
+      - sound: warm_cutoff_saw
         pattern: nearly 2 bar sustained notes, cutting off around 2.3.1
-        timing: 9.1.1 - 14.3.1
-      - category: Vocals - Chop
-        label: Ahh Ayy
-        tonality: female, breathy, Ah vowels, reverbed
+        timing:
+          active: ["9.1.1 - 14.3.1"]
+      - sound: ahh_ayy
         pattern: 2 eight notes
-        timing: 15.1.1
-
+        timing:
+          hits: ["15.1.1"]
 
   - section_name: Chorus A
     duration_bars: 16
@@ -93,57 +162,47 @@ arrangement:
       8.1.1: Clap rhythm occurs just before Chorus A2.
       15.1.1 - 17.1.1: Simple white noise swell with a long reverb tail lasting approximately 4 bars.
     elements:
-      - category: Synth - Pluck
-        label: Layered Main Saw
-        tonality: >
-          Main saw synth layered with an identical patch one octave higher for increased width and brightness.
+      - sound: main_saw
+        notes: >
+          Layered with an identical patch one octave higher for increased width and brightness.
         pattern: >
           Driving the core melody.
-        timing: 1.1.1 - 17.1.1
-      - category: Synth - Pluck
-        label: Sonar Ping
-        tonality: >
-          Sonar ping sounds with a long reverb tail (lasting 5-10s).
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: sonar_ping
+        notes: >
+          Long reverb tail (lasting 5-10s).
         pattern: >
           Similar pattern as verses, with one prominent lower-pitch ping around beat 2.
-        timing: 1.1.1 - 17.1.1
-      - category: Drums - Kick
-        label: Main Kick
-        tonality: >
-          Full-sounding kick with med-high treble content for punch. Fundamental around 80-110Hz. Short overall envelope.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_kick
         pattern: >
           Driving 4/4 rhythm.
-        timing: 1.1.1 - 17.1.1
-      - category: Drums - Snare
-        label: Main Snare
-        tonality: >
-          Punchy but smooth. Features an unzip/zip compressor effect that "swishes" the volume.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_snare
         pattern: >
           Sharp hits on beats 2 and 4.
-        timing: 1.1.1 - 17.1.1
-      - category: Vocals - Chop
-        label: Mid Vocal Chop
-        tonality: >
-          Mid-range audible with a fair amount of reverb; tail ends within a few seconds.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: mid_vocal_chop
         pattern: >
           Occurs intermittently.
-        timing: 1.1.1 - 17.1.1
-      - category: Bass
-        label: Sub Bass
-        tonality: >
-          Sub-bass foundation.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: sub_bass
         pattern: >
           Driving bassline following the progression.
         automation: >
           Sidechained heavily to the kick.
-        timing: 1.1.1 - 17.1.1
-      - category: Drums - Hats
-        label: Main Closed Hat
-        tonality: >
-          Standard tight closed hi-hat.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_closed_hat
         pattern: >
           Driving 16th-note rhythm to establish peak groove.
-        timing: 9.1.1 - 17.1.1
+        timing:
+          active: ["9.1.1 - end"]
 
   - section_name: Pre-Verse
     duration_bars: 16
@@ -152,32 +211,26 @@ arrangement:
       1.1.1: Heavy 4/4 kick, sub-bass, and driving percussion are completely removed to release tension.
       15.1.1: All instruments cut out completely except for one solitary synth line, maximizing the tension vacuum before the second verse.
     elements:
-      - category: Keys - Piano
-        label: Piano Pad Layer
-        tonality: >
-          Piano layered with lush, string-like sustained pads.
+      - sound: piano
+        notes: >
+          Layered with lush, string-like sustained pads.
         pattern: >
           The piano melody from the intro returns.
-        timing: 1.1.1 - 17.1.1
-      - category: Synth - Arp
-        label: Main 16th Arp
-        tonality: >
-          The 16th-note plucky synth from the intro.
-        pattern: >
-          Emerges around 3.1.1.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_arp
         automation: >
           Crescendos toward the next section.
-        timing: 1.1.1 - 17.1.1
-      - category: Synth - Sustained
-        label: Melodic Riser
-        tonality: >
-          Soft melodic synthesizer.
+        timing:
+          description: Emerges around 3.1.1.
+          active: ["3.1.1 - end"]
+      - sound: melodic_riser
         pattern: >
           Functions as a melodic riser.
         automation: >
           Cutoff filter continues to open steadily.
-        timing: 9.1.1 - 17.1.1
-
+        timing:
+          active: ["9.1.1 - end"]
 
   - section_name: Chorus B
     duration_bars: 16
@@ -188,58 +241,47 @@ arrangement:
       8.1.1: Clap rhythm occurs just before Chorus A2.
       15.1.1 to 17.1.1: Simple white noise swell with a long reverb tail lasting approximately 4 bars.
     elements:
-      - category: Synth - Pluck
-        label: Layered Main Saw
-        tonality: >
-          Main saw synth layered with an identical patch one octave higher for increased width and brightness.
+      - sound: main_saw
+        notes: >
+          Layered with an identical patch one octave higher for increased width and brightness.
         pattern: >
           Driving the core melody.
-        timing: 1.1.1 - 17.1.1
-      - category: Synth - Pluck
-        label: Sonar Ping
-        tonality: >
-          Sonar ping sounds with a long reverb tail (lasting 5-10s).
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: sonar_ping
+        notes: >
+          Long reverb tail (lasting 5-10s).
         pattern: >
           Similar pattern as verses, with one prominent lower-pitch ping around beat 2.
-        timing: 1.1.1 - 17.1.1
-      - category: Drums - Kick
-        label: Main Kick
-        tonality: >
-          Full-sounding kick with med-high treble content for punch. Fundamental around 80-110Hz. Short overall envelope.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_kick
         pattern: >
           Driving 4/4 rhythm.
-        timing: 1.1.1 - 17.1.1
-      - category: Drums - Snare
-        label: Main Snare
-        tonality: >
-          Punchy but smooth. Features an unzip/zip compressor effect that "swishes" the volume.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_snare
         pattern: >
           Sharp hits on beats 2 and 4.
-        timing: 1.1.1 - 17.1.1
-      - category: Vocals - Chop
-        label: Mid Vocal Chop
-        tonality: >
-          Mid-range audible with a fair amount of reverb; tail ends within a few seconds.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: mid_vocal_chop
         pattern: >
           Occurs intermittently.
-        timing: 1.1.1 - 17.1.1
-      - category: Bass
-        label: Sub Bass
-        tonality: >
-          Sub-bass foundation.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: sub_bass
         pattern: >
           Driving bassline following the progression.
         automation: >
           Sidechained heavily to the kick.
-        timing: 1.1.1 - 17.1.1
-      - category: Drums - Hats
-        label: Main Closed Hat
-        tonality: >
-          Standard tight closed hi-hat.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_closed_hat
         pattern: >
           Driving 16th-note rhythm to establish peak groove.
-        timing: 9.1.1 - 17.1.1
-
+        timing:
+          active: ["9.1.1 - end"]
 
   - section_name: Outro
     duration_bars: 8
@@ -247,21 +289,19 @@ arrangement:
     global_transitions: >
       1.1.1: Heavy 4/4 kick, sub-bass, and claps are removed. Track strips back strictly to core intro elements.
     elements:
-      - category: Keys - Piano
-        label: Delayed Piano
-        tonality: >
-          Delayed acoustic piano.
+      - sound: piano
         pattern: >
           Original intro melody.
         automation: >
           Progressively low-pass filtered and faded out to prepare for DJ mix transition.
-        timing: 1.1.1 - 17.1.1
-      - category: Synth - Sustained
-        label: Warm Saw
-        tonality: >
-          Single-layer sawtooth synthesizer.
+        timing:
+          active: ["1.1.1 - 17.1.1"]
+      - sound: warm_saw
+        notes: >
+          Single-layer sawtooth.
         pattern: >
           Intermittent root notes.
         automation: >
           Progressively low-pass filtered and faded out.
-        timing: 1.1.1 - 17.1.1
+        timing:
+          active: ["1.1.1 - 17.1.1"]

@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=./track_schema.json
+# yaml-language-server: $schema=./song-schema.json
 
 track_metadata:
   artist: Lane 8
@@ -8,252 +8,319 @@ track_metadata:
   time_signature: 4/4
   genre: Melodic House
 
+sounds:
+  vocal_string_pad:
+    category: Synth - Pad
+    label: Vocal String Pad
+    tonality: Vocal mixed with strings character.
+
+  transition_pad_swell:
+    category: Synth - Pad
+    label: Transition Pad Swell
+    tonality: Synthesizer pad.
+
+  saw_pad_swell:
+    category: Synth - Pad
+    label: Saw Pad Swell
+    tonality: Sawtooth pad texture.
+
+  aggressive_saw_pad:
+    category: Synth - Pad
+    label: Aggressive Saw Pad
+    tonality: Prominent, aggressive sawtooth texture.
+
+  trebly_kick:
+    category: Drums - Kick
+    label: Trebly Kick
+    tonality: Treble-heavy kick drum.
+
+  main_kick:
+    category: Drums - Kick
+    label: Main Kick
+    tonality: Standard driving kick.
+
+  main_snare:
+    category: Drums - Snare
+    label: Main Snare
+    tonality: Standard snare drum.
+
+  snare_clap:
+    category: Drums - Snare
+    label: Main Snare/Clap
+    tonality: Layered snare and clap sound.
+
+  tonal_tom:
+    category: Drums - Other Percussive
+    label: Tonal Tom
+    tonality: Noisy tonal tom.
+
+  tommy_drum_beat:
+    category: Drums - Other Percussive
+    label: Tommy Drum Beat
+    tonality: Tom-heavy drum rhythm.
+
+  simple_pluck:
+    category: Synth - Pluck
+    label: Simple Pluck
+    tonality: Warm sine/sawtooth sound.
+
+  distorted_pluck:
+    category: Synth - Pluck
+    label: Distorted Pluck
+    tonality: Melodic pluck mixed with a secondary distorted synth layer.
+
+  main_bass:
+    category: Bass
+    label: Main Bass
+    tonality: Foundational bassline.
+
+  reese_bass:
+    category: Bass
+    label: Reese Bass
+    tonality: Thick Reese-style bassline.
+
+  standard_bass:
+    category: Bass
+    label: Standard Bass
+    tonality: Cleaner, non-Reese bass character.
+
+  siney_bass:
+    category: Bass
+    label: Siney Bass
+    tonality: Pure sine-wave bass character.
+
+  vocal_fx:
+    category: Vocals - Atmosphere
+    label: Vocal FX
+    tonality: Processed vocal texture.
+
+  falsetto_fx:
+    category: Vocals - Atmosphere
+    label: Falsetto FX
+    tonality: Processed high-register falsetto.
+
+  main_vocals:
+    category: Vocals - Lead
+    label: Main Vocals
+    tonality: Clear vocal line.
+
+  cinematic_hypersaw:
+    category: Synth - Supersaw
+    label: Cinematic Hypersaw
+    tonality: Verbed, expansive cinematic saw.
+
+  hiss_fx:
+    category: FX - Noise
+    label: Air Hiss FX
+    tonality: Hissing white noise, airy texture.
+
 arrangement:
   - section_name: Intro
     duration_bars: 16
     chord_progression: "D#, E#, F"
     elements:
-      - category: Synth - Pad
-        label: Vocal String Pad
-        timing: 1.1.1 - 17.1.1
-        tonality: Vocal mixed with strings character.
+      - sound: vocal_string_pad
         pattern: Stays primarily on one note but goes a bit higher for a beat or so intermittently.
-      - category: Drums - Kick
-        label: Trebly Kick
-        timing: 1.1.1 - 17.1.1
-        tonality: Treble-heavy kick drum.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: trebly_kick
         pattern: Standard driving beat.
-      - category: Drums - Other Percussive
-        label: Tonal Tom
-        timing: 1.1.1 - 17.1.1
-        tonality: Noisy tonal tom.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: tonal_tom
         pattern: Replaces standard snare placement in the groove.
-      - category: Synth - Pluck
-        label: Simple Pluck
-        timing: 1.1.1 - 17.1.1
-        tonality: Warm sine/sawtooth sound.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: simple_pluck
         pattern: Simple melodic progression.
         pattern_variation: 8.1.1 Melody harmonizes as it leads into the second phrase.
-      - category: Bass
-        label: Main Bass
-        timing: 9.1.1 - 17.1.1
-        tonality: Foundational bassline.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_bass
         pattern: Enters to support the groove.
-      - category: Vocals - Atmosphere
-        label: Vocal FX
-        timing: 9.1.1 - 17.1.1
-        tonality: Processed vocal texture.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: vocal_fx
         pattern: Occurs throughout the second phrase.
-      - category: Synth - Supersaw
-        label: Cinematic Hypersaw
-        timing: 15.1.1 - 17.1.1
-        tonality: Verbed, expansive cinematic saw.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: cinematic_hypersaw
         pattern: Leads directly into the break.
+        timing:
+          active: ["15.1.1 - end"]
 
   - section_name: Break A
     duration_bars: 8
     chord_progression: "D#, E#, F"
     elements:
-      - category: Bass
-        label: Main Bass
-        timing: 1.1.1 - 9.1.1
-        tonality: Foundational bassline.
+      - sound: main_bass
         pattern: Continuous underlying rhythm.
-      - category: Synth - Pluck
-        label: Simple Pluck
-        timing: 1.1.1 - 9.1.1
-        tonality: Warm sine/sawtooth sound.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: simple_pluck
         pattern: Simple melodic progression.
-      - category: Synth - Pad
-        label: Transition Pad Swell
-        timing: 7.1.1 - 9.1.1
-        tonality: Synthesizer pad.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: transition_pad_swell
         pattern: Swells up and cuts out right before the verse starts.
+        timing:
+          active: ["7.1.1 - end"]
 
   - section_name: Verse A
     duration_bars: 24
     chord_progression: "D#, E#, F"
     elements:
-      - category: Bass
-        label: Reese Bass
-        timing: 1.1.1 - 17.1.1
-        tonality: Thick Reese-style bassline.
+      - sound: reese_bass
         pattern: Steady fundamental support.
         automation: Cutoff adjusts subtly over time.
-      - category: Synth - Pluck
-        label: Simple Pluck
-        timing: 1.1.1 - 25.1.1
-        tonality: Warm melodic pluck.
+        timing:
+          active: ["1.1.1 - 17.1.1"]
+      - sound: simple_pluck
         pattern: Simple melody.
-      - category: Vocals - Lead
-        label: Main Vocals
-        timing: 1.1.1 - 25.1.1
-        tonality: Clear vocal line.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_vocals
         pattern: Continuous lyrical phrasing.
-      - category: Vocals - Atmosphere
-        label: Falsetto FX
-        timing: 9.1.1 - 25.1.1
-        tonality: Processed high-register falsetto.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: falsetto_fx
         pattern: Occurs in the background.
-      - category: Bass
-        label: Standard Bass
-        timing: 17.1.1 - 25.1.1
-        tonality: Cleaner, non-Reese bass character.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: standard_bass
         pattern: Standard foundational support replacing the Reese bass.
+        timing:
+          active: ["17.1.1 - end"]
 
   - section_name: Break B
     duration_bars: 8
     elements:
-      - category: Bass
-        label: Reese Bass
-        timing: 1.1.1 - 9.1.1
-        tonality: Thick Reese-style bass.
+      - sound: reese_bass
         pattern: Driving low-end rhythm.
-      - category: Synth - Pluck
-        label: Simple Pluck
-        timing: 1.1.1 - 9.1.1
-        tonality: Warm melodic sound.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: simple_pluck
         pattern: Continuous simple melody.
-      - category: Drums - Other Percussive
-        label: Tommy Drum Beat
-        timing: 1.1.1 - 9.1.1
-        tonality: Tom-heavy drum rhythm.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: tommy_drum_beat
         pattern: Replaces standard drum patterns.
-      - category: Synth - Pad
-        label: Transition Pad Swell
-        timing: 7.1.1 - 9.1.1
-        tonality: Synthesizer pad.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: transition_pad_swell
         pattern: Swells in and cuts out just prior to the verse.
+        timing:
+          active: ["7.1.1 - end"]
 
   - section_name: Verse B
     duration_bars: 24
     elements:
-      - category: Drums - Snare
-        label: Main Snare/Clap
-        timing: 1.1.1 - 25.1.1
-        tonality: Layered snare and clap sound.
+      - sound: snare_clap
         pattern: Enters strongly on beats 2 and 4.
-      - category: Vocals - Lead
-        label: Main Vocals
-        timing: 1.1.1 - 25.1.1
-        tonality: Clear vocal delivery.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_vocals
         pattern: Sings main verse phrasing.
-      - category: Vocals - Atmosphere
-        label: Falsetto FX
-        timing: 1.1.1 - 25.1.1
-        tonality: Processed high-register falsetto.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: falsetto_fx
         pattern: Occurs intermittently in the background.
-      - category: Synth - Pluck
-        label: Distorted Pluck
-        timing: 1.1.1 - 25.1.1
-        tonality: Melodic pluck mixed with a secondary distorted synth layer.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: distorted_pluck
         pattern: Core melodic progression.
         automation: Fades in and out throughout the section.
-      - category: FX - Noise
-        label: Air Hiss FX
-        timing: 9.1.1 - 13.1.1
-        tonality: Hissing white noise.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: hiss_fx
         pattern: Adds atmospheric texture.
+        timing:
+          active: ["9.1.1 - 13.1.1"]
 
   - section_name: Break C
     duration_bars: 16
     global_transitions: >
       15.1.1: All vocals and remaining instrumental sounds cut abruptly.
     elements:
-      - category: Bass
-        label: Main Bass
-        timing: 1.1.1 - 15.1.1
-        tonality: Subdued foundational bass.
+      - sound: main_bass
+        notes: Subdued.
         pattern: Quieter performance.
         automation: Cutoff and distortion adjust subtly throughout.
-      - category: Synth - Pluck
-        label: Simple Pluck
-        timing: 1.1.1 - 15.1.1
-        tonality: Warm melodic sound.
+        timing:
+          active: ["1.1.1 - 15.1.1"]
+      - sound: simple_pluck
         pattern: Melody continues without heavy drum accompaniment.
-      - category: Vocals - Atmosphere
-        label: Falsetto FX
-        timing: 1.1.1 - 15.1.1
-        tonality: Processed falsetto.
+        timing:
+          active: ["1.1.1 - 15.1.1"]
+      - sound: falsetto_fx
         pattern: Continuous background presence.
-      - category: Vocals - Lead
-        label: Isolated Vocals
-        timing: 1.1.1 - 16.1.1
-        tonality: Sings the word "alone".
+        timing:
+          active: ["1.1.1 - 15.1.1"]
+      - sound: main_vocals
+        notes: Sings the word "alone".
         pattern: Vocals isolated from major instrumentation.
         automation: High-passed on and off heavily in bars 9 through 15.
-      - category: Synth - Pad
-        label: Saw Pad Swell
-        timing: 12.1.1 - 16.1.1
-        tonality: Sawtooth pad texture.
+        timing:
+          active: ["1.1.1 - 16.1.1"]
+      - sound: saw_pad_swell
         pattern: Swells in before hard cutting.
+        timing:
+          active: ["12.1.1 - 16.1.1"]
 
   - section_name: Finale
     duration_bars: 16
     global_transitions: >
       9.1.1 - 17.1.1 Elements progressively become more subtle leading into the outro.
     elements:
-      - category: Synth - Pad
-        label: Aggressive Saw Pad
-        timing: 1.1.1 - 17.1.1
-        tonality: Prominent, aggressive sawtooth texture.
+      - sound: aggressive_saw_pad
         pattern: Takes center stage, playing the same melody as the pluck.
-      - category: Vocals - Atmosphere
-        label: Falsetto FX
-        timing: 1.1.1 - 17.1.1
-        tonality: Processed high-register falsetto.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: falsetto_fx
         pattern: Occurs throughout the section.
-      - category: Drums - Kick
-        label: Main Kick
-        timing: 1.1.1 - 17.1.1
-        tonality: Standard driving kick.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_kick
         pattern: Four-on-the-floor rhythm.
-      - category: Drums - Snare
-        label: Main Snare
-        timing: 1.1.1 - 17.1.1
-        tonality: Standard snare drum.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_snare
         pattern: Backbeat on 2 and 4.
-      - category: Bass
-        label: Main Bass
-        timing: 1.1.1 - 17.1.1
-        tonality: Foundational low-end.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_bass
         pattern: Follows the chord progression.
-      - category: FX - Noise
-        label: Hissing Noise FX
-        timing: 9.1.1 - 13.1.1
-        tonality: Hissing air texture.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: hiss_fx
         pattern: Accompanies the transition to subtlety.
+        timing:
+          active: ["9.1.1 - 13.1.1"]
 
   - section_name: Outro
     duration_bars: 16
     elements:
-      - category: Vocals - Atmosphere
-        label: Falsetto FX
-        timing: 1.1.1 - 17.1.1
-        tonality: Processed high-register falsetto.
+      - sound: falsetto_fx
         pattern: Continuous through the outro.
-      - category: Synth - Pluck
-        label: Simple Pluck
-        timing: 1.1.1 - 17.1.1
-        tonality: Plucky melody sound.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: simple_pluck
         pattern: Core melodic progression returns isolated.
-      - category: Drums - Snare
-        label: Transition Snare Fill
-        timing: 8.1.1
-        tonality: Standard snare.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_snare
         pattern: Snare fill leading into the second half of the outro.
-      - category: Drums - Kick
-        label: Main Kick
-        timing: 9.1.1 - 17.1.1
-        tonality: Foundational kick.
+        timing:
+          hits: ["8.1.1"]
+      - sound: main_kick
         pattern: Beat returns for the final 8 bars.
-      - category: Drums - Snare
-        label: Main Snare
-        timing: 9.1.1 - 17.1.1
-        tonality: Standard snare.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: main_snare
         pattern: Hits on beats 2 and 4.
-      - category: Bass
-        label: Siney Bass
-        timing: 9.1.1 - 17.1.1
-        tonality: Pure sine-wave bass character.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: siney_bass
         pattern: Wubs in and out to close the track.
+        timing:
+          active: ["9.1.1 - end"]

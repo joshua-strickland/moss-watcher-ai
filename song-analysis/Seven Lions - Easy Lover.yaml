@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=/song-schema.json
+ # yaml-language-server: $schema=./song-schema.json
 
 track_metadata:
   artist: Seven Lions
@@ -8,573 +8,621 @@ track_metadata:
   time_signature: 4/4
   genre: Future Bass / House / Melodic House Future Bass hybrid
 
+sounds:
+  granular_swell:
+    category: Synth - Swell
+    label: tonal reverse granular swell
+    tonality: some sort of piano / tonal like sound repeated every beat or so
+
+  vocal_synth_swell:
+    category: Synth - Swell
+    label: vocal / synth swell
+
+  chord_pluck:
+    category: Synth - Pluck
+    label: lead chord pluck
+    tonality: triangle sounding chord pluck
+
+  rapid_pluck:
+    category: Synth - Pluck
+    label: lead rapid pluck
+    tonality: saw pluck of some sort. distorted a bit
+
+  slow_attack_accents:
+    category: Synth - Pluck
+    label: background slow attack synth accents
+    tonality: slow attack high frequency synth, think a fairly basic saw sound
+
+  string_pad:
+    category: Synth - Pad
+    tonality: string like sounding synth pad. not a ton of reverb, but lots of sustain
+
+  phone_arp:
+    category: FX - Synth
+    tonality: phone call like sounding rapid arp sine synth. long reverb tail
+
+  laser_fx:
+    category: FX - Synth
+    label: electric rapid lasser / noise sounding FX
+
+  bass_house_hats:
+    category: Drums - Hats
+    tonality: snappy, loud, high treble content kind of bass house sounding hat
+
+  standard_hats:
+    category: Drums - Hats
+    tonality: standard hats
+
+  kick:
+    category: Drums - Kick
+    tonality: full kick
+
+  reverse_kick:
+    category: Drums - Kick
+    label: Reverse kick drum
+    tonality: full kick reversed
+
+  plastic_snare:
+    category: Drums - Snare
+    tonality: very electronic "plastic" sounding snare
+
+  soft_snare:
+    category: Drums - Snare
+    label: transitionary snare hits
+    tonality: more typical sounding snare, soft hit
+
+  clap:
+    category: Drums - Clap
+    tonality: basic clap
+
+  triangle_hit:
+    category: Drums - Other Percussive
+    label: triangle hit
+    tonality: like the hanging triangle thing that drummers hit
+
+  reverse_ride:
+    category: Drums - Rides
+    label: reverse ride / cymbal
+    tonality: this is either a very quick noise sweep or a cymbal / ride / open hat reversed
+
+  crash_ride:
+    category: Drums - Rides
+    label: crash / ride cymbal
+
+  sidechained_bass:
+    category: Bass
+    tonality: sub & mid range bass, not overly aggressive but some distortion, not particularly prominent
+      sidechained to kick
+
+  unsidechained_bass:
+    category: Bass
+    tonality: Sub & mid bass content, mid bass sounds distorted a bit
+      Not side chained.
+      Does have a bit of a louder transient on every quarter note
+      Sustained sound is a bit quieter
+
+  lead_vocals:
+    category: Vocals - Lead
+    tonality: Very soft female vocals
+      fair amount of  reverb
+      sounds like its slightly autotuned or put through a vocoder
+
+  background_vocals:
+    category: Vocals - Background
+    tonality: Very soft female vocals
+      fair amount of  reverb
+      sounds like its slightly autotuned or put through a vocoder
+      very cut off
+
+  vocal_chop:
+    category: Vocals - Chop
+
+  white_noise_sweep:
+    category: Transition - Sweep
+    label: white noise sweep
+
+  gentle_sweep:
+    category: Transition - Sweep
+    label: long gentle sweep
+    tonality: longer gentler ascending white noise sweep, little low end content
+
+  rapid_sweep:
+    category: Transition - Sweep
+    label: rapid high energy sweep
+    tonality: quick louder maybe slightly saturated descending white noise sweep
+      maybe reverse snare?
+
+  lingering_sweep:
+    category: Transition - Sweep
+    label: lingering descending noise sweep
+    tonality: longer gentler descending white noise sweep
+
+  mid_noise_sweep:
+    category: Transition - Sweep
+    tonality: mid range sounding ascending white noise sweep
+
+  pre_transition_impact:
+    category: FX - Impact
+    label: pre transition impact
+
+  big_kick_impact:
+    category: FX - Impact
+    label: big kick impact
+
 arrangement:
   - section_name: Pre Intro swell FX
     duration_bars: 1
     elements:
-      - category: Synth - Swell
-        label: tonal reverse granular swell
-        tonality: some sort of piano / tonal like sound repeated every beat or so
+      - sound: granular_swell
         pattern: one swell
-        timing: 1.1.1
         automation: Swell rises in volume over the bar serving to quickly raise energy right from the start
+        timing:
+          active: ["1.1.1 - end"]
 
   - section_name: Intro
     duration_bars: 8
     global_transitions: At 8.1.1, instruments and vocals cut out, swells begin
       At 8.4.1, everything cuts out, snare hits, building tension into verse a
     elements:
-      - category: Synth - Pluck
-        label: lead chord pluck
-        tonality: triangle sounding chord pluck
+      - sound: chord_pluck
         pattern: The pluck utilizes a mix of dotted eighth and eighth notes in the following sequence repeating per bar x.1.1, x.1.4, x.2.3, x.3.1, x.3.4, x.4.3.
-        timing: 1.1.1 - 8.1.1
+        timing:
+          active: ["1.1.1 - 8.1.1"]
 
-      - category: Drums - Hats
-        tonality: snappy, loud, high treble content kind of bass house sounding hat
+      - sound: bass_house_hats
         pattern: 2 or 3 rapid 16th note sequences, where the loudest hat always lands on the up beat or And.
           resulting in a quiet-LOUD-quiet or LOUD-quiet pattern. This gives it a 4 on the floor feel, with a bit
           more energy
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Kick
-        tonality: full kick
-        timing: once, at 1.1.1, and once again at 5.1.1
+      - sound: kick
+        timing:
+          hits: ["1.1.1", "5.1.1"]
 
-      - category: Vocals - Lead
-        tonality: Very soft female vocals
-          fair amount of  reverb
-          sounds like its slightly autotuned or put through a vocoder
+      - sound: lead_vocals
         pattern: The vocal follows a similar pattern as the lead chord pluck
           utilizes a mix of dotted eighth and eighth notes in the following sequence repeating per bar x.1.1, x.1.4, x.2.3, x.3.1, x.3.4, x.4.3.
           it does alternate to eighth notes near the end of bars however.
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Synth - Swell
-        label: tonal reverse granular swell
-        tonality: some sort of piano / tonal like sound repeated every beat or so
+      - sound: granular_swell
         pattern: one swell
-        timing: 8.1.1 - 8.4.1
         automation: Swell rises in volume over the bar serving to quickly raise energy right from the start
+        timing:
+          active: ["8.1.1 - 8.4.1"]
 
-      - category: Transition - Sweep
-        label: white noise sweep
+      - sound: white_noise_sweep
         pattern: once
-        timing: 8.3.1 - 8.4.1
         automation: hi cut filter expands upward quickly over one beat
+        timing:
+          active: ["8.3.1 - 8.4.1"]
 
-      - category: Drums - Snare
-        tonality: very electronic "plastic" sounding snare
-        timing: once, at 8.4.1, transitory element leading into verse a
+      - sound: plastic_snare
+        timing:
+          description: once, at 8.4.1, transitory element leading into verse a
+          hits: ["8.4.1"]
 
-      - category: Drums - Kick
-        label: Reverse kick drum
-        tonality: full kick reversed
-        timing: 8.4.3 - transitory element leading into verse a
+      - sound: reverse_kick
+        timing:
+          description: transitory element leading into verse a
+          active: ["8.4.3 - end"]
 
   - section_name: verse a
     duration_bars: 16
     elements:
-      - category: Bass
-        tonality: sub & mid range bass, not overly aggressive but some distortion, not particularly prominent
-          sidechained to kick
-        timing: 1.1.1 - 16.3.1
+      - sound: sidechained_bass
+        timing:
+          active: ["1.1.1 - 16.3.1"]
 
-      - category: Drums - Hats
-        tonality: snappy, loud, high treble content kind of bass house sounding hat
+      - sound: bass_house_hats
         pattern: 2 or 3 rapid 16th note sequences, where the loudest hat always lands on the up beat or And.
           resulting in a quiet-LOUD-quiet or LOUD-quiet pattern. This gives it a 4 on the floor feel, with a bit
           more energy
-        timing: 1.1.1 - 16.3.1
         automation: at 16.1.1, volume increase
+        timing:
+          active: ["1.1.1 - 16.3.1"]
 
-      - category: Drums - Kick
-        tonality: full kick
+      - sound: kick
         pattern: 4 on the floor
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Snare
-        label: transitionary snare hits
-        tonality: more typical sounding snare, soft hit
+      - sound: soft_snare
         pattern: 2 quick 16th note hits
-        timing: 4.4.3, 4.4.4 and again at 12.4.3, 12.4.4
+        timing:
+          hits: ["4.4.3", "4.4.4", "12.4.3", "12.4.4"]
 
-      - category: Synth - Pluck
-        label: lead rapid pluck
+      - sound: rapid_pluck
         pattern: high energy 16th notes
-        tonality: saw pluck of some sort. distorted a bit
         automation: starts fairly cut off.  high cut filter expands around 5.1.1, and then gradually expands until end of section.
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Synth - Pluck
-        label: background slow attack synth accents
+      - sound: slow_attack_accents
         pattern: 2 quick 16th notes
-        tonality: slow attack high frequency synth, think a fairly basic saw sound
-        timing: 11.1.1 - 13.1.1, and again at 15.1.1 - 17.1.1
+        timing:
+          active: ["11.1.1 - 13.1.1", "15.1.1 - 17.1.1"]
 
-      - category: Transition - Sweep
-        label: long gentle sweep
-        tonality: longer gentler ascending white noise sweep, little low end content
-        timing: 7.1.1 - 8.4.1
+      - sound: gentle_sweep
+        timing:
+          active: ["7.1.1 - 8.4.1"]
 
-      - category: Transition - Sweep
-        label: rapid high energy sweep
-        tonality: quick louder maybe slightly saturated descending white noise sweep
-          maybe reverse snare?
-        timing: 8.4.1 - 8.4.4
+      - sound: rapid_sweep
+        timing:
+          active: ["8.4.1 - 8.4.4"]
 
-      - category: Transition - Sweep
-        label: lingering descending noise sweep
-        tonality: longer gentler descending white noise sweep
-        timing: 9.1.1 - 11.1.1
+      - sound: lingering_sweep
+        timing:
+          active: ["9.1.1 - 11.1.1"]
 
-      - category: FX - Impact
-        label: pre transition impact
-        timing: 16.4.1
+      - sound: pre_transition_impact
+        timing:
+          hits: ["16.4.1"]
 
-      - category: Drums - Rides
-        label: reverse ride sound
-        tonality: this is either a very quick noise sweep or a cymbal / ride / open hat reversed
-        timing: 16.3.3 - 16.4.1
+      - sound: reverse_ride
+        timing:
+          active: ["16.3.3 - 16.4.1"]
 
-      - category: Vocals - Lead
-        tonality: Very soft female vocals
-          fair amount of  reverb
-          sounds like its slightly autotuned or put through a vocoder
+      - sound: lead_vocals
         pattern: longer held notes than in intro
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Vocals - Background
-        tonality: Very soft female vocals
-          fair amount of  reverb
-          sounds like its slightly autotuned or put through a vocoder
-          very cut off
+      - sound: background_vocals
         pattern: longer held notes than in intro. same pattern and notes as background slow attack synth accents
-        timing: 11.1.1 - 13.1.1, and again at 15.1.1 - 17.1.1
+        timing:
+          active: ["11.1.1 - 13.1.1", "15.1.1 - 17.1.1"]
 
   - section_name: break
     duration_bars: 8
     global_transitions: at 8.4.1 everything but vocal cuts
     elements:
-      - category: FX - Impact
-        label: big kick impact
-        timing: 1.1.1
+      - sound: big_kick_impact
+        timing:
+          hits: ["1.1.1"]
 
-      - category: Synth - Pluck
-        label: lead rapid pluck
+      - sound: rapid_pluck
         pattern: high energy 16th notes
-        tonality: saw pluck of some sort. distorted a bit
         automation: hi cut filter is almost fully expanded here, dramatically changing the tone. sounds electric
           I suspect a bandpass filter may be adjusting cut off up and down slightly throughout section
-        timing: 1.1.1 - 7.1.1
+        timing:
+          active: ["1.1.1 - 7.1.1"]
 
-      - category: Drums - Hats
-        tonality: standard hats
+      - sound: standard_hats
         pattern: swung 16th notes
-        timing: 1.1.1 - 8.1.1
         automation: hi cut filter gradually ascends throughout section
+        timing:
+          active: ["1.1.1 - 8.1.1"]
 
-      - category: Drums - Snare
-        tonality: soft snare
+      - sound: soft_snare
         pattern: swung 16th notes
-        timing: 1.1.1 - 8.1.1
         automation: hi cut filter gradually ascends throughout section
+        timing:
+          active: ["1.1.1 - 8.1.1"]
 
-      - category: Drums - Other Percussive
-        label: triangle hit
-        tonality: like the hanging triangle thing that drummers hit
+      - sound: triangle_hit
         pattern: every bar
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Snare
-        tonality: very electronic "plastic" sounding snare
-        timing: once, at 8.4.1, transitory element leading into verse a
+      - sound: plastic_snare
+        timing:
+          description: once, at 8.4.1, transitory element leading into verse a
+          hits: ["8.4.1"]
 
-      - category: Bass
-        tonality: Sub & mid bass content, mid bass sounds distorted a bit
-          Not side chained.
-          Does have a bit of a louder transient on every quarter note
-          Sustained sound is a bit quieter
-        timing: 1.1.1 - 7.1.1
+      - sound: unsidechained_bass
+        timing:
+          active: ["1.1.1 - 7.1.1"]
 
-      - category: Synth - Pad
-        tonality: string like sounding synth pad. not a ton of reverb, but lots of sustain
+      - sound: string_pad
         pattern: A chord that shifts about every bar
-        timing: 1.1.1-8.4.1
         automation: hi pass filter descends gradually around 6.1.1 until end of section
+        timing:
+          active: ["1.1.1 - 8.4.1"]
 
-      - category: Transition - Sweep
-        label: long gentle sweep
-        tonality: longer gentler ascending white noise sweep, little low end content
-        timing: 7.1.1 - 8.4.1
+      - sound: gentle_sweep
+        timing:
+          active: ["7.1.1 - 8.4.1"]
 
-      - category: Vocals - Lead
-        tonality: Very soft female vocals
-          fair amount of  reverb
-          sounds like its slightly autotuned or put through a vocoder
+      - sound: lead_vocals
         pattern: longer held notes than in intro
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Vocals - Background
-        tonality: Very soft female vocals
-          fair amount of  reverb
-          sounds like its slightly autotuned or put through a vocoder
-          very cut off
+      - sound: background_vocals
         pattern: longer held notes than in intro. same pattern and notes as background slow attack synth accents
-        timing: 5.1.1 - 7.1.1
+        timing:
+          active: ["5.1.1 - 7.1.1"]
 
   - section_name: break 2
     duration_bars: 8
     elements:
-      - category: Drums - Kick
-        tonality: full kick
+      - sound: kick
         pattern: 4 on the floor
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Hats
-        tonality: snappy, loud, high treble content kind of bass house sounding hat
+      - sound: bass_house_hats
         pattern: 2 or 3 rapid 16th note sequences, where the loudest hat always lands on the up beat or And.
           resulting in a quiet-LOUD-quiet or LOUD-quiet pattern. This gives it a 4 on the floor feel, with a bit
           more energy
-        timing: 1.1.1 - 9.1.1
         automation: As section begins, these are very very loud, very much like bass house hats.
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Bass
-        tonality: Sub & mid bass content, mid bass sounds distorted a bit
-          Not side chained.
-          Does have a bit of a louder transient 
-          Sustained sound is a bit quieter
-        timing: 1.1.1 - 9.1.1
+      - sound: unsidechained_bass
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Vocals - Chop
-        timing: constant
+      - sound: vocal_chop
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Synth - Pluck
-        label: lead rapid pluck
+      - sound: rapid_pluck
         pattern: quick 2 note 16th note fill
-        tonality: saw pluck of some sort. distorted a bit
         automation: hi cut filter is almost fully expanded here, dramatically changing the tone. sounds electric
           I suspect a bandpass filter may be adjusting cut off up and down slightly throughout section
-        timing: 4.4.1, 4.4.3
+        timing:
+          hits: ["4.4.1", "4.4.3"]
 
-      - category: Transition - Sweep
-        label: long gentle sweep
-        tonality: longer gentler descending white noise sweep, little low end content
-        timing: 1.1.1 - 4.1.1
+      - sound: gentle_sweep
+        notes: descending this time
+        timing:
+          active: ["1.1.1 - 4.1.1"]
 
-      - category: Transition - Sweep
-        label: long gentle sweep
-        tonality: longer gentler ascending white noise sweep, little low end content
-        timing: 7.1.1 - 9.1.1
+      - sound: gentle_sweep
+        timing:
+          active: ["7.1.1 - end"]
 
-      - category: Synth - Swell
-        label: vocal / synth swell
-        timing: 8.1.1 until section end
+      - sound: vocal_synth_swell
+        timing:
+          active: ["8.1.1 - end"]
 
-      - category: FX - Synth
-        label: electric rapid lasser / noise sounding FX
-        timing: 8.1.1 until section end
+      - sound: laser_fx
+        timing:
+          active: ["8.1.1 - end"]
 
   - section_name: verse b intro
     duration_bars: 8
     global_transitions: as section starts, everything but vocals is cut
     elements:
-      - category: Vocals - Lead
-        tonality: Very soft female vocals
-          fair amount of  reverb
-          sounds like its slightly autotuned or put through a vocoder
+      - sound: lead_vocals
         pattern: longer held notes than in intro
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Vocals - Background
-        tonality: Very soft female vocals
-          fair amount of  reverb
-          sounds like its slightly autotuned or put through a vocoder
-          very cut off
-        pattern: longer held notes than in intro. same pattern and notes as background slow attack synth accents
-        timing: 11.1.1 - 13.1.1, and again at 15.1.1 - 17.1.1
+      - sound: mid_noise_sweep
+        timing:
+          active: ["1.3.1 - 2.1.1"]
 
-      - category: Transition - Sweep
-        tonality: mid range sounding ascending white noise sweep
-        timing: 1.3.1 - 2.1.1
-
-      - category: Drums - Clap
-        tonality: basic clap
+      - sound: clap
         pattern: 2nd and 4th beats
         pattern_variation: fill occurs around 8.1.1
-        timing: 1.4.1 and on
+        timing:
+          active: ["1.4.1 - end"]
 
-      - category: FX - Synth
-        tonality: phone call like sounding rapid arp sine synth. long reverb tail
-        timing: 2.1.1
+      - sound: phone_arp
+        timing:
+          hits: ["2.1.1"]
 
-      - category: Drums - Kick
-        tonality: full kick
+      - sound: kick
         pattern: 4 on the floor
-        timing: 2.1.1 - 8.1.1
+        timing:
+          active: ["2.1.1 - 8.1.1"]
 
-      - category: Drums - Hats
-        tonality: snappy, loud, high treble content kind of bass house sounding hat
+      - sound: bass_house_hats
         pattern: 2 or 3 rapid 16th note sequences, where the loudest hat always lands on the up beat or And.
           resulting in a quiet-LOUD-quiet or LOUD-quiet pattern. This gives it a 4 on the floor feel, with a bit
           more energy
-        timing: 1.1.1 - 8.4.4
         automation: As section begins, these are very very loud, very much like bass house hats.
+        timing:
+          active: ["1.1.1 - 8.4.4"]
 
-      - category: Synth - Pluck
-        label: lead chord pluck
-        tonality: triangle sounding chord pluck
+      - sound: chord_pluck
         pattern: The pluck utilizes a mix of dotted eighth and eighth notes in the following sequence repeating per bar x.1.1, x.1.4, x.2.3, x.3.1, x.3.4, x.4.3.
-        timing: 2.1.1 - 8.1.1
+        timing:
+          active: ["2.1.1 - 8.1.1"]
 
-      - category: Transition - Sweep
-        label: rapid high energy sweep
-        tonality: quick louder maybe slightly saturated descending white noise sweep
-          maybe reverse snare?
-        timing: 8.3.1 - 8.4.4
+      - sound: rapid_sweep
+        timing:
+          active: ["8.3.1 - 8.4.4"]
 
-      - category: Bass
-        tonality: sub & mid range bass, not overly aggressive but some distortion, not particularly prominent
-          sidechained to kick
-        timing: 1.1.1 - 8.4.1
+      - sound: sidechained_bass
+        timing:
+          active: ["1.1.1 - 8.4.1"]
 
-      - category: Drums - Kick
-        label: Reverse kick drum
-        tonality: full kick reversed
-        timing: 8.4.3 - transitory element leading into verse b
+      - sound: reverse_kick
+        timing:
+          description: transitory element leading into verse b
+          active: ["8.4.3 - end"]
 
   - section_name: verse b
     duration_bars: 8
     elements:
-      - category: Bass
-        tonality: sub & mid range bass, not overly aggressive but some distortion, not particularly prominent
-          sidechained to kick
-        timing: 1.1.1 - 16.3.1
+      - sound: sidechained_bass
+        timing:
+          active: ["1.1.1 - 8.3.1"]
 
-      - category: Drums - Hats
-        tonality: snappy, loud, high treble content kind of bass house sounding hat
+      - sound: bass_house_hats
         pattern: 2 or 3 rapid 16th note sequences, where the loudest hat always lands on the up beat or And.
           resulting in a quiet-LOUD-quiet or LOUD-quiet pattern. This gives it a 4 on the floor feel, with a bit
           more energy
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Kick
-        tonality: full kick
+      - sound: kick
         pattern: 4 on the floor
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Snare
-        label: transitionary snare hits
-        tonality: more typical sounding snare, soft hit
+      - sound: soft_snare
         pattern: 2 quick 16th note hits
-        timing: 4.4.3, 4.4.4
+        timing:
+          hits: ["4.4.3", "4.4.4"]
 
-      - category: Synth - Pluck
-        label: lead rapid pluck
+      - sound: rapid_pluck
         pattern: high energy 16th notes
-        tonality: saw pluck of some sort. distorted a bit
         automation: starts fairly cut off.  high cut filter expands around 5.1.1, and then gradually expands until end of section.
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Synth - Pluck
-        label: background slow attack synth accents
-        pattern: 2 quick 16th notes
-        tonality: slow attack high frequency synth, think a fairly basic saw sound
-        timing: 11.1.1 - 13.1.1, and again at 15.1.1 - 17.1.1
+      - sound: gentle_sweep
+        timing:
+          active: ["7.1.1 - 8.4.1"]
 
-      - category: Transition - Sweep
-        label: long gentle sweep
-        tonality: longer gentler ascending white noise sweep, little low end content
-        timing: 7.1.1 - 8.4.1
+      - sound: rapid_sweep
+        timing:
+          active: ["8.4.1 - 8.4.4"]
 
-      - category: Transition - Sweep
-        label: rapid high energy sweep
-        tonality: quick louder maybe slightly saturated descending white noise sweep
-          maybe reverse snare?
-        timing: 8.4.1 - 8.4.4
+      - sound: pre_transition_impact
+        timing:
+          hits: ["8.4.1"]
 
-      - category: FX - Impact
-        label: pre transition impact
-        timing: 8.4.1
-
-      - category: Vocals - Lead
-        tonality: Very soft female vocals
-          fair amount of  reverb
-          sounds like its slightly autotuned or put through a vocoder
+      - sound: lead_vocals
         pattern: longer held notes than in intro
-        timing: constant
-
-      - category: Vocals - Background
-        tonality: Very soft female vocals
-          fair amount of  reverb
-          sounds like its slightly autotuned or put through a vocoder
-          very cut off
-        pattern: longer held notes than in intro. same pattern and notes as background slow attack synth accents
-        timing: 11.1.1 - 13.1.1, and again at 15.1.1 - 17.1.1
+        timing:
+          active: ["1.1.1 - end"]
 
   - section_name: break 3
     duration_bars: 8
     global_transitions: at 8.4.1 everything but vocal cuts
     elements:
-      - category: FX - Impact
-        label: big kick impact
-        timing: 1.1.1
+      - sound: big_kick_impact
+        timing:
+          hits: ["1.1.1"]
 
-      - category: Synth - Pluck
-        label: lead rapid pluck
+      - sound: rapid_pluck
         pattern: high energy 16th notes
-        tonality: saw pluck of some sort. distorted a bit
         automation: hi cut filter is almost fully expanded here, dramatically changing the tone. sounds electric
           I suspect a bandpass filter may be adjusting cut off up and down slightly throughout section
-        timing: 1.1.1 - 7.1.1
+        timing:
+          active: ["1.1.1 - 7.1.1"]
 
-      - category: Drums - Hats
-        tonality: standard hats
+      - sound: standard_hats
         pattern: swung 16th notes
-        timing: 1.1.1 - 8.1.1
         automation: hi cut filter gradually ascends throughout section
+        timing:
+          active: ["1.1.1 - 8.1.1"]
 
-      - category: Drums - Snare
-        tonality: soft snare
+      - sound: soft_snare
         pattern: swung 16th notes
-        timing: 1.1.1 - 8.1.1
         automation: hi cut filter gradually ascends throughout section
+        timing:
+          active: ["1.1.1 - 8.1.1"]
 
-      - category: Drums - Other Percussive
-        label: triangle hit
-        tonality: like the hanging triangle thing that drummers hit
+      - sound: triangle_hit
         pattern: every bar
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Snare
-        tonality: very electronic "plastic" sounding snare
-        timing: once, at 8.4.1, transitory element leading into verse a
+      - sound: plastic_snare
+        timing:
+          description: once, at 8.4.1, transitory element leading into verse a
+          hits: ["8.4.1"]
 
-      - category: Bass
-        tonality: Sub & mid bass content, mid bass sounds distorted a bit
-          Not side chained.
-          Does have a bit of a louder transient on every quarter note
-          Sustained sound is a bit quieter
-        timing: 1.1.1 - 7.1.1
+      - sound: unsidechained_bass
+        timing:
+          active: ["1.1.1 - 7.1.1"]
 
-      - category: Synth - Pad
-        tonality: string like sounding synth pad. not a ton of reverb, but lots of sustain
+      - sound: string_pad
         pattern: A chord that shifts about every bar
-        timing: 1.1.1-8.4.1
         automation: hi pass filter descends gradually around 6.1.1 until end of section
+        timing:
+          active: ["1.1.1 - 8.4.1"]
 
-      - category: Transition - Sweep
-        label: long gentle sweep
-        tonality: longer gentler ascending white noise sweep, little low end content
-        timing: 7.1.1 - 8.4.1
+      - sound: gentle_sweep
+        timing:
+          active: ["7.1.1 - 8.4.1"]
 
-      - category: Vocals - Lead
-        tonality: Very soft female vocals
-          fair amount of  reverb
-          sounds like its slightly autotuned or put through a vocoder
+      - sound: lead_vocals
         pattern: longer held notes than in intro
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Vocals - Background
-        tonality: Very soft female vocals
-          fair amount of  reverb
-          sounds like its slightly autotuned or put through a vocoder
-          very cut off
+      - sound: background_vocals
         pattern: longer held notes than in intro. same pattern and notes as background slow attack synth accents
-        timing: 5.1.1 - 7.1.1
+        timing:
+          active: ["5.1.1 - 7.1.1"]
 
   - section_name: break 4
     duration_bars: 16
     elements:
-      - category: Vocals - Background
-        tonality: Very soft female vocals
-          fair amount of  reverb
-          sounds like its slightly autotuned or put through a vocoder
-          very cut off
+      - sound: background_vocals
         pattern: longer held notes than in intro. same pattern and notes as background slow attack synth accents
-        timing: 11.1.1 - 13.1.1, and again at 15.1.1 - 17.1.1
+        timing:
+          active: ["11.1.1 - 13.1.1", "15.1.1 - 17.1.1"]
 
-      - category: Drums - Clap
-        tonality: basic clap
+      - sound: clap
         pattern: 2nd and 4th beats
-        timing: 1.1.1 and on
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: FX - Synth
-        tonality: phone call like sounding rapid arp sine synth. long reverb tail
-        timing: 2.1.1
+      - sound: phone_arp
+        timing:
+          hits: ["2.1.1"]
 
-      - category: Drums - Kick
-        tonality: full kick
+      - sound: kick
         pattern: 4 on the floor
-        timing: 2.1.1 - 7.1.1
+        timing:
+          active: ["2.1.1 - 7.1.1"]
 
-      - category: Drums - Hats
-        tonality: snappy, loud, high treble content kind of bass house sounding hat
+      - sound: bass_house_hats
         pattern: 2 or 3 rapid 16th note sequences, where the loudest hat always lands on the up beat or And.
           resulting in a quiet-LOUD-quiet or LOUD-quiet pattern. This gives it a 4 on the floor feel, with a bit
           more energy
-        timing: 1.1.1 - 7.1.1
         automation: As section begins, these are very very loud, very much like bass house hats.
+        timing:
+          active: ["1.1.1 - 7.1.1"]
 
-      - category: Drums - Rides
-        label: reverse ride / cymbal
-        timing: 8.3.1 - 8.4.1
+      - sound: reverse_ride
+        timing:
+          active: ["8.3.1 - 8.4.1", "16.3.1 - 16.4.1"]
 
-      - category: Drums - Rides
-        label: crash / ride cymbal
-        timing: 9.1.1
+      - sound: crash_ride
+        timing:
+          hits: ["9.1.1"]
 
-      - category: Synth - Pluck
-        label: lead rapid pluck
+      - sound: rapid_pluck
         pattern: high energy 16th notes
-        tonality: saw pluck of some sort. distorted a bit
         automation: starts fairly cut off.  high cut filter expands around 5.1.1, and then gradually expands until end of section.
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Synth - Pluck
-        label: background slow attack synth accents
+      - sound: slow_attack_accents
         pattern: 2 quick 16th notes
-        tonality: slow attack high frequency synth, think a fairly basic saw sound
-        timing: 11.1.1 - 13.1.1, and again at 15.1.1 - 17.1.1
+        timing:
+          active: ["11.1.1 - 13.1.1", "15.1.1 - 17.1.1"]
 
-      - category: Transition - Sweep
-        label: long gentle sweep
-        tonality: longer gentler ascending white noise sweep, little low end content
-        timing: 15.1.1 - 16.4.1
+      - sound: gentle_sweep
+        timing:
+          active: ["15.1.1 - 16.4.1"]
 
-      - category: Drums - Rides
-        label: reverse ride / cymbal
-        timing: 16.3.1 - 16.4.1
+      - sound: sidechained_bass
+        timing:
+          active: ["1.1.1 - 8.4.1"]
 
-      - category: Bass
-        tonality: sub & mid range bass, not overly aggressive but some distortion, not particularly prominent
-          sidechained to kick
-        timing: 1.1.1 - 8.4.1
+      - sound: reverse_kick
+        timing:
+          description: transitory element leading into verse b
+          active: ["8.4.3 - 9.1.1"]
 
-      - category: Drums - Kick
-        label: Reverse kick drum
-        tonality: full kick reversed
-        timing: 8.4.3 - transitory element leading into verse b
-
-  - section_name: break 4
+  - section_name: outro
     duration_bars: 8
     elements:
-      - category: Vocals - Background
-        tonality: Very soft female vocals
-          fair amount of  reverb
-          sounds like its slightly autotuned or put through a vocoder
-          very cut off
+      - sound: background_vocals
         pattern: longer held notes than in intro. same pattern and notes as background slow attack synth accents
-        timing: 11.1.1 - 13.1.1, and again at 15.1.1 - 17.1.1
+        timing:
+          active: ["1.1.1 - 3.1.1", "5.1.1 - 7.1.1"]
 
-      - category: Synth - Pluck
-        label: lead rapid pluck
+      - sound: rapid_pluck
+        notes: sound appears to change pan position based on velocity or note. maybe ping pong delayed
         pattern: high energy 16th notes
-        tonality: saw pluck of some sort. distorted a bit.
-          sound appears to change pan position based on velocity or note. maybe ping pong delayed
         automation: the sound now sounds a bit like a square wave, less distorted,
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Rides
-        label: crash / ride cymbal
-        timing: 1.1.1
+      - sound: crash_ride
+        timing:
+          hits: ["1.1.1"]

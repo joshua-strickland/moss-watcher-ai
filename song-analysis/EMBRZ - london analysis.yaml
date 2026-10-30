@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=/song-schema.json
+# yaml-language-server: $schema=./song-schema.json
 
 track_metadata:
   artist: EMBRZ
@@ -8,58 +8,176 @@ track_metadata:
   time_signature: 4/4
   genre: Melodic House
 
+sounds:
+  breathy_vocal_pad:
+    category: Synth - Granular Pad
+    label: Breathy vocal pad
+    tonality:
+      granular vocal pad, gated, breathy, verbed, washed sound
+
+  main_pluck:
+    category: Synth - Pluck
+    label: main pluck
+    tonality:
+      Warm cutoff plucky saw sustained synth.
+      While this does have a significant upwards low cutoff ascending pluck as an attack,
+      it is legato. notes are sustained until next note
+
+  male_oooo_vocals:
+    category: Vocals - Background
+    tonality:
+      warm male vocals "oooo" vowels.
+
+  ooo_aaa_vocals:
+    category: Vocals - Background
+    tonality:
+      soft "ooo" and "aaa" vowels melody mixes in with other vocals background elements
+
+  noise_sweep:
+    category: Transition - Sweep
+    tonality: resonant white noise
+
+  kick:
+    category: Drums - Kick
+    tonality: Deep kick, low end heavy, mild treble transient content / "click"
+
+  prime_hats:
+    category: Drums - Hats
+    label: prime hats
+    tonality: Extremely high transient / loud, reminds me of bass house hats
+
+  muted_hats:
+    category: Drums - Hats
+    tonality: muted hats
+
+  ride_accents:
+    category: Drums - Rides
+    label: Second half verse ride accents
+    tonality: a "ride" cymbal like sound complementing the hats
+
+  snare:
+    category: Drums - Snare
+    tonality: papery sort of dry sounding soft snare. some hi cut to it
+
+  clock_shaker:
+    category: Drums - Other Percussive
+    tonality: '"clock" like shaker'
+
+  bass:
+    category: Bass
+    tonality:
+      primarily seems like a fairly typical deep sub,
+      however, there are intermittent "plucks" that sound just like a bass guitar.
+
+  ducking_vocal_pad:
+    category: Synth - Granular Pad
+    label: main ducking vocal pad
+    tonality:
+      potentially granular vocal pad.
+      volume ducks and rises with the hat.
+      very aligned with the hat. sort of "snaps" with it
+
+  piano_pad:
+    category: Synth - Granular Pad
+    label: piano pad
+    tonality:
+      granular piano pad
+      sidechained to every quarter note
+
+  saw_pad:
+    category: Synth - Pad
+    tonality: simple saw pad, sireny sounding
+
+  bell_pluck:
+    category: Synth - Pluck
+    label: bell transitory background pluck
+    tonality:
+      bell like synth pluch
+
+  alternate_bell_pluck:
+    category: Synth - Pluck
+    label: alternate bell transitory background pluck
+    tonality:
+      sounds kinda like a guitar pluck
+
+  ultra_light_pluck:
+    category: Synth - Pluck
+    label: ultra light pluck
+    tonality:
+      very light hi passed saw pluck
+
+  glassy_ghost_pluck:
+    category: Synth - Pluck
+    label: glassy ghost synth pluck
+    tonality:
+      very light hi passed saw pluck, with a longer reverb tail. ethereal sounding
+
+  supersaw_swell_sweep:
+    category: Synth - Supersaw
+    label: transitory supersaw swell sweep
+    tonality:
+      it sounds like some tonal pad, maybe part synth, part vocals.
+      the sound has a quick but not instant volume gate causing a sort of "sweeping" effect
+      it seems to quickly switch from heavier side focus to heavier mid focus.
+
+  granular_vocal_sweep:
+    category: Synth - Granular Pad
+    label: alternate transitory granular vocal sweep
+    tonality:
+      it sounds like some vocal based pad.
+      the sound has a quick but not instant volume gate causing a sort of "sweeping" effect
+      it seems to quickly switch from heavier side focus to heavier mid focus.
+
+  aaa_call_response:
+    category: Vocals - Background
+    label: background aaa vowel call / response
+    tonality: a brief bandpassed vocal sample
+
+  aaa_chops:
+    category: Vocals - Chop
+    tonality: Aaa vowel female chops
+
 arrangement:
   - section_name: pre Intro
     duration_bars: 2
     elements:
-      - category: Synth - Granular Pad
-        label: Breathy vocal pad
-        tonality:
-          granular vocal pad, gated, breathy, verbed, washed sound
+      - sound: breathy_vocal_pad
+        pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique.
           4th unique beat note ascends a bit higher
-        pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique
-        timing: 1.1.1 - 3.1.1
+        timing:
+          active: ["1.1.1 - end"]
 
   - section_name: Intro
     duration_bars: 16
     global_transitions: 16.4.1 everything cuts out, and quick "london" vocal sample hits
     elements:
-      - category: Synth - Granular Pad
-        label: Breathy vocal pad
-        tonality:
-          granular vocal pad, gated, breathy, verbed, washed sound
+      - sound: breathy_vocal_pad
+        pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique.
           4th unique beat note ascends a bit higher
-        pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique
-        timing: 1.1.1 - 17.1.1
-
-      - category: Synth - Pluck
-        label: main pluck
-        tonality:
-          Warm cutoff plucky saw sustained synth.
-          While this does have a significant upwards low cutoff ascending pluck as an attack,
-          it is legato. notes are sustained until next note
-        pattern:
-          alternates between chords & single notes. 
-          single notes occur on beat 4, chords on beat 1
-        timing: 1.1.1 - 17.1.1
-        automation: cutoff gradually rises
-
-      - category: Vocals - Background
-        tonality:
-          warm male vocals "oooo" vowels.
-          stays on one note
-        timing: 9.1.1 - 17.1.1
-
-      - category: Vocals - Background
-        tonality:
-          soft "ooo" and "aaa" vowels melody mixes in with other vocals background elements
-          notes shift up and down
-        timing: 9.1.1 - 17.1.1
-
-      - category: Transition - Sweep
-        tonality: resonant white noise
         timing:
-          15.1.1 - 17.4.1
+          active: ["1.1.1 - end"]
+
+      - sound: main_pluck
+        pattern:
+          alternates between chords & single notes.
+          single notes occur on beat 4, chords on beat 1
+        automation: cutoff gradually rises
+        timing:
+          active: ["1.1.1 - end"]
+
+      - sound: male_oooo_vocals
+        pattern: stays on one note
+        timing:
+          active: ["9.1.1 - end"]
+
+      - sound: ooo_aaa_vocals
+        pattern: notes shift up and down
+        timing:
+          active: ["9.1.1 - end"]
+
+      - sound: noise_sweep
+        timing:
+          active: ["15.1.1 - 17.4.1"]
 
   - section_name: Verse a
     duration_bars: 32
@@ -68,212 +186,179 @@ arrangement:
       On 20.4.1, everything cuts out aside from transitory supersaw swell sweep
       On 24.4.1, everything cuts out aside from transitory supersaw swell sweep
     elements:
-      - category: Drums - Kick
-        tonality: Deep kick, low end heavy, mild treble transient content / "click"
-        timing: constant
+      - sound: kick
         pattern: 4 on the floor
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Hats
-        label: prime hats
-        tonality: Extremely high transient / loud, reminds me of bass house hats
-        timing: constant
+      - sound: prime_hats
         pattern: 4 on the floor
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Rides
-        label: Second half verse ride accents
-        tonality: a "ride" cymbal like sound complementing the hats
-        timing: 17.1.1 - 33.1.1
+      - sound: ride_accents
         pattern: 4 on the floor, occurring with hats
+        timing:
+          active: ["17.1.1 - end"]
 
-      - category: Drums - Snare
-        tonality: papery sort of dry sounding soft snare. some hi cut to it
-        timing: constant
+      - sound: snare
         pattern: 4 on the floor
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Bass
-        tonality:
-          primarily seems like a fairly typical deep sub,
-          however, there are intermittent "plucks" that sound just like a bass guitar.
+      - sound: bass
         pattern: primarily note transitions occur on quarter notes
           bass plucks occur approx 1 eigth note prior to SOME bars, but not all.
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Synth - Pluck
-        label: main pluck
-        tonality:
-          Warm cutoff plucky saw sustained synth.
-          While this does have a significant upwards low cutoff ascending pluck as an attack,
-          it is legato. notes are sustained until next note
+      - sound: main_pluck
         pattern:
           alternates between chords & single notes.
           single notes occur on beat 4, chords on beat 1
-        timing: 1.1.1 - 17.1.1
         automation:
           low pass filter resets to a lower frequency as verse a begins
           cutoff gradually rises
+        timing:
+          active: ["1.1.1 - 17.1.1"]
 
-      - category: Synth - Granular Pad
-        label: main ducking vocal pad
-        tonality:
-          potentially granular vocal pad.
-          volume ducks and rises with the hat.
-          very aligned with the hat. sort of "snaps" with it
-        timing: constant
+      - sound: ducking_vocal_pad
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Synth - Granular Pad
-        label: piano pad
-        tonality:
-          granular piano pad
-          sidechained to every quarter note
+      - sound: piano_pad
         pattern: notes stay constant
-        timing: bar
         automation:
-          for 1.1.1 - 17.1.1, this is low passed and quiet. 
+          for 1.1.1 - 17.1.1, this is low passed and quiet.
           For 17.1.1 - 33.1.1, the low pass filter is opened and the pad is louder
+        timing:
+          description: bar
+          active: ["1.1.1 - end"]
 
-      - category: Synth - Pluck
-        label: bell transitory background pluck
-        tonality:
-          bell like synth pluch
+      - sound: bell_pluck
         pattern: 16th note sequence occurring just before next bar
         timing:
-          approx every 2nd bar
-          absent on 8.1.1 for alternate bell transitory background pluck
-          absent on 16.1.1
+          description:
+            approx every 2nd bar
+            absent on 8.1.1 for alternate bell transitory background pluck
+            absent on 16.1.1
+          repeat:
+            - start: "2.1.1"
+              every_bars: 2
+              length_bars: 1
+          mutes:
+            - "8.1.1 - 9.1.1"
+            - "16.1.1 - 17.1.1"
 
-      - category: Synth - Pluck
-        label: alternate bell transitory background pluck
-        tonality:
-          sounds kinda like a guitar pluck
+      - sound: alternate_bell_pluck
         pattern:
           Occurs on beats 1 And, 2, 3 And, 4
-        timing: Starting on 7.1.1, every 8 bars.
+        timing:
+          description: Starting on 7.1.1, every 8 bars.
+          repeat:
+            - start: "7.1.1"
+              every_bars: 8
+              length_bars: 1
 
-      - category: Synth - Pluck
-        label: ultra light pluck
-        tonality:
-          very light hi passed saw pluck
+      - sound: ultra_light_pluck
         pattern: 2 16th notes starting on x.3.2
         timing:
-          17.1.1 - 33.1.1
-          occuring every 2 bars
+          description: 17.1.1 - 33.1.1, occurring every 2 bars
+          repeat:
+            - start: "17.1.1"
+              every_bars: 2
+              length_bars: 1
 
-      - category: Synth - Pluck
-        label: glassy ghost synth pluck
-        tonality:
-          very light hi passed saw pluck, with a longer reverb tail. ethereal sounding
+      - sound: glassy_ghost_pluck
         pattern: on x.1.1 and approx x.4.3
         timing:
-          25.1.1 - 33.1.1
+          active: ["25.1.1 - end"]
 
-      - category: Synth - Supersaw
-        label: transitory supersaw swell sweep
-        tonality:
-          it sounds like some tonal pad, maybe part synth, part vocals.
-          the sound has a quick but not instant volume gate causing a sort of "sweeping" effect
-          it seems to quickly switch from heavier side focus to heavier mid focus.
+      - sound: supersaw_swell_sweep
         pattern: 8th notes
-        timing: 16.4.1, transitory element leading to 17.1.1
+        timing:
+          description: 16.4.1, transitory element leading to 17.1.1
+          active: ["16.4.1 - 17.1.1"]
 
-      - category: Synth - Granular Pad
-        label: alternate transitory granular vocal sweep
-        tonality:
-          it sounds like some vocal based pad.
-          the sound has a quick but not instant volume gate causing a sort of "sweeping" effect
-          it seems to quickly switch from heavier side focus to heavier mid focus.
+      - sound: granular_vocal_sweep
         pattern: 8th notes
-        timing: 20.4.1, transitory element leading to 21.1.1
+        timing:
+          description: 20.4.1, transitory element leading to 21.1.1
+          active: ["20.4.1 - 21.1.1"]
 
-      - category: Vocals - Background
-        label: background aaa vowel call / response
-        tonality: a brief bandpassed vocal sample
+      - sound: aaa_call_response
         pattern: 2nd beat of every bar
-        timing: 25.1.1 - 33.1.1
+        timing:
+          active: ["25.1.1 - end"]
 
   - section_name: break 1
     duration_bars: 8
     elements:
-      - category: Drums - Other Percussive
-        tonality: "clock" like shaker
-        timing: constant
+      - sound: clock_shaker
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Drums - Kick
-        tonality: Deep kick, low end heavy, mild treble transient content / "click"
-        timing: 1.1.1 - 7.1.1
+      - sound: kick
         pattern: 4 on the floor
+        timing:
+          active: ["1.1.1 - 7.1.1"]
 
-      - category: Synth - Granular Pad
-        label: piano pad
-        tonality:
-          granular piano pad
-          sidechained to every quarter note
+      - sound: piano_pad
         pattern: pad
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Synth - Pluck
-        label: glassy ghost synth pluck
-        tonality:
-          very light hi passed saw pluck, with a longer reverb tail. ethereal sounding
+      - sound: glassy_ghost_pluck
         pattern: on x.1.1 and approx x.4.3
         timing:
-          1.1.1 - 9.1.1
+          active: ["1.1.1 - end"]
 
   - section_name: break 2
     duration_bars: 16
     global_transitions: 16.4.1 everything cuts out, and quick "london" vocal sample hits
     elements:
-      - category: Synth - Granular Pad
-        label: Breathy vocal pad
-        tonality:
-          granular vocal pad, gated, breathy, verbed, washed sound
+      - sound: breathy_vocal_pad
+        pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique.
           4th unique beat note ascends a bit higher
-        pattern: constant, but granular pattern changes, beats 1-3 repeat, but 4 is unique
-        timing: 1.1.1 - 17.1.1
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Synth - Pluck
-        label: main pluck
-        tonality:
-          Warm cutoff plucky saw sustained synth.
-          While this does have a significant upwards low cutoff ascending pluck as an attack,
-          it is legato. notes are sustained until next note
+      - sound: main_pluck
         pattern:
           alternates between chords & single notes.
           single notes occur on beat 4, chords on beat 1
-        timing: 1.1.1 - 17.1.1
         automation: cutoff gradually rises
-
-      - category: Vocals - Background
-        tonality:
-          warm male vocals "oooo" vowels.
-          stays on one note
-        timing: 9.1.1 - 17.1.1
-
-      - category: Vocals - Background
-        tonality:
-          soft "ooo" and "aaa" vowels melody mixes in with other vocals background elements
-          notes shift up and down
-        timing: 1.1.1 - 17.1.1
-
-      - category: Transition - Sweep
-        tonality: resonant white noise
         timing:
-          15.1.1 - 17.4.1
+          active: ["1.1.1 - end"]
 
-      - category: Transition - Sweep
-        label: minor sweep
-        tonality: resonant white noise
+      - sound: male_oooo_vocals
+        pattern: stays on one note
         timing:
-          8.1.1
+          active: ["9.1.1 - end"]
 
-      - category: Drums - Hats
-        tonality: muted hats
-        timing: 9.1.1 - 17.1.1
+      - sound: ooo_aaa_vocals
+        pattern: notes shift up and down
+        timing:
+          active: ["1.1.1 - end"]
 
-      - category: Synth - Pad
-        tonality: simple saw pad, sireny sounding
-        timing: 9.1.1 - 17.1.1
+      - sound: noise_sweep
+        timing:
+          active: ["15.1.1 - 17.4.1"]
 
-      - category: Vocals - Chop
-        tonality: Aaa vowel female chops
-        timing: 15.1.1 - 17.1.1
+      - sound: noise_sweep
+        notes: minor sweep
+        timing:
+          hits: ["8.1.1"]
+
+      - sound: muted_hats
+        timing:
+          active: ["9.1.1 - end"]
+
+      - sound: saw_pad
+        timing:
+          active: ["9.1.1 - end"]
+
+      - sound: aaa_chops
         pattern: 2nd beat on each bar
+        timing:
+          active: ["15.1.1 - end"]

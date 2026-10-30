@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=./track_schema.json
+# yaml-language-server: $schema=./song-schema.json
 
 track_metadata:
   artist: Lane 8
@@ -8,114 +8,203 @@ track_metadata:
   time_signature: 4/4
   genre: Melodic House
 
+sounds:
+  reverse_swell:
+    category: Transition - Sweep
+    label: Reverse Swell
+    tonality: Reverse sound.
+
+  main_kick:
+    category: Drums - Kick
+    label: Main Kick
+    tonality: Standard foundational kick.
+
+  sub_kick:
+    category: Drums - Kick
+    label: Sub Kick
+    tonality: Real subtle, low cutoff.
+
+  lfo_pad:
+    category: Synth - Pad
+    label: LFO Pad
+    tonality: Synthesizer pad with heavy modulation.
+
+  post_intro_pad:
+    category: Synth - Pad
+    label: Post Intro Pad
+    tonality: Smooth sustaining pad.
+
+  ringing_pad:
+    category: Synth - Pad
+    label: Ringing Pad
+    tonality: Resonant, ringing pad character.
+
+  verse_break_pad:
+    category: Synth - Pad
+    label: Verse Break Pad
+    tonality: Softer pad, not ringy.
+
+  vocal_fx:
+    category: Vocals - Atmosphere
+    label: Vocal FX
+    tonality: Processed human voice.
+
+  steel_drum_melody:
+    category: Drums - Other Percussive
+    label: Steel Drum Melody
+    tonality: Cutoff steel drums character.
+
+  harmonic_percussion:
+    category: Drums - Other Percussive
+    label: Harmonic Percussion
+    tonality: Percussive element containing harmonic content.
+
+  main_hats:
+    category: Drums - Hats
+    label: Main Hats
+    tonality: Standard hi-hats.
+
+  secondary_hats:
+    category: Drums - Hats
+    label: Secondary Hats
+    tonality: Light open hats.
+
+  transition_hats:
+    category: Drums - Hats
+    label: Transition Hats
+    tonality: Open hi-hat.
+
+  warm_synth:
+    category: Synth - Sustained
+    label: Warm Synth
+    tonality: Warm synthesizer sound using distortion.
+
+  telephone_synth:
+    category: Synth - Sustained
+    label: Telephone Synth
+    tonality: Warm, cutoff telephone ring character.
+
+  automated_pluck:
+    category: Synth - Pluck
+    label: Automated Pluck
+    tonality: Light plucky synth.
+
+  plucks:
+    category: Synth - Pluck
+    label: Plucks
+    tonality: Plucky melodic synth.
+
+  percussive_snare:
+    category: Drums - Snare
+    label: Percussive Snare
+    tonality: Percussive snare-like element.
+
+  main_vocals:
+    category: Vocals - Lead
+    label: Main Vocals
+    tonality: Clear lead vocal.
+
+  vocal_harmony:
+    category: Vocals - Lead
+    label: Vocal Harmony
+    tonality: Harmonized vocal layer.
+
+  outro_vocals:
+    category: Vocals - Lead
+    label: Outro Vocals
+    tonality: Atmospheric "whoo oo oo oo" vocal lines.
+
 arrangement:
   - section_name: Intro
     duration_bars: 32
     elements:
-      - category: Transition - Sweep
-        label: Reverse Swell
-        timing: 1.1.1
-        tonality: Reverse sound.
+      - sound: reverse_swell
         pattern: Swells right away on the first beat.
-      - category: Drums - Kick
-        label: Main Kick
-        timing: 1.1.1 - 33.1.1
-        tonality: Standard foundational kick.
+        timing:
+          hits: ["1.1.1"]
+      - sound: main_kick
         pattern: Four-on-the-floor rhythm.
-        pattern_variation: Begins on 1.2.1.
-      - category: Synth - Pad
-        label: LFO Pad
-        timing: 1.1.1 - 33.1.1
-        tonality: Synthesizer pad with heavy modulation.
+        timing:
+          active: ["1.2.1 - end"]
+      - sound: lfo_pad
         pattern: Quarter notes.
-      - category: Vocals - Atmosphere
-        label: Vocal FX
-        timing: 1.1.1 - 33.1.1
-        tonality: Processed human voice.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: vocal_fx
         pattern: Occurs intermittently throughout the section.
-      - category: Drums - Other Percussive
-        label: Steel Drum Melody
-        timing: 1.1.1 - 33.1.1
-        tonality: Cutoff steel drums character.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: steel_drum_melody
         pattern: Subtle percussive melody.
-      - category: Drums - Hats
-        label: Intro Hats
-        timing: 9.1.1 - 33.1.1
-        tonality: Standard hi-hats.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_hats
         pattern: Rhythmic hat pattern introduced.
-      - category: Drums - Other Percussive
-        label: Harmonic Percussion
-        timing: 17.1.1 - 33.1.1
-        tonality: Percussive element containing harmonic content.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: harmonic_percussion
         pattern: Interlocking rhythm.
-      - category: Drums - Hats
-        label: Secondary Hats
-        timing: 25.1.1 - 33.1.1
-        tonality: Light open hats.
+        timing:
+          active: ["17.1.1 - end"]
+      - sound: secondary_hats
         pattern: Additional hat rhythm that leads into the post intro.
+        timing:
+          active: ["25.1.1 - end"]
 
   - section_name: Post Intro
     duration_bars: 16
     global_transitions: >
       1.1.1: Kick drum exits completely.
     elements:
-      - category: Vocals - Atmosphere
-        label: Vocal FX
-        timing: 1.1.1 - 17.1.1
-        tonality: Processed human voice.
+      - sound: vocal_fx
         pattern: Continues intermittently.
-      - category: Synth - Sustained
-        label: Warm Synth
-        timing: 1.1.1 - 17.1.1
-        tonality: Warm synthesizer sound using distortion.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: warm_synth
         pattern: Comes and goes throughout the section.
         automation: Distortion becomes more aggressive from 9.1.1 - 17.1.1
-      - category: Drums - Kick
-        label: Sub Kick
-        timing: 9.1.1 - 17.1.1
-        tonality: Real subtle, low cutoff.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: sub_kick
         pattern: Soft driving beat.
-      - category: Synth - Pad
-        label: Post Intro Pad
-        timing: 9.1.1 - 17.1.1
-        tonality: Smooth sustaining pad.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: post_intro_pad
         pattern: Background texture.
+        timing:
+          active: ["9.1.1 - end"]
 
   - section_name: Preverse
     duration_bars: 16
     elements:
-      - category: Drums - Kick
-        label: Main Kick
-        timing: 1.1.1 - 17.1.1
-        tonality: Standard kick (not cutoff).
+      - sound: main_kick
+        notes: Not cutoff.
         pattern: Four-on-the-floor rhythm.
-        pattern_variation: Exits on 15.1.1.
-      - category: Synth - Pad
-        label: LFO Pad
-        timing: 1.1.1 - 17.1.1
-        tonality: Light, heavily modulated pad.
+        timing:
+          active: ["1.1.1 - 15.1.1"]
+      - sound: lfo_pad
+        notes: Lighter.
         pattern: Quarter notes, comes and goes.
-      - category: Synth - Pluck
-        label: Automated Pluck
-        timing: 1.1.1 - 17.1.1
-        tonality: Light plucky synth.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: automated_pluck
         pattern: Intermittent phrasing.
         automation: Volume automated in and out.
-      - category: Vocals - Atmosphere
-        label: Vocal FX
-        timing: 1.1.1 - 17.1.1
-        tonality: Subtle processed vocals.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: vocal_fx
+        notes: Subtle.
         pattern: Light background presence.
-      - category: Drums - Snare
-        label: Percussive Snare
-        timing: 9.1.1 - 17.1.1
-        tonality: Percussive snare-like element.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: percussive_snare
         pattern: Hits strictly on the 2nd beats.
-      - category: Drums - Hats
-        label: Transition Hats
-        timing: 15.1.1 - 17.1.1
-        tonality: Open hi-hat.
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: transition_hats
         pattern: Ascending rhythm leading into the verse.
+        timing:
+          active: ["15.1.1 - end"]
 
   - section_name: Verse A
     duration_bars: 24
@@ -123,95 +212,77 @@ arrangement:
     global_transitions: >
       17.1.1: Kicks and plucks exit for the verse break.
     elements:
-      - category: Vocals - Lead
-        label: Main Vocals
-        timing: 1.1.1 - 25.1.1
-        tonality: Clear lead vocal.
+      - sound: main_vocals
         pattern: Main melody lines enter.
-      - category: Drums - Kick
-        label: Main Kick
-        timing: 1.1.1 - 17.1.1
-        tonality: Standard kick.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_kick
         pattern: Four-on-the-floor rhythm.
-      - category: Drums - Hats
-        label: Main Hats
-        timing: 1.1.1 - 17.1.1
-        tonality: Standard hi-hats.
+        timing:
+          active: ["1.1.1 - 17.1.1"]
+      - sound: main_hats
         pattern: Top rhythmic layer.
-      - category: Synth - Pluck
-        label: Verse Plucks
-        timing: 1.1.1 - 17.1.1
-        tonality: Plucky melodic synth.
+        timing:
+          active: ["1.1.1 - 17.1.1"]
+      - sound: plucks
         pattern: Core accompaniment.
-      - category: Synth - Pad
-        label: Ringing Pad
-        timing: 1.1.1 - 17.1.1
-        tonality: Resonant, ringing pad character.
+        timing:
+          active: ["1.1.1 - 17.1.1"]
+      - sound: ringing_pad
         pattern: Pings specifically on beat 1 and 2a.
-      - category: Synth - Pad
-        label: Verse Break Pad
-        timing: 17.1.1 - 25.1.1
-        tonality: Softer pad, not ringy.
+        timing:
+          active: ["1.1.1 - 17.1.1"]
+      - sound: verse_break_pad
         pattern: Replaces the ringing pad for the vocal break.
+        timing:
+          active: ["17.1.1 - end"]
 
   - section_name: Chorus A
     duration_bars: 24
     elements:
-      - category: Vocals - Lead
-        label: Main Vocals
-        timing: 1.1.1 - 25.1.1
-        tonality: Clear lead vocal ("all the brightest lights").
+      - sound: main_vocals
+        notes: Sings "all the brightest lights".
         pattern: Sings main chorus phrasing.
-      - category: Vocals - Lead
-        label: Vocal Harmony
-        timing: 9.1.1 - 17.1.1
-        tonality: Harmonized vocal layer.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: vocal_harmony
         pattern: Accompanies the main vocal melody.
-      - category: Vocals - Lead
-        label: Outro Vocals
-        timing: 17.1.1 - 25.1.1
-        tonality: Atmospheric "whoo oo oo oo" vocal lines.
+        timing:
+          active: ["9.1.1 - 17.1.1"]
+      - sound: outro_vocals
         pattern: Ethereal phrasing.
-      - category: Synth - Pluck
-        label: Chorus Plucks
-        timing: 1.1.1 - 17.1.1
-        tonality: Very similar to Verse A1, but a bit less cutoff.
+        timing:
+          active: ["17.1.1 - end"]
+      - sound: plucks
+        notes: A bit less cutoff than in Verse A.
         pattern: Core melodic rhythm.
-        pattern_variation: Exits on 15.1.1.
-      - category: Drums - Kick
-        label: Main Kick
-        timing: 1.1.1 - 17.1.1
-        tonality: Standard kick.
+        timing:
+          active: ["1.1.1 - 15.1.1"]
+      - sound: main_kick
         pattern: Four-on-the-floor.
-        pattern_variation: Exits on 15.1.1.
-      - category: Synth - Sustained
-        label: Telephone Synth
-        timing: 17.1.1 - 25.1.1
-        tonality: Warm, cutoff telephone ring character.
+        timing:
+          active: ["1.1.1 - 15.1.1"]
+      - sound: telephone_synth
         pattern: New melodic synthesizer element.
+        timing:
+          active: ["17.1.1 - end"]
 
   - section_name: Verse B
     duration_bars: 8
     elements:
-      - category: Vocals - Lead
-        label: Main Vocals
-        timing: 1.1.1 - 9.1.1
-        tonality: Clear lead vocal.
+      - sound: main_vocals
         pattern: Follows Verse A structure.
-      - category: Synth - Pluck
-        label: Verse Plucks
-        timing: 1.1.1 - 9.1.1
-        tonality: Plucky melodic synth.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: plucks
         pattern: Core accompaniment.
-      - category: Drums - Hats
-        label: Main Hats
-        timing: 1.1.1 - 9.1.1
-        tonality: Standard hi-hats.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_hats
         pattern: Top rhythmic layer.
-      - category: Drums - Kick
-        label: Half-Time Kick
-        timing: 1.1.1 - 9.1.1
-        tonality: Standard kick.
-        pattern: Half-notes instead of quarter-notes.
-        pattern_variation: Does not come in until 2.1.1.
-
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_kick
+        pattern: Half-time; half-notes instead of quarter-notes.
+        timing:
+          active: ["2.1.1 - end"]

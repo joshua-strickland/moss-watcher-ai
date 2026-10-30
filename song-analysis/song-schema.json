@@ -15,6 +15,12 @@
         "genre": { "type": "string" }
       }
     },
+    "sounds": {
+      "description": "Library of reusable sounds, keyed by ID. Elements reference these with `sound: <id>`.",
+      "type": "object",
+      "propertyNames": { "pattern": "^[a-z0-9_]+$" },
+      "additionalProperties": { "$ref": "#/definitions/sound" }
+    },
     "arrangement": {
       "type": "array",
       "items": {
@@ -27,53 +33,128 @@
           "global_transitions": { "type": "string" },
           "elements": {
             "type": "array",
-            "items": {
-              "type": "object",
-              "required": ["category", "timing"],
-              "properties": {
-                "category": {
-                  "type": "string",
-                  "enum": [
-                    "Bass",
-                    "Drums - Kick",
-                    "Drums - Snare",
-                    "Drums - Clap",
-                    "Drums - Shakers",
-                    "Drums - Hats",
-                    "Drums - Rides",
-                    "Drums - Other Percussive",
-                    "Synth - Sustained",
-                    "Synth - Pluck",
-                    "Synth - Pad",
-                    "Synth - Granular Pad",
-                    "Synth - Arp",
-                    "Synth - Supersaw",
-                    "Synth - Swell",
-                    "Keys - Piano",
-                    "Vocals - Lead",
-                    "Vocals - Background",
-                    "Vocals - Chop",
-                    "Vocals - Atmosphere",
-                    "Transition - Sweep",
-                    "Transition - Riser",
-                    "FX - Foley",
-                    "FX - Noise",
-                    "FX - Impact",
-                    "FX - Synth",
-                    "Guitar - Electric",
-                    "Guitar - Acoustic",
-                    "Strings - Violin"
-                  ]
-                },
-                "label": { "type": "string" },
-                "tonality": { "type": "string" },
-                "pattern": { "type": "string" },
-                "automation": { "type": "string" },
-                "timing": { "type": "string" },
-                "pattern_variation": { "type": "string" }
-              }
-            }
+            "items": { "$ref": "#/definitions/element" }
           }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "category": {
+      "type": "string",
+      "enum": [
+        "Bass",
+        "Drums - Kick",
+        "Drums - Snare",
+        "Drums - Clap",
+        "Drums - Shakers",
+        "Drums - Hats",
+        "Drums - Rides",
+        "Drums - Other Percussive",
+        "Synth - Sustained",
+        "Synth - Pluck",
+        "Synth - Pad",
+        "Synth - Granular Pad",
+        "Synth - Arp",
+        "Synth - Supersaw",
+        "Synth - Swell",
+        "Keys - Piano",
+        "Vocals - Lead",
+        "Vocals - Background",
+        "Vocals - Chop",
+        "Vocals - Atmosphere",
+        "Transition - Sweep",
+        "Transition - Riser",
+        "FX - Foley",
+        "FX - Noise",
+        "FX - Impact",
+        "FX - Synth",
+        "Guitar - Electric",
+        "Guitar - Acoustic",
+        "Strings - Violin"
+      ]
+    },
+    "position": {
+      "description": "Section-relative Bar.Beat.16th position. Bar 1 is the first bar of the section.",
+      "type": "string",
+      "pattern": "^[1-9][0-9]*\\.[1-4]\\.[1-4]$"
+    },
+    "positionOrEnd": {
+      "description": "A section-relative position, or `end` for the end of the section.",
+      "type": "string",
+      "pattern": "^([1-9][0-9]*\\.[1-4]\\.[1-4]|end)$"
+    },
+    "span": {
+      "description": "`start - end`, end exclusive. End may be `end` for the end of the section.",
+      "type": "string",
+      "pattern": "^[1-9][0-9]*\\.[1-4]\\.[1-4] - ([1-9][0-9]*\\.[1-4]\\.[1-4]|end)$"
+    },
+    "spanOrPosition": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]*\\.[1-4]\\.[1-4]( - ([1-9][0-9]*\\.[1-4]\\.[1-4]|end))?$"
+    },
+    "repeat": {
+      "description": "A sound that comes in on a regular cycle.",
+      "type": "object",
+      "required": ["start", "every_bars", "length_bars"],
+      "additionalProperties": false,
+      "properties": {
+        "start": { "$ref": "#/definitions/position" },
+        "every_bars": { "type": "integer", "minimum": 1 },
+        "length_bars": { "type": "number", "exclusiveMinimum": 0 },
+        "until": { "$ref": "#/definitions/positionOrEnd", "default": "end" }
+      }
+    },
+    "timing": {
+      "description": "When the element plays. active, hits and repeat are combined; mutes are removed from the result.",
+      "type": "object",
+      "additionalProperties": false,
+      "anyOf": [
+        { "required": ["active"] },
+        { "required": ["hits"] },
+        { "required": ["repeat"] }
+      ],
+      "properties": {
+        "description": { "type": "string" },
+        "active": { "type": "array", "items": { "$ref": "#/definitions/span" } },
+        "hits": { "type": "array", "items": { "$ref": "#/definitions/position" } },
+        "repeat": { "type": "array", "items": { "$ref": "#/definitions/repeat" } },
+        "mutes": { "type": "array", "items": { "$ref": "#/definitions/spanOrPosition" } }
+      }
+    },
+    "sound": {
+      "type": "object",
+      "required": ["category"],
+      "additionalProperties": false,
+      "properties": {
+        "category": { "$ref": "#/definitions/category" },
+        "label": { "type": "string" },
+        "tonality": { "type": "string" },
+        "automation": { "type": "string" }
+      }
+    },
+    "element": {
+      "description": "One sound's appearance in a section. Reference a library sound with `sound`, or describe a one-off inline with `category`. pattern belongs here, not in the library. Any sound field set here overrides the library value.",
+      "type": "object",
+      "required": ["timing"],
+      "anyOf": [
+        { "required": ["sound"] },
+        { "required": ["category"] }
+      ],
+      "properties": {
+        "sound": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+        "category": { "$ref": "#/definitions/category" },
+        "label": { "type": "string" },
+        "tonality": { "type": "string" },
+        "pattern": { "type": "string" },
+        "automation": { "type": "string" },
+        "pattern_variation": { "type": "string" },
+        "notes": { "type": "string" },
+        "timing": {
+          "anyOf": [
+            { "type": "string", "description": "Legacy free-text timing. Convert to the timing object." },
+            { "$ref": "#/definitions/timing" }
+          ]
         }
       }
     }

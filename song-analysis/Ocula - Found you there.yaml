@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=/song-schema.json
+# yaml-language-server: $schema=./song-schema.json
 
 track_metadata:
   artist: Ocula
@@ -8,383 +8,433 @@ track_metadata:
   time_signature: 4/4
   genre: Melodic House
 
+sounds:
+  tremolo_warm_saw:
+    category: Synth - Pad
+    label: tremolo warm saw
+    tonality: >
+      Warm cut off, tremolo'd sawtooth synthesizer.
+
+  tremolo_shimmer_pad:
+    category: Synth - Pad
+    label: tremolo shimmer pad
+    tonality: >
+      High frequency content saw / similar synth gated with pseudo random rhythm.
+      layered with tremolo warm saw
+
+  trumpet_pad:
+    category: Synth - Pad
+    tonality: Sounds kinda like a trumpet
+
+  main_arp:
+    category: Synth - Arp
+    label: Main 16th Arp
+    tonality: >
+      Plucky synthesizer sharing notes with the piano melody.
+
+  background_vocals:
+    category: Vocals - Atmosphere
+    label: background verbed background vocals
+    tonality: >
+      Female vocal with a lush reverb tail. heavy cutoff
+
+  lead_vocal:
+    category: Vocals - Lead
+    tonality: clean, unfiltered
+
+  muffled_vocal_chops:
+    category: Vocals - Chop
+    tonality: muffled sounding vocal chops like in intro
+
+  vowel_chops:
+    category: Vocals - Chop
+    tonality: vowel chops, breathy, maybe some noise, slight reverb
+
+  kick:
+    category: Drums - Kick
+    tonality: not super punchy, not super soft, right in the middle
+
+  hats:
+    category: Drums - Hats
+    tonality: alternates in velocity, ranges from heavy to soft.
+
+  snare:
+    category: Drums - Snare
+    tonality: Slappy, "paper-y" Not a super long tail, no verb?
+
+  speaker_pops:
+    category: Drums - Other Percussive
+    label: gentle speaker pops
+    tonality: like a vinyl crackle or low quality speaker pops with low filter
+
+  cutoff_toms:
+    category: Drums - Other Percussive
+    label: cutoff toms
+    tonality: a muted tom-like sound heavily cut off, descending
+
+  warm_bass:
+    category: Bass
+    tonality: very warm gentle bass, sub and maybe mid bass
+
+  intro_riser:
+    category: Transition - Riser
+    label: intro to verse riser
+    tonality: band passed pad like saw
+
+  lead_pluck:
+    category: Synth - Pluck
+    label: lead cutoff warm saw pluck
+    tonality: warm cut off saw pluck
+
+  cutoff_sustained_saw:
+    category: Synth - Sustained
+    label: cut off sustained saw
+    tonality: cut off sustained saw
+
+  sonar_synth:
+    category: Synth - Sustained
+    tonality: warm siren sonar sounding sustained background synth
+
+  warm_bell_synth:
+    category: Synth - Pluck
+    label: warm bell synth
+    tonality: bell like synth, cut off, very much in the background, delicate
+
 arrangement:
   - section_name: Intro
     duration_bars: 16
     chord_progression: ""
-    global_transitions: >
     elements:
-      - category: Synth - Pad
-        label: tremolo warm saw
-        tonality: >
-          Warm cut off, tremolo'd sawtooth synthesizer.
+      - sound: tremolo_warm_saw
         pattern: >
           pad
-        timing: pad
-      - category: Synth - Pad
-        label: tremolo shimmer pad
-        tonality: >
-          High frequency content saw / similar synth gated with pseudo random rhythm. 
-          layered with tremolo warm saw
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: tremolo_shimmer_pad
         pattern: >
           gated with pseudo random rhythm, otherwise constant
-        timing: pad
-      - category: Synth - Arp
-        label: Main 16th Arp
-        tonality: >
-          Plucky synthesizer sharing notes with the piano melody.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: main_arp
         pattern: >
           16th-note arpeggiated rhythm.
         automation: >
           Low pass filter gradually opens up.
-        timing: 1.1.1 - 17.1.1
-      - category: Vocals - Atmosphere
-        label: background verbed background vocals
-        tonality: >
-          Female vocal with a lush reverb tail. heavy cutoff
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: background_vocals
         pattern: >
           inconsistent
-        timing: 1.1.1 - 17.1.1
-      - category: Drums - Kick
-        label: soft intro kick
-        tonality: cut off
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: kick
+        notes: soft intro kick, heavily cut off
         pattern: 4 on the floor
-        timing: >
-          5.1.1 - 17.1.1
-          except for on 16.4.1, where kick is absent as transitory pattern shift
+        timing:
+          description: kick is absent on 16.4.1 as a transitory pattern shift
+          active: ["5.1.1 - end"]
+          mutes: ["16.4.1"]
 
-      - category: Drums - Other Percussive
-        label: gentle speaker pops
-        tonality: like a vinyl crackle or low quality speaker pops with low filter
+      - sound: speaker_pops
         pattern: seemingly random
-        timing: 5.1.1 - 17.1.1
+        timing:
+          active: ["5.1.1 - end"]
 
-      - category: Bass
-        tonality: very warm gentle bass, sub and maybe mid bass
+      - sound: warm_bass
         pattern: primarily changes every bar, but intermittently changes on quarter notes
-        timing: 9.1.1 - 17.1.1
+        timing:
+          active: ["9.1.1 - end"]
 
-      - category: Transition - Riser
-        label: intro to verse riser
-        tonality: band passed pad like saw
+      - sound: intro_riser
         pattern: note descends approx one interval once after 15th bar
-        timing: 15.1.1 - 17.1.1 or so?
+        timing:
+          description: 15.1.1 - 17.1.1 or so?
+          active: ["15.1.1 - end"]
 
-      - category: Synth - Pad
-        tonality: Sounds kinda like a trumpet
+      - sound: trumpet_pad
         pattern: pad
-        timing: 9.1.1 - 17.1.1
         automation: cutoff gradually changes
+        timing:
+          active: ["9.1.1 - end"]
 
-      - category: Drums - Hats
-        tonality: varying velocity hi hat hits, transitory
+      - sound: hats
+        notes: transitory
         pattern: 16th notes
-        timing: 16.4.1
+        timing:
+          hits: ["16.4.1"]
 
-      - category: Vocals - Lead
-        tonality: clean, unfiltered
+      - sound: lead_vocal
         pattern: transitionary timing occurring on final bar beat 3 "And"
-        timing: transitory timing occurring on final bar
+        timing:
+          hits: ["16.3.3"]
 
   - section_name: Verse A
     duration_bars: 16
     chord_progression: unsure
     elements:
-      - category: Bass
-        tonality: very warm gentle bass, sub and maybe mid bass
+      - sound: warm_bass
         pattern: primarily changes every bar, but intermittently changes on quarter notes
-        timing: constant
-      - category: Drums - Kick
-        tonality: not super punchy, not super soft, right in the middle
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: kick
         automation: cut off filter expands as soon as verse a begins allowing full frequency presence
         pattern: >
           4 on the floor
-          on last beat of final bar, kick is absent
-        timing: constant
-      - category: Drums - Hats
-        tonality: alternates in velocity, ranges from heavy to soft.
+        timing:
+          active: ["1.1.1 - end"]
+          mutes: ["16.4.1"]
+      - sound: hats
         pattern: >
           primarily occurs on eigth notes with 4 on the floor pattern.
           heavier quarter note hits occur on beats 1 & 3, while beats 2 and 4 utilize softer hits
           eighth note hits are softer
         pattern_variation:
           16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on 2.4.1
-        timing: constant
-      - category: Drums - Snare
-        tonality: Slappy, "paper-y" Not a super long tail, no verb?
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: snare
         pattern: beats 2 & 4
-        timing: constant
-      - category: Synth - Pad
-        label: tremolo shimmer pad
-        tonality: >
-          High frequency content saw / similar synth gated with pseudo random rhythm. 
-          layered with tremolo warm saw
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: tremolo_shimmer_pad
         pattern: >
           gated with pseudo random rhythm, otherwise constant
-        timing: pad
-      - category: Synth - Pluck
-        label: lead cutoff warm saw pluck
-        tonality: warm cut off saw pluck
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: lead_pluck
         pattern: >
           alternates between quarter and eighth notes.
           more rapid notes occur primarily during transitory rhythms leading to subsequent bars.
           goes to 16th notes as well during some transitory rhythms
-        timing: constant
-      - category: Vocals - Lead
-        tonality: clean, unfiltered
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: lead_vocal
         pattern: Plays as transitory, occurring on the "And" of beats 3 or 2
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
   - section_name: chorus A
     duration_bars: 16
     chord_progression: unsure
     elements:
-      - category: Bass
-        tonality: very warm gentle bass, sub and maybe mid bass
+      - sound: warm_bass
         pattern: primarily changes every bar, but intermittently changes on quarter notes
-        timing: constant
-      - category: Drums - Kick
-        tonality: not super punchy, not super soft, right in the middle
-        automation: cut off filter expands as soon as verse a begins allowing full frequency presence
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: kick
         pattern: 4 on the floor
-        timing: constant
-      - category: Drums - Hats
-        tonality: alternates in velocity, ranges from heavy to soft.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: hats
         pattern: >
           primarily occurs on eigth notes with 4 on the floor pattern.
           heavier quarter note hits occur on beats 1 & 3, while beats 2 and 4 utilize softer hits
           eighth note hits are softer
         pattern_variation:
           16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on 2.4.1
-        timing: constant
-      - category: Drums - Snare
-        tonality: Slappy, "paper-y" Not a super long tail, no verb?
-        pattern: > 
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: snare
+        pattern: >
           beats 2 & 4
         pattern_variation:
           on final bar & beat, 16th note quick fill
-        timing: constant
-      - category: Synth - Pad
-        label: tremolo shimmer pad
-        tonality: >
-          High frequency content saw / similar synth gated with pseudo random rhythm. 
-          layered with tremolo warm saw
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: tremolo_shimmer_pad
         pattern: >
           gated with pseudo random rhythm, otherwise constant
-        timing: pad
-      - category: Synth - Pluck
-        label: lead cutoff warm saw pluck
-        tonality: warm cut off saw pluck
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: lead_pluck
         pattern: >
           alternates between quarter and eighth notes.
           more rapid notes occur primarily during transitory rhythms leading to subsequent bars.
           goes to 16th notes as well during some transitory rhythms
-        timing: constant
-      - category: Vocals - Lead
-        tonality: clean, unfiltered
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: lead_vocal
         pattern: Plays as transitory, occurring on the "And" of beats 3 or 2
-        timing: constant
-      - category: Synth - Sustained
-        label: cut off sustained saw
-        tonality: cut off sustained saw
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: cutoff_sustained_saw
         pattern: pad
-        timing: 15.1.1 & 16
+        timing:
+          active: ["15.1.1 - end"]
 
   - section_name: bridge
     duration_bars: 2
     chord_progression: unsure
     global_transitions: synth lead reverb trails ring out.
     elements:
-      - category: Vocals - Lead
-        tonality: clean - unfiltered
+      - sound: lead_vocal
         pattern: eighth notes
-        timing: 2.3.3
+        timing:
+          hits: ["2.3.3"]
 
   - section_name: Verse B
     duration_bars: 16
     chord_progression: unsure
     global_transitions: light snare & hat fill occurs on 16.4.1
     elements:
-      - category: Bass
-        tonality: very warm gentle bass, sub and maybe mid bass
+      - sound: warm_bass
         pattern: primarily changes every bar, but intermittently changes on quarter notes
-        timing: constant
-      - category: Drums - Kick
-        tonality: not super punchy, not super soft, right in the middle
-        automation: cut off filter expands as soon as verse a begins allowing full frequency presence
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: kick
         pattern: 4 on the floor
-        timing: constant
-      - category: Synth - Sustained
-        tonality: warm siren sonar sounding sustained background synth
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: sonar_synth
         pattern: pad
-      - category: Synth - Pluck
-        label: warm bell synth
-        tonality: bell like synth, cut off, very much in the background, delicate
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: warm_bell_synth
         pattern: eighth notes
-        timing: constant, but so quiet its almost inaudible from 9.1.1 - 17.1.1
-      - category: Synth - Pad
-        label: tremolo shimmer pad
-        tonality: >
-          High frequency content saw / similar synth gated with pseudo random rhythm. 
-          layered with tremolo warm saw
+        timing:
+          description: constant, but so quiet its almost inaudible from 9.1.1 - 17.1.1
+          active: ["1.1.1 - end"]
+      - sound: tremolo_shimmer_pad
         pattern: >
           gated with pseudo random rhythm, otherwise constant
-        timing: pad
-      - category: Vocals - Lead
-        tonality: clean, unfiltered
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: lead_vocal
         pattern: Plays as transitory, occurring on the "And" of beats 3 or 2
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
 
   - section_name: chorus B
     duration_bars: 16
     chord_progression: unsure
     elements:
-      - category: Bass
-        tonality: very warm gentle bass, sub and maybe mid bass
+      - sound: warm_bass
         pattern: primarily changes every bar, but intermittently changes on quarter notes
-        timing: constant
-      - category: Drums - Kick
-        tonality: not super punchy, not super soft, right in the middle
-        automation: cut off filter expands as soon as verse a begins allowing full frequency presence
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: kick
         pattern: 4 on the floor
-        timing: constant
-      - category: Drums - Hats
-        tonality: alternates in velocity, ranges from heavy to soft.
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: hats
         pattern: >
           primarily occurs on eigth notes with 4 on the floor pattern.
           heavier quarter note hits occur on beats 1 & 3, while beats 2 and 4 utilize softer hits
           eighth note hits are softer
         pattern_variation:
           16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on 2.4.1
-        timing: constant
-      - category: Drums - Snare
-        tonality: Slappy, "paper-y" Not a super long tail, no verb?
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: snare
         pattern: beats 2 & 4
-        timing: constant
-      - category: Synth - Pad
-        label: tremolo shimmer pad
-        tonality: >
-          High frequency content saw / similar synth gated with pseudo random rhythm. 
-          layered with tremolo warm saw
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: tremolo_shimmer_pad
         pattern: >
           gated with pseudo random rhythm, otherwise constant
-        timing: pad
-      - category: Synth - Sustained
-        tonality: warm sonar sounding sustained background synth
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: sonar_synth
         pattern: pad
-      - category: Synth - Pluck
-        label: lead cutoff warm saw pluck
-        tonality: warm cut off saw pluck
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: lead_pluck
         pattern: >
           alternates between quarter and eighth notes.
           more rapid notes occur primarily during transitory rhythms leading to subsequent bars.
           goes to 16th notes as well during some transitory rhythms
-        timing: constant
-      - category: Vocals - Lead
-        tonality: clean, unfiltered
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: lead_vocal
         pattern: Plays as transitory, occurring on the "And" of beats 3 or 2
-        timing: constant
-      - category: Vocals - Chop
-        tonality: muffled sounding vocal chops like in intro
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: muffled_vocal_chops
         pattern: eighth notes
-        timing: intermittent
+        timing:
+          description: intermittent
+          active: ["1.1.1 - end"]
 
   - section_name: post chorus B
     duration_bars: 16
     chord_progression: unsure
     global_transitions: light snare & hat fill on final bar and beat
     elements:
-      - category: Bass
-        tonality: very warm gentle bass, sub and maybe mid bass
+      - sound: warm_bass
         pattern: primarily changes every bar, but intermittently changes on quarter notes
-        timing: constant
-      - category: Drums - Kick
-        tonality: not super punchy, not super soft, right in the middle
-        automation: cut off filter expands as soon as verse a begins allowing full frequency presence
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: kick
         pattern: 4 on the floor
-        timing: 1.1.1 - 15.1.1
-      - category: Drums - Hats
-        tonality: alternates in velocity, ranges from heavy to soft.
+        timing:
+          active: ["1.1.1 - 15.1.1"]
+      - sound: hats
         pattern: >
           primarily occurs on eigth notes with 4 on the floor pattern.
           heavier quarter note hits occur on beats 1 & 3, while beats 2 and 4 utilize softer hits
           eighth note hits are softer
-        pattern_variation:  16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on 2.4.1
-        timing: constant
-      - category: Drums - Snare
-        tonality: Slappy, "paper-y" Not a super long tail, no verb?
+        pattern_variation: 16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on 2.4.1
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: snare
         pattern: beats 2 & 4
-        timing: constant
-      - category: Synth - Pad
-        label: tremolo shimmer pad
-        tonality: >
-          High frequency content saw / similar synth gated with pseudo random rhythm. 
-          layered with tremolo warm saw
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: tremolo_shimmer_pad
         pattern: >
           gated with pseudo random rhythm, otherwise constant
-        timing: pad
-      - category: Synth - Sustained
-        tonality: warm sonar sounding sustained background synth
-        timing: constant
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: sonar_synth
         pattern: pad
-      - category: Synth - Pluck
-        label: lead cutoff warm saw pluck
-        tonality: warm cut off saw pluck
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: lead_pluck
         pattern: >
           alternates between quarter and eighth notes.
           more rapid notes occur primarily during transitory rhythms leading to subsequent bars.
           goes to 16th notes as well during some transitory rhythms
-        timing: constant
-      - category: Vocals - Chop
-        tonality: vowel chops, breathy, maybe some noise, slight reverb
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: vowel_chops
         pattern: eighth notes
-        timing: intermittent
+        timing:
+          description: intermittent
+          active: ["1.1.1 - end"]
 
   - section_name: Outro
     duration_bars: 16
     chord_progression: unsure
     elements:
-      - category: Synth - Pad
-        label: tremolo warm saw
-        tonality: >
-          Warm cut off, tremolo'd sawtooth synthesizer.
+      - sound: tremolo_warm_saw
         pattern: >
           pad
-        timing: pad
-      - category: Vocals - Atmosphere
-        label: background verbed background vocals
-        tonality: >
-          Female vocal with a lush reverb tail. heavy cutoff
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: background_vocals
         pattern: >
           inconsistent
-        timing: 1.1.1 - 17.1.1
         automation: low pass gradually lowers muting vocals further
-      - category: Drums - Kick
-        label: soft intro kick
-        tonality: cut off
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: kick
+        notes: soft intro kick, heavily cut off
         pattern: 4 on the floor
-        timing: >
-          1.1.1 - 9.1.1
-      - category: Drums - Other Percussive
-        label: gentle speaker pops
-        tonality: like a vinyl crackle or low quality speaker pops with low filter
+        timing:
+          active: ["1.1.1 - 9.1.1"]
+      - sound: speaker_pops
         pattern: seemingly random
-        timing: 9.1.1 - 17.1.1
-      - category: Drums - Other Percussive
-        label: cutoff toms
-        tonality: a muted tom-like sound heavily cut off, descending
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: cutoff_toms
         pattern: 2 notes descending approx one quarter note away from each other near the middle of a bar
-        timing: 9.1.1 - 17.1.1
-      - category: Bass
-        tonality: very warm gentle bass, sub and maybe mid bass
+        timing:
+          active: ["9.1.1 - end"]
+      - sound: warm_bass
         pattern: primarily changes every bar, but intermittently changes on quarter notes
-        timing: 1.1.1 - 17.1.1
-      - category: Synth - Pluck
-        label: warm bell synth
-        tonality: bell like synth, cut off, very much in the background, delicate
+        timing:
+          active: ["1.1.1 - end"]
+      - sound: warm_bell_synth
         pattern: eighth notes
-        timing: constant
-
-
+        timing:
+          active: ["1.1.1 - end"]
