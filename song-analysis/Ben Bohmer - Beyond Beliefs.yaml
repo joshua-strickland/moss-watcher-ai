@@ -9,10 +9,14 @@ track_metadata:
   genre: Melodic House
 
 sounds:
-  noise_hats:
+  shaker_noise_hats:
     category: Drums - Hats
-    label: soft hat noise layer 1
-    tonality: white noise like sounding hats. layered I think with real hats
+    label: layered hat, white noise & soft shaker
+    tonality: Layered percussion combining a real hi-hat, a white-noise-like hat layer,
+      and a soft shaker sound all hitting together.
+      The shaker component has a Christmas sleigh-bell character;
+      at times there is a ringing tonality where extra high-frequency content rings out,
+      while other hits have a relatively short release / duration.
 
   sharp_hats:
     category: Drums - Hats
@@ -29,13 +33,6 @@ sounds:
       short duration - roughly slightly longer than a single 16th note
     frequencies:
       fundamental_hz: 51
-
-  soft_shaker:
-    category: Drums - Shakers
-    label: soft shaker
-    tonality: This is sort of like the Christmas shaker sound in sleigh bells
-      at times there is a sort of ringing tonality where extra high frequency content
-      rings out. other times the hits have a relatively short release / duration
 
   metallic_hit:
     category: Drums - Other Percussive
@@ -104,7 +101,7 @@ arrangement:
   - section_name: intro
     duration_bars: 8
     elements:
-      - sound: noise_hats
+      - sound: shaker_noise_hats
         pattern: 16th notes
         timing:
           active: [ "1.1.1 - end" ]
@@ -129,12 +126,7 @@ arrangement:
   - section_name: verse a
     duration_bars: 48
     elements:
-      - sound: noise_hats
-        pattern: 16th notes
-        timing:
-          active: [ "1.1.1 - end" ]
-
-      - sound: soft_shaker
+      - sound: shaker_noise_hats
         pattern: 16th notes
         timing:
           active: [ "1.1.1 - end" ]
