@@ -12,7 +12,7 @@ sounds:
   noise_hats:
     category: Drums - Hats
     label: soft hat noise layer 1
-    tonality: white noise like sounding hats
+    tonality: white noise like sounding hats. layered I think with real hats
 
   sharp_hats:
     category: Drums - Hats
@@ -27,6 +27,8 @@ sounds:
     category: Drums - Kick
     tonality: full sounding kick, mild click,
       short duration - roughly slightly longer than a single 16th note
+    frequencies:
+      fundamental_hz: 51
 
   soft_shaker:
     category: Drums - Shakers
@@ -47,15 +49,26 @@ sounds:
     label: snare brush
     tonality: sounds like a snare brush
 
-  sub_bass:
+  bass:
     category: Bass
-    tonality: sub, ducks with kick, duck continues even if kick is absent
+    tonality:  ducks with kick, duck continues even if kick is absent
       pointing to the usage of a periodic duck through something like
-      shaperbox.
+      shaperbox. Sounds a bit like a cello actually, has that sort of
+      vibration as if a large string bring driven by a bow, perhaps layered
+    frequencies:
+      fundamental_range_hz: [38, 52]
+      span_hz: [20, 700]
 
   warm_arp:
     category: Synth - Arp
-    tonality: warm saw synth arp
+    tonality: warm saw synth arp.
+      Is cut off at high-mid range and the hats really 
+      fill in the extra space beyond that.
+      I think there is another layer that adds a minor 2 hits
+      at a lower note range. like a low pitched "sonar" hit.
+      Very brief and not incredibly perceptible but definitely present
+    frequencies:
+      span_hz: [100, 1700]
 
   prime_pluck:
     category: Synth - Pluck
@@ -69,6 +82,9 @@ sounds:
       This makes the pluck sound fairly massive
       sometimes the pluck is given more or less reverb to accentuate certain
       notes
+    frequencies:
+      fundamental_range_hz: [124,180]
+      span_hz: [124, 5000]
 
   heavenly_swell:
     category: Synth - Swell
@@ -129,19 +145,22 @@ arrangement:
           active: [ "1.1.1 - end" ]
 
       - sound: kick
-        pattern: 4 on the floor
+        pattern: 4 on the floor but with an extra kick on x.3.3.
+          The extra kick is not quite as loud or full in terms
+          of frequency range. It also seems to be a slightly higher pitch
         timing:
           active: [ "1.1.1 - end" ]
           mutes:
             - "16.4.1"
             - "48.1.1 - end"
 
+
       - sound: warm_arp
         pattern: 16th & 8th notes intermixed pattern
         timing:
           active: [ "1.1.1 - end" ]
 
-      - sound: sub_bass
+      - sound: bass
         timing:
           active: [ "1.1.1 - end" ]
 
