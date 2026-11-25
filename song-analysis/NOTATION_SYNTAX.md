@@ -54,6 +54,10 @@ sounds:
     label: prime synth pluck
     tonality: ...
     automation: ...
+    frequencies:                # optional (all values in Hz)
+      fundamental_hz: 52
+      fundamental_range_hz: [39, 58]
+      span_hz: [35, 180]
 ```
 
 Section elements reference a sound with `sound: <id>`. The library holds only what the sound *is*; what it *plays* belongs to the section, so `pattern` is always written on the element:
@@ -66,7 +70,7 @@ Section elements reference a sound with `sound: <id>`. The library holds only wh
     hits: ["7.4.3"]
 ```
 
-Any of `label`, `tonality` or `automation` set on the element overrides the library value for that section only. Use `notes` for what is different about the sound in that section (more reverb, louder hits) instead of rewriting `tonality`.
+Any of `label`, `tonality`, `automation`, or `frequencies` set on the element overrides the library value for that section only (for example, setting `frequencies: { span_hz: [38, 200] }` on a low-passed intro kick). Use `notes` for what is different about the sound in that section (more reverb, louder hits) instead of rewriting `tonality`.
 
 One-off sounds that appear in only one place may be written inline with `category` instead of `sound`.
 

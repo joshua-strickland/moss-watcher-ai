@@ -71,7 +71,9 @@ sounds:
     category: Drums - Kick
     label: Main Kick
     tonality: >
-      Full-sounding kick with med-high treble content for punch. Fundamental around 80-110Hz. Short overall envelope.
+      Full-sounding kick with med-high treble content for punch. Short overall envelope.
+    frequencies:
+      fundamental_range_hz: [80, 110]
 
   main_snare:
     category: Drums - Snare

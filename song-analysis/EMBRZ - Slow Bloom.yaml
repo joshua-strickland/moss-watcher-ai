@@ -106,13 +106,14 @@ sounds:
     category: Bass
     label: core swell bass layer
     tonality: Growly bass, has that sort of rapid volume jitter effect from saturation or OTT similar
-      kinda sounds like a bass guitar in isolation
-      fundamentals fairly low around 55hz, 47hz, 74hz
-      some mid layers extend upwards to 800-2k at times
+      kinda sounds like a bass guitar in isolation, with some upper-mid layers at times.
       The bass seems to have a long decay that completely stops when the next note is played. Suspect some monophonic voicing in play
       Sidechained to each quarter note.
       Bass also seems to decay the hi cut so that the hi cut descends gradually as the notes ring out.
       The decay and the sidechain combine so that each "gate opening" of the side chain is a little bit quieter and a little bit more cut off
+    frequencies:
+      fundamental_range_hz: [47, 74]
+      span_hz: [47, 2000]
 
   swell_synth:
     category: Synth - Swell

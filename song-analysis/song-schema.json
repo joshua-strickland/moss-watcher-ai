@@ -122,6 +122,32 @@
         "mutes": { "type": "array", "items": { "$ref": "#/definitions/spanOrPosition" } }
       }
     },
+    "hzRange": {
+      "description": "[low_hz, high_hz] frequency bounds in Hz.",
+      "type": "array",
+      "items": { "type": "number", "exclusiveMinimum": 0 },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "frequencies": {
+      "description": "Measured or estimated frequency characteristics in Hz.",
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "fundamental_hz": {
+          "description": "Primary or settled fundamental frequency in Hz (e.g., kick sub-tail or anchor bass note).",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "fundamental_range_hz": {
+          "$ref": "#/definitions/hzRange"
+        },
+        "span_hz": {
+          "$ref": "#/definitions/hzRange"
+        }
+      }
+    },
     "sound": {
       "type": "object",
       "required": ["category"],
@@ -130,7 +156,8 @@
         "category": { "$ref": "#/definitions/category" },
         "label": { "type": "string" },
         "tonality": { "type": "string" },
-        "automation": { "type": "string" }
+        "automation": { "type": "string" },
+        "frequencies": { "$ref": "#/definitions/frequencies" }
       }
     },
     "element": {
@@ -148,6 +175,7 @@
         "tonality": { "type": "string" },
         "pattern": { "type": "string" },
         "automation": { "type": "string" },
+        "frequencies": { "$ref": "#/definitions/frequencies" },
         "pattern_variation": { "type": "string" },
         "notes": { "type": "string" },
         "timing": {
