@@ -87,9 +87,14 @@ sounds:
     category: Synth - Swell
     label: heavenly swell
     tonality: has that washed multi tonal verbed out sound.
-      very ambient & lush soundscape, "heavenly".
+      very ambient & lush soundscape, "heavenly". "glassy".
+      outer wilds like ambience.
+      maybe some sort of rapid piano
+      significant resonance around 2k hz
       reverb tail lasts approx two bars
       The sound changes notes pitch every time it comes in
+    frequencies:
+      span_hz: [1000, 5000]
 
   reverse_swell:
     category: Synth - Swell
@@ -144,8 +149,8 @@ arrangement:
           active: [ "1.1.1 - end" ]
           mutes:
             - "16.4.1"
+            - "32.4.1"
             - "48.1.1 - end"
-
 
       - sound: warm_arp
         pattern: 16th & 8th notes intermixed pattern
@@ -167,30 +172,43 @@ arrangement:
 
       - sound: heavenly_swell
         pattern: comes in once after the prime synth pluck cuts out
+        automation: volume & frequency cutoff shift a bit with each hit
         timing:
-          description: swells in just before bar 13 at first, then reoccurs every 3-4 bars
-          repeat:
-            - start: "12.4.1"
-              every_bars: 4
-              length_bars: 2
+          description: swell / decay lasts approx 1-2 bars
+          hits:
+            - "17.3.1"
+            - "21.1.1"
+            - "25.1.1"
+            - "29.1.1"
+            - "33.1.1"
+            - "38.1.1"
+            - "41.1.1"
+            - "46.1.1"
 
       - sound: reverse_swell
         pattern: comes in once after the prime synth pluck cuts out,
           very frequently along with the heavenly swell
+        automation: volume & frequency cutoff shift a bit with each hit
         timing:
-          description: swells in just before bar 13 at first, then reoccurs every 3-4 bars
-          repeat:
-            - start: "12.4.1"
-              every_bars: 4
-              length_bars: 2
+          description: swell / decay lasts approx 1-2 bars
+          hits:
+            - "12.3.1"
+            - "21.1.1"
+            - "24.3.1"
+            - "33.3.1"
+            - "37.1.1"
+            - "40.1.1"
+            - "45.1.1"
+            - "48.3.1"
 
       - category: FX - Synth
         label: vowel like transitory synth sound
         pattern: once, 3 descending notes
         tonality: Weird muffled vowel like synth sound
         timing:
-          description: just prior to bar 17
-          hits: [ "16.4.1" ]
+          hits:
+             - "16.4.1"
+             - "32.3.1"
 
       - sound: sharp_hats
         pattern: 8th notes on up beat
