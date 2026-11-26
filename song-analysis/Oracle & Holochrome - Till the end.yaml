@@ -1,0 +1,122 @@
+# yaml-language-server: $schema=./song-schema.json
+
+track_metadata:
+  artist: Oracle & Holochrome
+  title: Till the end
+  key_signature: B Major
+  bpm: 122
+  time_signature: 4/4
+  genre: Melodic House
+
+sounds:
+  sharp_hats:
+    tonality: sharp hats
+    category: Drums - Hats
+
+  bass:
+    tonality: sub + mid bass layer
+    category: Bass
+
+  kick:
+    category: Drums - Kick
+    tonality: kick
+
+  vocals:
+    tonality: male vocals, falsetto partially
+      fair amount of verb
+    category: Vocals - Lead
+
+  prime_saw_pluck:
+    tonality: gliding heavily cut off, cut off seems to
+      rise and fall with notes (higher notes have a higher
+      cut off). some reverb and very light delay
+    category: Synth - Pluck
+
+  heavenly_instrumental_pad:
+    category: Synth - Granular Pad
+    tonality: maybe a piano based reverbed pad
+
+  heavenly_instrumental_swell:
+    category: Synth - Swell
+    tonality: piano based reverbed swell
+
+  reverse_vocal_reverb_swell:
+    category: Vocals - Swell
+    tonality: this is a classic vocal reverse reverb throw. 
+      swells for a bar
+
+  clicky_percussion:
+    category: Drums - Other Percussive
+    tonality: sort of a clicky-clacky shaker sound
+
+  synth_swell:
+    category: Synth - Swell
+    tonality: simple saw swell
+
+arrangement:
+  - section_name: pre intro
+    duration_bars: 1
+    elements:
+      - sound: heavenly_instrumental_swell
+        timing:
+          hits: ["1.1.1"]
+
+  - section_name: intro
+    duration_bars: 24
+    elements:
+      - sound: bass
+        timing:
+          active: [ "1.1.1 - 24.1.1" ]
+
+      - sound: prime_saw_pluck
+        timing:
+          active: [ "1.1.1 - end" ]
+
+      - sound: vocals
+        timing:
+          active: [ "9.1.1 - 24.1.1" ]
+
+      - sound: heavenly_instrumental_pad
+        timing:
+          active: [ "1.1.1 - end" ]
+
+      - sound: reverse_vocal_reverb_swell
+        timing:
+          hits: "15.1.1"
+
+      - sound: kick
+        automation: cut off here slightly
+        timing:
+          active:
+            - "17.1.1 - 24.1.1"
+
+  - section_name: verse a
+    duration_bars: 32
+    elements:
+      - sound: clicky_percussion
+        timing:
+          active:
+            - "1.1.1 - end"
+
+      - sound: bass
+        timing:
+          active:
+            - "1.1.1 - end"
+
+      - sound: prime_saw_pluck
+        timing:
+          active: [ "1.1.1 - end" ]
+
+      - sound: sharp_hat
+        timing:
+          active:
+            - "9.1.1 - end"
+
+      - sound: synth_swell
+        timing:
+          active:
+           - "13.1.1 - 17.1.1"
+
+
+
+

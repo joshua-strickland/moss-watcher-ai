@@ -110,11 +110,13 @@ arrangement:
           pad
         timing:
           active: ["1.1.1 - end"]
+
       - sound: tremolo_shimmer_pad
         pattern: >
           gated with pseudo random rhythm, otherwise constant
         timing:
           active: ["1.1.1 - end"]
+
       - sound: main_arp
         pattern: >
           16th-note arpeggiated rhythm.
@@ -122,11 +124,13 @@ arrangement:
           Low pass filter gradually opens up.
         timing:
           active: ["1.1.1 - end"]
+
       - sound: background_vocals
         pattern: >
           inconsistent
         timing:
           active: ["1.1.1 - end"]
+
       - sound: kick
         notes: soft intro kick, heavily cut off
         pattern: 4 on the floor
@@ -176,6 +180,7 @@ arrangement:
         pattern: primarily changes every bar, but intermittently changes on quarter notes
         timing:
           active: ["1.1.1 - end"]
+
       - sound: kick
         automation: cut off filter expands as soon as verse a begins allowing full frequency presence
         pattern: >
@@ -183,6 +188,7 @@ arrangement:
         timing:
           active: ["1.1.1 - end"]
           mutes: ["16.4.1"]
+
       - sound: hats
         pattern: >
           primarily occurs on eigth notes with 4 on the floor pattern.
@@ -192,15 +198,18 @@ arrangement:
           16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on 2.4.1
         timing:
           active: ["1.1.1 - end"]
+
       - sound: snare
         pattern: beats 2 & 4
         timing:
           active: ["1.1.1 - end"]
+
       - sound: tremolo_shimmer_pad
         pattern: >
           gated with pseudo random rhythm, otherwise constant
         timing:
           active: ["1.1.1 - end"]
+
       - sound: lead_pluck
         pattern: >
           alternates between quarter and eighth notes.
@@ -208,6 +217,7 @@ arrangement:
           goes to 16th notes as well during some transitory rhythms
         timing:
           active: ["1.1.1 - end"]
+
       - sound: lead_vocal
         pattern: Plays as transitory, occurring on the "And" of beats 3 or 2
         timing:
@@ -221,10 +231,12 @@ arrangement:
         pattern: primarily changes every bar, but intermittently changes on quarter notes
         timing:
           active: ["1.1.1 - end"]
+
       - sound: kick
         pattern: 4 on the floor
         timing:
           active: ["1.1.1 - end"]
+
       - sound: hats
         pattern: >
           primarily occurs on eigth notes with 4 on the floor pattern.
@@ -234,6 +246,7 @@ arrangement:
           16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on 2.4.1
         timing:
           active: ["1.1.1 - end"]
+
       - sound: snare
         pattern: >
           beats 2 & 4
@@ -241,11 +254,13 @@ arrangement:
           on final bar & beat, 16th note quick fill
         timing:
           active: ["1.1.1 - end"]
+
       - sound: tremolo_shimmer_pad
         pattern: >
           gated with pseudo random rhythm, otherwise constant
         timing:
           active: ["1.1.1 - end"]
+
       - sound: lead_pluck
         pattern: >
           alternates between quarter and eighth notes.
@@ -253,10 +268,12 @@ arrangement:
           goes to 16th notes as well during some transitory rhythms
         timing:
           active: ["1.1.1 - end"]
+
       - sound: lead_vocal
         pattern: Plays as transitory, occurring on the "And" of beats 3 or 2
         timing:
           active: ["1.1.1 - end"]
+
       - sound: cutoff_sustained_saw
         pattern: pad
         timing:
@@ -281,24 +298,29 @@ arrangement:
         pattern: primarily changes every bar, but intermittently changes on quarter notes
         timing:
           active: ["1.1.1 - end"]
+
       - sound: kick
         pattern: 4 on the floor
         timing:
           active: ["1.1.1 - end"]
+
       - sound: sonar_synth
         pattern: pad
         timing:
           active: ["1.1.1 - end"]
+
       - sound: warm_bell_synth
         pattern: eighth notes
         timing:
           description: constant, but so quiet its almost inaudible from 9.1.1 - 17.1.1
           active: ["1.1.1 - end"]
+
       - sound: tremolo_shimmer_pad
         pattern: >
           gated with pseudo random rhythm, otherwise constant
         timing:
           active: ["1.1.1 - end"]
+
       - sound: lead_vocal
         pattern: Plays as transitory, occurring on the "And" of beats 3 or 2
         timing:
@@ -312,10 +334,12 @@ arrangement:
         pattern: primarily changes every bar, but intermittently changes on quarter notes
         timing:
           active: ["1.1.1 - end"]
+
       - sound: kick
         pattern: 4 on the floor
         timing:
           active: ["1.1.1 - end"]
+
       - sound: hats
         pattern: >
           primarily occurs on eigth notes with 4 on the floor pattern.
@@ -325,19 +349,23 @@ arrangement:
           16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on 2.4.1
         timing:
           active: ["1.1.1 - end"]
+
       - sound: snare
         pattern: beats 2 & 4
         timing:
           active: ["1.1.1 - end"]
+
       - sound: tremolo_shimmer_pad
         pattern: >
           gated with pseudo random rhythm, otherwise constant
         timing:
           active: ["1.1.1 - end"]
+
       - sound: sonar_synth
         pattern: pad
         timing:
           active: ["1.1.1 - end"]
+
       - sound: lead_pluck
         pattern: >
           alternates between quarter and eighth notes.
@@ -345,10 +373,12 @@ arrangement:
           goes to 16th notes as well during some transitory rhythms
         timing:
           active: ["1.1.1 - end"]
+
       - sound: lead_vocal
         pattern: Plays as transitory, occurring on the "And" of beats 3 or 2
         timing:
           active: ["1.1.1 - end"]
+
       - sound: muffled_vocal_chops
         pattern: eighth notes
         timing:
@@ -364,10 +394,12 @@ arrangement:
         pattern: primarily changes every bar, but intermittently changes on quarter notes
         timing:
           active: ["1.1.1 - end"]
+
       - sound: kick
         pattern: 4 on the floor
         timing:
           active: ["1.1.1 - 15.1.1"]
+
       - sound: hats
         pattern: >
           primarily occurs on eigth notes with 4 on the floor pattern.
@@ -376,19 +408,23 @@ arrangement:
         pattern_variation: 16th note fills lasting approx 1 beat are utilized as transitory rhythms leading to subsequent bars. IE on 2.4.1
         timing:
           active: ["1.1.1 - end"]
+
       - sound: snare
         pattern: beats 2 & 4
         timing:
           active: ["1.1.1 - end"]
+
       - sound: tremolo_shimmer_pad
         pattern: >
           gated with pseudo random rhythm, otherwise constant
         timing:
           active: ["1.1.1 - end"]
+
       - sound: sonar_synth
         pattern: pad
         timing:
           active: ["1.1.1 - end"]
+
       - sound: lead_pluck
         pattern: >
           alternates between quarter and eighth notes.
@@ -396,6 +432,7 @@ arrangement:
           goes to 16th notes as well during some transitory rhythms
         timing:
           active: ["1.1.1 - end"]
+
       - sound: vowel_chops
         pattern: eighth notes
         timing:
@@ -411,29 +448,35 @@ arrangement:
           pad
         timing:
           active: ["1.1.1 - end"]
+
       - sound: background_vocals
         pattern: >
           inconsistent
         automation: low pass gradually lowers muting vocals further
         timing:
           active: ["1.1.1 - end"]
+
       - sound: kick
         notes: soft intro kick, heavily cut off
         pattern: 4 on the floor
         timing:
           active: ["1.1.1 - 9.1.1"]
+
       - sound: speaker_pops
         pattern: seemingly random
         timing:
           active: ["9.1.1 - end"]
+
       - sound: cutoff_toms
         pattern: 2 notes descending approx one quarter note away from each other near the middle of a bar
         timing:
           active: ["9.1.1 - end"]
+
       - sound: warm_bass
         pattern: primarily changes every bar, but intermittently changes on quarter notes
         timing:
           active: ["1.1.1 - end"]
+          
       - sound: warm_bell_synth
         pattern: eighth notes
         timing:

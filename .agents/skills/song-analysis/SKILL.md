@@ -3,7 +3,7 @@ name: song-analysis
 description: >-
   Use this skill when creating, editing, validating, or querying Melodic House
   song analysis YAML files in song-analysis/, generating arrangement or
-  drop-out reports, or running STFT frequency-band audio analysis with Python.
+  drop-out reports.
 ---
 
 # Song Analysis Workflow
@@ -14,8 +14,6 @@ This skill governs how reference tracks are documented in `song-analysis/` and m
 Read these files before creating or analyzing track data:
 - **Notation Rules:** [NOTATION_SYNTAX.md](../../../song-analysis/NOTATION_SYNTAX.md) — Mandatory `Bar.Beat.16th` timing format and sound library rules.
 - **JSON Schema:** [song-schema.json](../../../song-analysis/song-schema.json) — Strict schema for `track_metadata`, `sounds`, `arrangement`, `category` enum values, and `timing` objects.
-- **Analysis Objectives:** [ANALYSIS_GOALS.md](../../../song-analysis/ANALYSIS_GOALS.md) — Focal points when summarizing or comparing tracks across the dataset.
-- **Audio Spectrum Script:** [frequency-analysis.py](../../../python/frequency-analysis.py) — Computes per-section average dB across 5 frequency bands from a `.wav` file + `.yaml` arrangement.
 
 ## 1. Authoring or Updating a Track YAML
 1. Add the schema header on line 1 of every file in `song-analysis/`:
@@ -24,23 +22,59 @@ Read these files before creating or analyzing track data:
    ```
 2. Populate `track_metadata` (`artist`, `title`, `key_signature`, `bpm`, `time_signature`, `genre`).
 3. Define reusable instruments once under top-level `sounds:` (keyed by `snake_case` IDs) using only valid `category` enum values from [song-schema.json](../../../song-analysis/song-schema.json). Keep `pattern` out of `sounds:`—what a sound *plays* belongs on the section element. Record quantitative Hz measurements (especially kick and bass fundamentals) under `frequencies:` (`fundamental_hz`, `fundamental_range_hz`, `span_hz`) rather than burying numbers inside `tonality`.
+   - **Pay special attention to three signature Melodic House sound groups when documenting tracks:**
+     - **Novel / Non-Standard Percussion (`Drums - Other Percussive`):** Actively listen for and log odd percussive ear-candy outside the standard 4-on-the-floor kick/hat/snare kit—e.g., metallic/cowbell-like hits, tonal/cutoff/sonar toms, woodblocks, treble clicks, or steel-drum-like hits—noting their syncopated `pattern` and how they keep the groove feeling fresh.
+     - **Pads & Atmospheric Washes (`Synth - Pad`, `Synth - Granular Pad`, plus related `Synth - Swell`, `Vocals - Atmosphere`, `Vocals - Swell`):** Distinguish sustained chordal pads from granular/textured washes and multi-bar swells, noting filter character (low-passed, band-passed, resonant), reverb tail length, and which sections they occupy.
+     - **Synth Plucks (`Synth - Pluck`, and closely paired `Synth - Arp`):** As the primary driving melodic element in Melodic House, carefully document the main pluck (and any secondary/transitionary plucks), capturing waveform/filter character, delay/reverb space, rhythmic `pattern` (syncopated motif vs. continuous pulse vs. spaced phrases), and cutoff `automation` across sections.
 4. Write all positions in **section-relative** `Bar.Beat.16th` notation (`1.1.1` is always the downbeat of the section):
    - **End-exclusive spans:** An 8-bar loop at the start of a section is `1.1.1 - 9.1.1` (never `1.1.1 - 8.4.4`), or `17.1.1 - end` to run through the end of the section.
    - **Structured `timing` object:** Every element's `timing` must include at least one of `active`, `hits`, or `repeat` (not legacy free-text strings), using `mutes` to carve out pre-transition drop-outs (e.g., `mutes: ["16.3.1 - end"]`).
 
 ## 2. Mining Commonalities & Generating Reports
-When asked to find patterns or summarize tracks across `song-analysis/*.yaml`, follow [ANALYSIS_GOALS.md](../../../song-analysis/ANALYSIS_GOALS.md):
-1. **Element Timelines:** Track section lengths (`duration_bars`) and when foundational layers (kick, sub-bass, pads, arps, vocals) enter, filter open, or strip away.
-2. **Transitory Elements & Drop-outs (Highest Priority):** Scan `mutes`, `hits`, `global_transitions`, and `pattern_variation` for:
-   - **Micro-Cuts (1–2 beats):** Elements cutting at e.g. `16.3.1` or `16.4.1` before the next section.
-   - **Drum Pockets (2–4 bars):** Kick/bass dropping out early (e.g., `13.1.1` or `15.1.1` in a 16-bar phrase).
-   - **Transitory Fills:** Dry Foley hits, vocal chops, snare fills, or reverse swells triggered inside those vacuums.
-3. **Report Formatting:** Always list the exact songs analyzed, group findings by arrangement technique (not song-by-song), cite concrete DAW coordinates, and save persistent reports to `song-analysis/reports/` (see [arrangement_similarities_7-27-26.md](../../../song-analysis/reports/arrangement_similarities_7-27-26.md) as a reference).
+This is the main goal of analyzing songs: to find commonalities between analyzed songs and create a report on the similarities between them.
 
-## 3. Running Audio Frequency Analysis
-To measure spectral balance per arrangement section against a `.wav` file:
-1. Point [frequency-analysis.py](../../../python/frequency-analysis.py) (or invoke `analyze_sections_from_yaml(wav_path, yaml_path)`) at the audio file and its matching YAML file.
-2. Run using the workspace virtual environment (`python\.venv\Scripts\python.exe`) so `librosa`, `numpy`, and `pyyaml` are available.
+The aim is to extract recurring arrangement patterns, structural techniques, and instrumentation timelines from the provided Melodic House song analyses to inform the "Moss Watcher" production style.
+
+When asked to find patterns or summarize tracks across `song-analysis/*.yaml`, follow these instructions:
+
+> **Skip Incomplete / Stub Files:** Before analyzing, filter out and skip any `.yaml` file whose `arrangement` property is empty (`null` or `[]`) or contains only placeholder sections with no `elements` populated. Do **not** include skipped stub songs in calculations or in the report's analyzed-songs list.
+
+### 1. Element Timelines (Beginnings and Ends)
+- Track exactly **what elements play at what times**.
+- Identify patterns in how tracks are arranged and layered. For example, note when the main kick typically enters, when the sub bass is introduced, and when atmospheric pads or vocals swell in and out. Note what sections they typically occur in
+- Observe the duration of elements and how they define the energy of different sections (Intros, Verses, Breakdowns, Drops, Outros).
+
+### 2. Transitory Elements & Drop-outs (CRITICAL)
+The most important aspect of this analysis is identifying **transitory elements**—specifically when instruments cut out or come in *just before* a new section begins. You must place a heavy emphasis on finding where elements (such as kicks, sub bass, snares, or the entire mix) stop early.
+
+**Specifically scan the YAML for:**
+- **Micro-Cuts (1-2 Beats):** Look for elements cutting out precisely on the 3rd or 4th beat of the final bar of a section (e.g., stopping at `16.3.1` or `16.4.1` prior to a drop at `17.1.1`).
+- **Medium-cuts (1-4 Bars):** Look for foundational elements (kicks/bass) dropping out one to several bars early (e.g., stopping at `13.1.1` or `15.1.1` or `16.1.1` in a 16-bar phrase) to create an empty, tension-building pocket.
+- **Transitory Fills:** Note any specific elements that hit *during* these vacuums (e.g., a solitary vocal chop, a tom fill, or a snare hit).
+- Scan fields like `global_transitions` and `pattern_variation` for explicit mentions of these cuts.
+
+### 3. Signature Melodic House Elements (Percussive Ear-Candy, Pads, and Synth Plucks)
+Dedicated sections of your analysis and commonality reports should examine how tracks deploy these three core pillars and **which sections they play in**:
+- **Odd / Novel Percussion (`Drums - Other Percussive`):**
+  - Melodic House relies heavily on unusual percussive hits beyond the standard 4-on-the-floor kick, hat, and snare—such as metallic hits, tonal/cutoff toms, rim/wood hits, or treble clicks—to introduce novelty and keep listeners engaged over long arrangements.
+  - Track *what* these sounds are (`tonality`), *how* they sit rhythmically against the 4/4 pulse (`pattern`, e.g., off-beat `x.1.3`/`x.3.3` syncopation, sparse call-and-response `hits`, or multi-bar `repeat` cycles), and *when* they enter or swap out (e.g., mid-verse groove evolutions, breakdown textures, or pre-section fills).
+- **Pads & Atmospheric Layers (`Synth - Pad`, `Synth - Granular Pad`, and adjacent `Synth - Swell`, `Vocals - Atmosphere`, `Vocals - Swell`):**
+  - Identify how sustained harmonic pads, granular textures, and ambient vocal/synth swells establish space and emotional continuity.
+  - Compare **which sections they play in** across tracks—for example, setting the initial atmosphere in **Intros**, sitting filtered or sidechained beneath **Verses/Choruses**, stepping forward to carry **Breakdowns/Bridges** when drums and bass drop out, or ringing into **Outros**—and note how multiple pad layers stack, alternate, or sweep their filter cutoffs between sections.
+- **Synth Plucks (`Synth - Pluck`, alongside supporting `Synth - Arp` layers):**
+  - Synth plucks are the primary driving melodic force in Melodic House, typically carrying the core hook or chordal pulse.
+  - Analyze commonalities in **how plucks are designed and sequenced** (warm low-passed saw plucks, key-tracked or LFO/automated filter cutoffs, dotted-8th/16th delays, long reverb tails; continuous 8th/16th rhythms vs. dotted syncopation vs. spaced melodic phrases; main lead plucks vs. secondary counter/transition plucks).
+  - Map **which sections plucks drive and how they evolve**—such as entering muted/filtered in **Intros**, anchoring the groove in **Verses**, opening their low-pass cutoff through **Builds** to peak brightness in **Drops/Choruses**, and filtering down or soloing in **Breaks/Outros**.
+
+### 4. Output Requirements
+When generating reports based on these analyses:
+1. **List the songs** that were referenced/analyzed.
+2. Provide **specific DAW notation coordinates** (e.g., `15.1.1`) as examples of the techniques you find.
+3. Group the findings logically by arrangement techniques rather than just summarizing one song at a time.
+4. Leave a report under song-analysis/reports
+
+*(Note: Always refer to `NOTATION_SYNTAX.md` to properly understand how timing and ambiguity are represented in this dataset).*
+
 
 ## Validation
 After creating or editing any `.yaml` file in `song-analysis/`, validate that it parses cleanly as YAML and conforms to [song-schema.json](../../../song-analysis/song-schema.json) (valid `category` enum strings, regex-compliant `Bar.Beat.16th` coordinates, and structured `timing` objects).
