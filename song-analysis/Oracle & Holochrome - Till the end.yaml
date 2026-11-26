@@ -9,12 +9,17 @@ track_metadata:
   genre: Melodic House
 
 sounds:
-  sharp_hats:
-    tonality: sharp hats
-    category: Drums - Hats
+  sharp_shakers:
+    tonality: sharp shakers
+    category: Drums - Shakers
+
+  soft_shakers:
+    tonality: soft shakers
+    category: Drums - Shakers
 
   bass:
-    tonality: sub + mid bass layer
+    tonality: sub + mid bass layer. ducks every quarter note
+      regardless of kick
     category: Bass
 
   kick:
@@ -52,6 +57,12 @@ sounds:
   synth_swell:
     category: Synth - Swell
     tonality: simple saw swell
+
+  clap:
+    category: Drums - Clap
+
+  reverse_cymbal:
+    category: Drums - Reverse Cymbal
 
 arrangement:
   - section_name: pre intro
@@ -93,6 +104,14 @@ arrangement:
   - section_name: verse a
     duration_bars: 32
     elements:
+      - sound: kick
+        timing:
+          active:
+            - "1.1.1 - end"
+          mutes:
+            - 16.4.1
+            - 32.1.1 - end
+
       - sound: clicky_percussion
         timing:
           active:
@@ -103,11 +122,22 @@ arrangement:
           active:
             - "1.1.1 - end"
 
+      - sound: heavenly_instrumental_pad
+        timing:
+          active: [ "1.1.1 - end" ] 
+
       - sound: prime_saw_pluck
+        pattern: alternates between 8th & quarter notes
+          pattern begins usually approx 1 8th note prior to the next bar
+          creating a transitory element as a brief lead / pull 
+          into subsequent sections
         timing:
           active: [ "1.1.1 - end" ]
 
-      - sound: sharp_hat
+      - sound: sharp_shaker
+        pattern: prime pattern is 8th notes on the upbeat
+          also has 16th note accents around that prime pattern 
+          every other hit to give it that sort of "shuffle" feeling
         timing:
           active:
             - "9.1.1 - end"
@@ -117,6 +147,29 @@ arrangement:
           active:
            - "13.1.1 - 17.1.1"
 
+      - sound: soft_shaker
+        pattern: 16th notes
+        automation: these seem to gradually increase in volume over approx a bar
+          around bar 24.1.1 and again round bar 31 as 
+           a transitory element
+        timing:
+          active:
+            - "17.1.1 - end"
 
+      - sound: clap
+        pattern: 4 on the floor (2 & 4)
+        timing:
+          active:
+            - "17.1.1 - end"
+
+      - sound: reverse_cymbal
+        timing:
+          hits:
+            - 32.1.1
+
+  - section_name: break
+    duration_bars: 32
+    elements:
+      -
 
 

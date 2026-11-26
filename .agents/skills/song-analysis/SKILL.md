@@ -22,7 +22,8 @@ Read these files before creating or analyzing track data:
    ```
 2. Populate `track_metadata` (`artist`, `title`, `key_signature`, `bpm`, `time_signature`, `genre`).
 3. Define reusable instruments once under top-level `sounds:` (keyed by `snake_case` IDs) using only valid `category` enum values from [song-schema.json](../../../song-analysis/song-schema.json). Keep `pattern` out of `sounds:`—what a sound *plays* belongs on the section element. Record quantitative Hz measurements (especially kick and bass fundamentals) under `frequencies:` (`fundamental_hz`, `fundamental_range_hz`, `span_hz`) rather than burying numbers inside `tonality`.
-   - **Pay special attention to three signature Melodic House sound groups when documenting tracks:**
+   - **Pay special attention to signature Melodic House sound groups when documenting tracks:**
+     - **Progressive Drum & Percussion Stacking (`Drums - Hats`, `Drums - Shakers`, `Drums - Snare`, `Drums - Clap`, `Drums - Rides`):** Log distinct hat/shaker/snare layers separately so mid-section entries (e.g., `17.1.1 - end`) are preserved, and record when existing drums step up in volume, shed a hi-cut filter, or densify their rhythm in `notes`, `automation`, or `pattern_variation`.
      - **Novel / Non-Standard Percussion (`Drums - Other Percussive`):** Actively listen for and log odd percussive ear-candy outside the standard 4-on-the-floor kick/hat/snare kit—e.g., metallic/cowbell-like hits, tonal/cutoff/sonar toms, woodblocks, treble clicks, or steel-drum-like hits—noting their syncopated `pattern` and how they keep the groove feeling fresh.
      - **Pads & Atmospheric Washes (`Synth - Pad`, `Synth - Granular Pad`, plus related `Synth - Swell`, `Vocals - Atmosphere`, `Vocals - Swell`):** Distinguish sustained chordal pads from granular/textured washes and multi-bar swells, noting filter character (low-passed, band-passed, resonant), reverb tail length, and which sections they occupy.
      - **Synth Plucks (`Synth - Pluck`, and closely paired `Synth - Arp`):** As the primary driving melodic element in Melodic House, carefully document the main pluck (and any secondary/transitionary plucks), capturing waveform/filter character, delay/reverb space, rhythmic `pattern` (syncopated motif vs. continuous pulse vs. spaced phrases), and cutoff `automation` across sections.
@@ -53,8 +54,12 @@ The most important aspect of this analysis is identifying **transitory elements*
 - **Transitory Fills:** Note any specific elements that hit *during* these vacuums (e.g., a solitary vocal chop, a tom fill, or a snare hit).
 - Scan fields like `global_transitions` and `pattern_variation` for explicit mentions of these cuts.
 
-### 3. Signature Melodic House Elements (Percussive Ear-Candy, Pads, and Synth Plucks)
-Dedicated sections of your analysis and commonality reports should examine how tracks deploy these three core pillars and **which sections they play in**:
+### 3. Signature Melodic House Elements (Drum Stacking, Percussive Ear-Candy, Pads, and Synth Plucks)
+Dedicated sections of your analysis and commonality reports should examine how tracks deploy these core pillars and **which sections they play in**:
+- **Progressive Drum & Percussion Layer Stacking (`Drums - *`):**
+  - Identify how percussive stacks evolve as sections progress—such as stacking sharper/upbeat hi-hats, shakers, or rides on top of foundational hats, layering claps with snares, or boosting snare/hat volume and high-frequency brightness (e.g., removing a hi-cut filter).
+  - Scan `timing.active` start offsets (e.g., `9.1.1`, `17.1.1`, `25.1.1`, `33.1.1`), `notes`, `automation`, and `pattern_variation`—as well as Verse 1 vs. Verse 2 or Chorus A vs. Chorus B differences—to pinpoint **when** percussive stack changes or volume/filter adjustments happen.
+  - Quantify **how many bars typically pass** before a new percussive layer is added or an existing drum sound gets louder/brighter (e.g., every 8 bars, 16 bars, or 32 bars within a section, or across section boundaries).
 - **Odd / Novel Percussion (`Drums - Other Percussive`):**
   - Melodic House relies heavily on unusual percussive hits beyond the standard 4-on-the-floor kick, hat, and snare—such as metallic hits, tonal/cutoff toms, rim/wood hits, or treble clicks—to introduce novelty and keep listeners engaged over long arrangements.
   - Track *what* these sounds are (`tonality`), *how* they sit rhythmically against the 4/4 pulse (`pattern`, e.g., off-beat `x.1.3`/`x.3.3` syncopation, sparse call-and-response `hits`, or multi-bar `repeat` cycles), and *when* they enter or swap out (e.g., mid-verse groove evolutions, breakdown textures, or pre-section fills).
